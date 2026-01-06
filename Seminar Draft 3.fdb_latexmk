@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1767663632.60826 "/Users/evandita/Documents/Kuliah/Semester 7/Seminar Fix/Seminar Draft 3.tex" "Seminar Draft 3.pdf" "Seminar Draft 3" 1767663633.43664 0
-  "/Users/evandita/Documents/Kuliah/Semester 7/Seminar Fix/Seminar Draft 3.tex" 1767663631.04261 71218 5e745f8f0dafab9b4117ba70e1bf77bd ""
+["pdflatex"] 1767664620.24737 "/Users/evandita/Documents/Kuliah/Semester 7/Seminar Fix/Seminar Draft 3.tex" "Seminar Draft 3.pdf" "Seminar Draft 3" 1767664621.08536 0
+  "/Users/evandita/Documents/Kuliah/Semester 7/Seminar Fix/Seminar Draft 3.tex" 1767664620.0664 72579 a63a34d3a8a7040bfea0c9118b5798e1 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -130,12 +130,12 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1766329171 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1766329087 3345744 26c5cb5398a1971536295a5171012c41 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "Seminar Draft 3.aux" 1767663633.37307 4700 7883e30dc12457b94951b232beb6dfa1 "pdflatex"
-  "Seminar Draft 3.lof" 1767663633.3745 29 427bdbf77372b3abab04d4813d2ca647 "pdflatex"
-  "Seminar Draft 3.lot" 1767663633.37467 263 434f25ac6e3a8684d1b6d2a24e140e7e "pdflatex"
-  "Seminar Draft 3.out" 1767663633.37424 5702 5c9ff4926001736897b84109ac2b2f75 "pdflatex"
-  "Seminar Draft 3.tex" 1767663631.04261 71218 5e745f8f0dafab9b4117ba70e1bf77bd ""
-  "Seminar Draft 3.toc" 1767663633.37448 2029 ac925f856d2c2b656f20c75ef6e979d2 "pdflatex"
+  "Seminar Draft 3.aux" 1767664621.02103 4749 36b15839e33a90a0d1eaaa24e5012881 "pdflatex"
+  "Seminar Draft 3.lof" 1767664621.02262 29 427bdbf77372b3abab04d4813d2ca647 "pdflatex"
+  "Seminar Draft 3.lot" 1767664621.02266 263 3ecc7889667809a05eb4a2bfbe5836bf "pdflatex"
+  "Seminar Draft 3.out" 1767664621.02232 5702 5c9ff4926001736897b84109ac2b2f75 "pdflatex"
+  "Seminar Draft 3.tex" 1767664620.0664 72579 a63a34d3a8a7040bfea0c9118b5798e1 ""
+  "Seminar Draft 3.toc" 1767664621.02258 2030 97e252fdf8b2cac83a78965d5c3bd961 "pdflatex"
   "logo-ui.png" 1767608803.69018 27123 94fdc7b1c200bf562b8ef8a778dc72dc ""
   (generated)
   "Seminar Draft 3.aux"
