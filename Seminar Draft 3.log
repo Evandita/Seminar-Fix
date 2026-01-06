@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.12.21)  6 JAN 2026 15:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.12.21)  6 JAN 2026 15:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -782,12 +782,12 @@ Package hyperref Info: bookmark level for unknown equation defaults to 0 on inpu
 [12]
 
 [13]
-<img/MASLEAK_System.png, id=342, 632.3625pt x 166.6225pt>
+<img/MASLEAK_System.png, id=354, 632.3625pt x 166.6225pt>
 File: img/MASLEAK_System.png Graphic file (type png)
 <use img/MASLEAK_System.png>
 Package pdftex.def Info: img/MASLEAK_System.png  used on input line 559.
 (pdftex.def)             Requested size: 362.77525pt x 95.58853pt.
-<img/MASLEAK_AdversarialPrompt.png, id=344, 660.4675pt x 487.8225pt>
+<img/MASLEAK_AdversarialPrompt.png, id=356, 660.4675pt x 487.8225pt>
 File: img/MASLEAK_AdversarialPrompt.png Graphic file (type png)
 <use img/MASLEAK_AdversarialPrompt.png>
 Package pdftex.def Info: img/MASLEAK_AdversarialPrompt.png  used on input line 565.
@@ -797,17 +797,17 @@ Package pdftex.def Info: img/MASLEAK_AdversarialPrompt.png  used on input line 5
 [14 <./img/MASLEAK_System.png>]
 
 [15 <./img/MASLEAK_AdversarialPrompt.png>]
-<img/LeakAgent_System.png, id=360, 610.28pt x 342.27875pt>
+<img/LeakAgent_System.png, id=372, 610.28pt x 342.27875pt>
 File: img/LeakAgent_System.png Graphic file (type png)
 <use img/LeakAgent_System.png>
 Package pdftex.def Info: img/LeakAgent_System.png  used on input line 581.
 (pdftex.def)             Requested size: 362.77525pt x 203.47296pt.
-<img/LeakAgent_AdversarialPrompt_SystemPrompt.png, id=361, 497.86pt x 169.63374pt>
+<img/LeakAgent_AdversarialPrompt_SystemPrompt.png, id=373, 497.86pt x 169.63374pt>
 File: img/LeakAgent_AdversarialPrompt_SystemPrompt.png Graphic file (type png)
 <use img/LeakAgent_AdversarialPrompt_SystemPrompt.png>
 Package pdftex.def Info: img/LeakAgent_AdversarialPrompt_SystemPrompt.png  used on input line 587.
 (pdftex.def)             Requested size: 362.77525pt x 123.609pt.
-<img/LeakAgent_AdversarialPrompt_TrainingData.png, id=362, 293.095pt x 102.3825pt>
+<img/LeakAgent_AdversarialPrompt_TrainingData.png, id=374, 293.095pt x 102.3825pt>
 File: img/LeakAgent_AdversarialPrompt_TrainingData.png Graphic file (type png)
 <use img/LeakAgent_AdversarialPrompt_TrainingData.png>
 Package pdftex.def Info: img/LeakAgent_AdversarialPrompt_TrainingData.png  used on input line 593.
@@ -1105,9 +1105,11 @@ Overfull \hbox (5.06018pt too wide) in paragraph at lines 1058--1059
 
 [36]
 
-[37] (./Seminar Draft 3.bbl)
+[37] (./Seminar Draft 3.bbl
 
-[38] 
+[38])
+
+[39] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./Seminar Draft 3.aux)
  ***********
@@ -1118,18 +1120,18 @@ Package rerunfilecheck Info: File `"Seminar Draft 3".out' has not changed.
 (rerunfilecheck)             Checksum: A4E9CC8F28813AB832144E2196564206;6378.
  ) 
 Here is how much of TeX's memory you used:
- 19123 strings out of 473190
- 308744 string characters out of 5715799
- 765765 words of memory out of 5000000
- 41514 multiletter control sequences out of 15000+600000
- 611561 words of font info for 383 fonts, out of 8000000 for 9000
+ 19146 strings out of 473190
+ 309543 string characters out of 5715799
+ 765828 words of memory out of 5000000
+ 41526 multiletter control sequences out of 15000+600000
+ 611799 words of font info for 387 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,22n,79p,2166b,740s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,22n,79p,2166b,734s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Seminar Draft 3.pdf" (50 pages, 1153895 bytes).
+Output written on "Seminar Draft 3.pdf" (51 pages, 1156210 bytes).
 PDF statistics:
- 572 PDF objects out of 1000 (max. 8388607)
- 476 compressed objects within 5 object streams
- 115 named destinations out of 1000 (max. 500000)
+ 596 PDF objects out of 1000 (max. 8388607)
+ 499 compressed objects within 5 object streams
+ 120 named destinations out of 1000 (max. 500000)
  68879 words of extra memory for PDF output out of 74296 (max. 10000000)
 
