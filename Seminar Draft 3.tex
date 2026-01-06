@@ -312,36 +312,33 @@ Komponen krusial yang mendukung efektivitas \textit{iterative peeling} adalah im
 Berdasarkan celah metodologis yang telah diidentifikasi dalam latar belakang, penelitian ini merumuskan tiga permasalahan fundamental terkait adaptasi metodologi serangan \textit{adversarial} dari lingkungan \textit{single-agent} ke arsitektur \textit{multi-agent} yang kompleks:
 
 \begin{enumerate}
-    \item \textbf{Ketidakefektifan Teknik Serangan \textit{Single-Agent} pada Lingkungan MAS:}
+    \item \textbf{Ketidakefektifan Teknik Serangan \textit{Single-Agent} pada Lingkungan MAS}
     
     Bagaimana mengadaptasi teknik serangan \textit{adversarial} yang telah terbukti efektif pada \textit{single-agent} LLM, seperti \textit{prompt injection} dan \textit{jailbreaking}, agar dapat mengatasi kompleksitas struktural sistem \textit{multi-agent}? Teknik-teknik tersebut mengalami degradasi performa signifikan ketika diterapkan pada MAS karena distribusi informasi antar agen, fenomena degradasi konteks (\textit{Lost in the Middle}) yang menyebabkan kegagalan propagasi \textit{payload} dalam rantai komunikasi yang panjang, serta keterbatasan visibilitas terhadap \textit{state} internal sistem yang mengakibatkan kesulitan dalam optimasi strategi serangan secara adaptif pada pengaturan \textit{black-box}.
     
-    \item \textbf{Kebutuhan Mekanisme \textit{Iterative Peeling} dan \textit{Client-Side Memory}:}
+    \item \textbf{Kebutuhan Mekanisme \textit{Iterative Peeling} dan \textit{Client-Side Memory}}
     
     Bagaimana merancang dan mengimplementasikan mekanisme \textit{iterative peeling} yang mampu melakukan ekstraksi informasi secara bertahap per agen tanpa mengalami kegagalan total akibat \textit{single point of failure}? Lebih lanjut, bagaimana mengintegrasikan \textit{Client-Side Memory} sebagai repositori eksternal yang menyimpan data intelektual hasil ekstraksi dan \textit{prompt} yang berhasil per agen, sehingga sistem dapat melakukan modifikasi \textit{prompt} secara adaptif ketika menghadapi perubahan perilaku agen atau kegagalan ekstraksi pada iterasi tertentu, dengan memanfaatkan pengetahuan historis yang terakumulasi dari interaksi sebelumnya?
     
-    \item \textbf{Transferabilitas Serangan dari Model Proksi ke Target \textit{Black-Box}:}
+    \item \textbf{Transferabilitas Serangan dari Model Proksi ke Target \textit{Black-Box}}
     
     Apakah mungkin untuk melatih \textit{attack agent} menggunakan \textit{Reinforcement Learning} pada model proksi \textit{open-source} (pengaturan \textit{white-box}) dan mentransfer efektivitas \textit{prompt adversarial} yang dihasilkan untuk mengekstrak IP dari berbagai arsitektur MAS \textit{black-box} dengan model dan konfigurasi yang tidak diketahui sebelumnya? Hipotesis transferabilitas ini bergantung pada asumsi adanya keselarasan universal (\textit{universal alignment}) dalam mekanisme model bahasa untuk mengikuti instruksi sistem, yang perlu divalidasi secara empiris melalui eksperimen pada berbagai platform MAS komersial dan model LLM yang berbeda.\cite{ref1}
 \end{enumerate}
 
 \subsection*{1.3 Tujuan Penelitian}
 \addcontentsline{toc}{subsection}{1.3 Tujuan Penelitian}
-Penelitian ini bertujuan untuk merancang, mengimplementasikan, dan mengevaluasi secara empiris sebuah kerangka kerja serangan adversarial tingkat lanjut yang mampu mengatasi keterbatasan metode yang ada. Tujuan spesifik dari penelitian ini meliputi:
+Penelitian ini bertujuan untuk mengembangkan kerangka kerja serangan \textit{adversarial} yang mampu mengatasi keterbatasan metodologi \textit{single-agent} dalam konteks \textit{multi-agent systems}, dengan fokus pada tiga tujuan spesifik:
 
 \begin{enumerate}
-    \item \textbf{Pengembangan Metodologi "Stateless Unit Test":}
+    \item \textbf{Pengembangan Mekanisme \textit{Iterative Peeling} dengan \textit{Client-Side Memory}}
     
-    Merumuskan kembali paradigma serangan MAS dari masalah pembelajaran lingkungan menjadi masalah orkestrasi eksternal deterministik. Ini melibatkan perancangan arsitektur Client-Side Memory yang memungkinkan penyerang untuk memetakan dan melacak status setiap agen secara independen dari riwayat percakapan internal MAS.\cite{ref1}
-    \item \textbf{Optimasi Hulu Ledak Adversarial Menggunakan LeakAgent:}
+    Merancang dan mengimplementasikan algoritma \textit{iterative peeling} yang melakukan ekstraksi informasi secara bertahap per agen untuk menghindari kegagalan total akibat \textit{single point of failure}. Implementasi mencakup pengembangan \textit{Client-Side Memory} sebagai repositori eksternal yang menyimpan data intelektual hasil ekstraksi (\textit{system prompt}, spesifikasi \textit{tools}, instruksi tugas, dan metadata topologi) serta \textit{prompt} yang berhasil per agen, yang memungkinkan sistem melakukan modifikasi \textit{prompt} secara adaptif berdasarkan pengetahuan historis ketika menghadapi perubahan perilaku agen atau kegagalan ekstraksi pada iterasi tertentu.\cite{ref1}
+    \item \textbf{Optimasi \textit{Prompt Adversarial} Menggunakan \textit{Reinforcement Learning}}
     
-    Mengimplementasikan pipeline pelatihan Reinforcement Learning menggunakan algoritma Proximal Policy Optimization (PPO) dan fungsi reward berbasis Word Edit Similarity (WES). Tujuannya adalah untuk melatih agen penyerang pada model proksi agar dapat menghasilkan prompt adversarial ($Q_{Leak}$) yang sangat efektif, beragam, dan memiliki transferabilitas tinggi.\cite{ref3}
-    \item \textbf{Perancangan Mekanisme Pengiriman Matryoshka:}
+    Mengimplementasikan \textit{pipeline} pelatihan menggunakan algoritma \textit{Proximal Policy Optimization} (PPO) dengan fungsi \textit{reward} berbasis \textit{Word Edit Similarity} (WES) untuk melatih \textit{attack agent} pada model proksi \textit{open-source}. Tujuannya adalah menghasilkan \textit{prompt adversarial} yang memiliki efektivitas tinggi, keragaman yang memadai untuk menghindari deteksi, dan transferabilitas yang kuat untuk dapat diaplikasikan pada berbagai arsitektur MAS \textit{black-box} dengan model LLM yang berbeda-beda.\cite{ref3}
+    \item \textbf{Evaluasi Empiris Transferabilitas dan Efektivitas Sistem}
     
-    Mengembangkan mekanisme pengiriman novel yang menggunakan prinsip enkapsulasi rekursif dan algoritma Iterative Peeling. Mekanisme ini dirancang untuk “mencuci” payload berbahaya melalui instruksi tepercaya antar-agen dan meninimalkan beban konteks pada setiap langkah serangan, sehingga meningkatkan fidelitas pemetaan topologi.\cite{ref1}
-    \item \textbf{Evaluasi Komprehensif Transferabilitas:}
-    
-    Melakukan serangkaian eksperimen pada dataset sintetis (MASLEAK Dataset) dan aplikasi dunia nyata (seperti di Coze, CrewAI, dan GPT Store) untuk mengukur kinerja PTMW. Evaluasi akan menggunakan metrik kuantitatif seperti Attack Success Rate (ASR), Topology Fidelity ($GS_{topo}$), dan Efisiensi Ekstraksi, serta membandingkannya dengan baseline MASLEAK dan PromptFuzz.\cite{ref8}
+    Melakukan eksperimen komprehensif pada tiga kategori lingkungan, yakni dataset sintetis untuk validasi internal dengan \textit{ground truth} yang diketahui, aplikasi \textit{honeypot} pada platform komersial (Coze, CrewAI) untuk pengujian kondisi \textit{real-world}, dan aplikasi produktif dari GPT Store untuk validasi transferabilitas \textit{in the wild}. Evaluasi menggunakan metrik kuantitatif meliputi \textit{Attack Success Rate} (ASR), \textit{Topology Fidelity} ($GS_{topo}$), dan \textit{Extraction Efficiency}, dengan perbandingan terhadap metode \textit{baseline} seperti MASLEAK dan PromptFuzz untuk mengukur peningkatan performa yang dicapai.\cite{ref8}
 \end{enumerate}
 
 \subsection*{1.4 Manfaat Penelitian}
