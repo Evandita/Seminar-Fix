@@ -1,0 +1,27 @@
+\babel@toc {bahasa}{}\relax 
+\contentsline {section}{BAB I PENDAHULUAN}{1}{Item.5}%
+\contentsline {subsection}{1.1 Latar Belakang}{1}{section*.1}%
+\contentsline {subsection}{1.2 Rumusan Masalah}{2}{section*.1}%
+\contentsline {subsection}{1.3 Tujuan Penelitian}{3}{Item.9}%
+\contentsline {subsection}{1.4 Manfaat Penelitian}{4}{Item.13}%
+\contentsline {subsection}{1.5 Batasan Masalah}{4}{Item.13}%
+\contentsline {subsection}{1.6 Sistematika Penulisan}{6}{Item.13}%
+\contentsline {section}{BAB II TINJAUAN PUSTAKA}{7}{Item.13}%
+\contentsline {subsection}{2.1 Landasan Teori}{7}{section*.2}%
+\contentsline {subsubsection}{2.1.2 The Complexity Trap: Keterbatasan Multi-Agent Reinforcement Learning (MARL)}{7}{section*.2}%
+\contentsline {subsubsection}{2.1.3 Proximal Policy Optimization (PPO) dalam Adversarial Prompting}{8}{Item.16}%
+\contentsline {subsubsection}{2.1.4 Fungsi Reward Semantik: Sliding-window Word Edit Similarity (WES)}{8}{Item.16}%
+\contentsline {subsection}{2.2 Penelitian Terkait}{9}{Item.16}%
+\contentsline {subsection}{2.3 Tabel Perbandingan Studi Pustaka}{10}{Item.16}%
+\contentsline {section}{BAB III METODOLOGI PENELITIAN}{12}{table.caption.3}%
+\contentsline {subsection}{3.1 Waktu dan Tempat Penelitian}{12}{section*.4}%
+\contentsline {subsection}{3.2 Metodologi Penelitian}{12}{section*.4}%
+\contentsline {subsubsection}{3.2.1 Fase I: Generasi Hulu Ledak (Warhead Generation)}{12}{section*.5}%
+\contentsline {subsubsection}{3.2.2 Fase II: Sistem Pengiriman (Delivery System)}{13}{section*.5}%
+\contentsline {subsection}{3.3 Perancangan Sistem}{15}{section*.5}%
+\contentsline {subsection}{3.4 Evaluasi dan Metode Pengujian}{17}{section*.5}%
+\contentsline {subsubsection}{3.4.1 Skenario Pengujian}{17}{section*.6}%
+\contentsline {subsubsection}{3.4.2 Metrik Kuantitatif}{18}{section*.6}%
+\contentsline {subsubsection}{3.4.3 Pengujian Hipotesis}{18}{table.caption.7}%
+\contentsline {subsubsection}{3.4.4 Pertimbangan Etis}{21}{table.caption.7}%
+\contentsline {section}{Daftar Pustaka}{23}{table.caption.7}%
