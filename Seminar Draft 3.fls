@@ -258,10 +258,13 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
 INPUT ./Seminar Draft 3.toc
@@ -311,6 +314,11 @@ INPUT ./img/MASLEAK_AdversarialPrompt.png
 INPUT ./img/MASLEAK_AdversarialPrompt.png
 INPUT ./img/MASLEAK_AdversarialPrompt.png
 INPUT ./img/MASLEAK_AdversarialPrompt.png
+INPUT ./img/PrompFuzz_System.png
+INPUT ./img/PrompFuzz_System.png
+INPUT ./img/PrompFuzz_System.png
+INPUT ./img/PrompFuzz_System.png
+INPUT ./img/PrompFuzz_System.png
 INPUT ./img/LeakAgent_System.png
 INPUT ./img/LeakAgent_System.png
 INPUT ./img/LeakAgent_System.png
@@ -326,6 +334,11 @@ INPUT ./img/LeakAgent_AdversarialPrompt_TrainingData.png
 INPUT ./img/LeakAgent_AdversarialPrompt_TrainingData.png
 INPUT ./img/LeakAgent_AdversarialPrompt_TrainingData.png
 INPUT ./img/LeakAgent_AdversarialPrompt_TrainingData.png
+INPUT ./img/AgentFuzzer_System.png
+INPUT ./img/AgentFuzzer_System.png
+INPUT ./img/AgentFuzzer_System.png
+INPUT ./img/AgentFuzzer_System.png
+INPUT ./img/AgentFuzzer_System.png
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
@@ -333,11 +346,8 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmbi7t.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/adobe/times/ptmbi7t.vf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmbi8r.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ot1pcr.fd

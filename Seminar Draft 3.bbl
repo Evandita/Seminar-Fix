@@ -20,6 +20,16 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{huh2024multiagentreinforcementlearningcomprehensive}
+\BIBentryALTinterwordspacing
+D.~Huh and P.~Mohapatra, ``Multi-agent reinforcement learning: A comprehensive survey,'' 2024. [Online]. Available: \url{https://arxiv.org/abs/2312.10256}
+\BIBentrySTDinterwordspacing
+
+\bibitem{andam2025constrainedblackboxattacksmultiagent}
+\BIBentryALTinterwordspacing
+A.~Andam, J.~Bentahar, and M.~Hedabou, ``Constrained black-box attacks against multi-agent reinforcement learning,'' 2025. [Online]. Available: \url{https://arxiv.org/abs/2508.09275}
+\BIBentrySTDinterwordspacing
+
 \bibitem{nie2025leakagentrlbasedredteamingagent}
 \BIBentryALTinterwordspacing
 Y.~Nie, Z.~Wang, Y.~Yu, X.~Wu, X.~Zhao, W.~Guo, and D.~Song, ``Leakagent: Rl-based red-teaming agent for llm privacy leakage,'' 2025. [Online]. Available: \url{https://arxiv.org/abs/2412.05734}
@@ -60,11 +70,6 @@ D.~Lee and M.~Tiwari, ``Prompt infection: Llm-to-llm prompt injection within mul
 J.~Yu, Y.~Shao, H.~Miao, and J.~Shi, ``Promptfuzz: Harnessing fuzzing techniques for robust testing of prompt injection in llms,'' 2025. [Online]. Available: \url{https://arxiv.org/abs/2409.14729}
 \BIBentrySTDinterwordspacing
 
-\bibitem{huh2024multiagentreinforcementlearningcomprehensive}
-\BIBentryALTinterwordspacing
-D.~Huh and P.~Mohapatra, ``Multi-agent reinforcement learning: A comprehensive survey,'' 2024. [Online]. Available: \url{https://arxiv.org/abs/2312.10256}
-\BIBentrySTDinterwordspacing
-
 \bibitem{zou2023universaltransferableadversarialattacks}
 \BIBentryALTinterwordspacing
 A.~Zou, Z.~Wang, N.~Carlini, M.~Nasr, J.~Z. Kolter, and M.~Fredrikson, ``Universal and transferable adversarial attacks on aligned language models,'' 2023. [Online]. Available: \url{https://arxiv.org/abs/2307.15043}
@@ -73,11 +78,6 @@ A.~Zou, Z.~Wang, N.~Carlini, M.~Nasr, J.~Z. Kolter, and M.~Fredrikson, ``Univers
 \bibitem{cohen2025comesaiwormunleashing}
 \BIBentryALTinterwordspacing
 S.~Cohen, R.~Bitton, and B.~Nassi, ``Here comes the ai worm: Unleashing zero-click worms that target genai-powered applications,'' 2025. [Online]. Available: \url{https://arxiv.org/abs/2403.02817}
-\BIBentrySTDinterwordspacing
-
-\bibitem{andam2025constrainedblackboxattacksmultiagent}
-\BIBentryALTinterwordspacing
-A.~Andam, J.~Bentahar, and M.~Hedabou, ``Constrained black-box attacks against multi-agent reinforcement learning,'' 2025. [Online]. Available: \url{https://arxiv.org/abs/2508.09275}
 \BIBentrySTDinterwordspacing
 
 \bibitem{wang2025agentvigilgenericblackboxredteaming}

@@ -15,17 +15,17 @@
 \contentsline {subsubsection}{2.1.4 Computer Worm dan Enkapsulasi Rekursif}{12}{section*.3}%
 \contentsline {subsubsection}{2.1.5 Proximal Policy Optimization (PPO) dalam Adversarial Prompting}{13}{section*.3}%
 \contentsline {subsubsection}{2.1.6 Fungsi Reward Semantik: Sliding-window Word Edit Similarity (WES)}{14}{equation.2.1}%
-\contentsline {subsection}{2.2 Penelitian Terkait}{15}{equation.2.2}%
-\contentsline {subsection}{2.3 Tabel Perbandingan Studi Pustaka}{19}{Item.26}%
-\contentsline {section}{BAB III METODOLOGI PENELITIAN}{21}{Item.29}%
-\contentsline {subsection}{3.1 Waktu dan Tempat Penelitian}{21}{section*.10}%
-\contentsline {subsection}{3.2 Metodologi Penelitian}{21}{section*.10}%
-\contentsline {subsubsection}{3.2.1 Tahap Pelatihan: Optimasi Prompt Adversarial}{21}{section*.11}%
-\contentsline {subsubsection}{3.2.2 Tahap Implementasi: Arsitektur Pengiriman Serangan}{22}{section*.11}%
-\contentsline {subsection}{3.3 Perancangan Sistem}{30}{algocf.3.2}%
-\contentsline {subsection}{3.4 Evaluasi dan Metode Pengujian}{32}{algocf.3.2}%
-\contentsline {subsubsection}{3.4.1 Skenario Pengujian}{32}{section*.13}%
-\contentsline {subsubsection}{3.4.2 Metrik Kuantitatif}{33}{section*.13}%
-\contentsline {subsubsection}{3.4.3 Pengujian Hipotesis}{36}{equation.3.10}%
-\contentsline {subsubsection}{3.4.4 Pertimbangan Etis}{37}{equation.3.10}%
-\contentsline {section}{Daftar Pustaka}{39}{equation.3.10}%
+\contentsline {subsection}{2.2 Penelitian Terkait}{14}{equation.2.2}%
+\contentsline {subsection}{2.3 Tabel Perbandingan Studi Pustaka}{19}{figure.caption.10}%
+\contentsline {section}{BAB III METODOLOGI PENELITIAN}{22}{Item.29}%
+\contentsline {subsection}{3.1 Waktu dan Tempat Penelitian}{22}{section*.12}%
+\contentsline {subsection}{3.2 Metodologi Penelitian}{22}{section*.12}%
+\contentsline {subsubsection}{3.2.1 Tahap Pelatihan: Optimasi Prompt Adversarial}{22}{section*.13}%
+\contentsline {subsubsection}{3.2.2 Tahap Implementasi: Arsitektur Pengiriman Serangan}{23}{section*.13}%
+\contentsline {subsection}{3.3 Perancangan Sistem}{31}{algocf.3.2}%
+\contentsline {subsection}{3.4 Evaluasi dan Metode Pengujian}{33}{algocf.3.2}%
+\contentsline {subsubsection}{3.4.1 Skenario Pengujian}{33}{section*.15}%
+\contentsline {subsubsection}{3.4.2 Metrik Kuantitatif}{34}{section*.15}%
+\contentsline {subsubsection}{3.4.3 Pengujian Hipotesis}{37}{equation.3.10}%
+\contentsline {subsubsection}{3.4.4 Pertimbangan Etis}{38}{equation.3.10}%
+\contentsline {section}{Daftar Pustaka}{40}{equation.3.10}%
