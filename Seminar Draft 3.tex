@@ -395,19 +395,19 @@ Untuk memastikan kedalaman analisis dan kelayakan pelaksanaan dalam kerangka wak
 \addcontentsline{toc}{subsection}{1.6 Sistematika Penulisan}
 Dokumen seminar ini disusun secara sistematis dalam tiga bab utama yang saling terkait untuk menyajikan argumentasi penelitian secara koheren dan komprehensif:
 
-\begin{itemize}
-    \item \textbf{BAB I PENDAHULUAN:}
+\begin{enumerate}
+    \item \textbf{BAB I PENDAHULUAN}
     
-    Bab ini memaparkan latar belakang transformasi lanskap AI menuju Multi-Agent Systems, rumusan masalah mengenai kerentanan keamanan MAS, tujuan pengembangan metodologi Proxy-Trained Matryoshka Worm, manfaat penelitian bagi akademis dan industri, batasan ruang lingkup penelitian, serta sistematika penulisan dokumen.
+    Bab ini memaparkan latar belakang penelitian, rumusan masalah, tujuan penelitian, manfaat penelitian, batasan masalah, dan sistematika penulisan dokumen.
     
-    \item \textbf{BAB II TINJAUAN PUSTAKA:}
+    \item \textbf{BAB II TINJAUAN PUSTAKA}
     
-    Bab ini menyediakan fondasi teoretis melalui landasan teori (arsitektur MAS, keterbatasan MARL, PPO dalam adversarial prompting, dan fungsi reward WES), tinjauan penelitian terkait (MASLEAK, PromptFuzz, LeakAgent, AgentFuzzer), serta tabel perbandingan metodologi serangan adversarial untuk mengidentifikasi gap penelitian.
+    Bab ini menyediakan landasan teori tentang arsitektur kognitif MAS, algoritma \textit{Proximal Policy Optimization} (PPO), dan fungsi \textit{reward} semantik \textit{Word Edit Similarity} (WES). Tinjauan penelitian terkait menganalisis keterbatasan MASLEAK, PromptFuzz, LeakAgent, dan AgentFuzzer untuk mengidentifikasi \textit{gap} penelitian yang diisi oleh PTMW.
     
-    \item \textbf{BAB III METODOLOGI PENELITIAN:}
+    \item \textbf{BAB III METODOLOGI PENELITIAN}
     
-    Bab ini mendeskripsikan metodologi PTMW yang terdiri dari dua fase (Generasi Hulu Ledak dengan LeakAgent dan Sistem Pengiriman dengan Iterative Peeling), perancangan sistem tiga modul (The Forge, The Brain, The Interface), serta protokol evaluasi komprehensif meliputi skenario pengujian, metrik kuantitatif, pengujian hipotesis dengan validasi statistik, dan pertimbangan etis penelitian.
-\end{itemize}
+    Bab ini mendeskripsikan metodologi PTMW yang terdiri dari Fase I (\textit{Warhead Generation}) menggunakan PPO dan Fase II (\textit{Delivery System}) dengan mekanisme \textit{iterative peeling} dan \textit{Client-Side Memory}. Protokol evaluasi meliputi pengujian pada dataset MASD, \textit{honeypots} komersial, dan GPT Store dengan metrik kuantitatif serta validasi statistik.
+\end{enumerate}
 
 \newpage
 
