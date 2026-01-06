@@ -1,12 +1,12 @@
-\contentsline {equation}{\numberline {2.1}Fungsi Objektif Proximal Policy Optimization (PPO)}{12}{equation.2.1}%
-\contentsline {equation}{\numberline {2.2}Fungsi Reward Word Edit Similarity (WES)}{13}{equation.2.2}%
-\contentsline {equation}{\numberline {3.1}Attack Success Rate}{33}{equation.3.1}%
-\contentsline {equation}{\numberline {3.2}Threshold Validasi Ekstraksi}{33}{equation.3.2}%
-\contentsline {equation}{\numberline {3.3}Topology Fidelity (Graph Edit Similarity)}{34}{equation.3.3}%
-\contentsline {equation}{\numberline {3.4}Extraction Efficiency (Average API Calls)}{34}{equation.3.4}%
-\contentsline {equation}{\numberline {3.5}Total Cost (All API Calls)}{34}{equation.3.5}%
-\contentsline {equation}{\numberline {3.6}Word Edit Similarity dengan Sliding Window}{34}{equation.3.6}%
-\contentsline {equation}{\numberline {3.7}Edit Distance (Levenshtein)}{35}{equation.3.7}%
-\contentsline {equation}{\numberline {3.8}Defense Evasion Rate}{35}{equation.3.8}%
-\contentsline {equation}{\numberline {3.9}Kondisi Bypass Berhasil}{35}{equation.3.9}%
-\contentsline {equation}{\numberline {3.10}Cost-Effectiveness Ratio}{35}{equation.3.10}%
+\contentsline {equation}{\numberline {2.1}Fungsi Objektif Proximal Policy Optimization (PPO)}{13}{equation.2.1}%
+\contentsline {equation}{\numberline {2.2}Fungsi Reward Word Edit Similarity (WES)}{14}{equation.2.2}%
+\contentsline {equation}{\numberline {3.1}Attack Success Rate}{34}{equation.3.1}%
+\contentsline {equation}{\numberline {3.2}Threshold Validasi Ekstraksi}{34}{equation.3.2}%
+\contentsline {equation}{\numberline {3.3}Topology Fidelity (Graph Edit Similarity)}{35}{equation.3.3}%
+\contentsline {equation}{\numberline {3.4}Extraction Efficiency (Average API Calls)}{35}{equation.3.4}%
+\contentsline {equation}{\numberline {3.5}Total Cost (All API Calls)}{35}{equation.3.5}%
+\contentsline {equation}{\numberline {3.6}Word Edit Similarity dengan Sliding Window}{35}{equation.3.6}%
+\contentsline {equation}{\numberline {3.7}Edit Distance (Levenshtein)}{36}{equation.3.7}%
+\contentsline {equation}{\numberline {3.8}Defense Evasion Rate}{36}{equation.3.8}%
+\contentsline {equation}{\numberline {3.9}Kondisi Bypass Berhasil}{36}{equation.3.9}%
+\contentsline {equation}{\numberline {3.10}Cost-Effectiveness Ratio}{36}{equation.3.10}%
