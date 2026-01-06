@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.12.21)  6 JAN 2026 10:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.12.21)  6 JAN 2026 11:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -457,60 +457,103 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/algorithms/algorithm.sty
-Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count318
  (/usr/local/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
-\@float@every@algorithm=\toks33
-\c@algorithm=\count318
+\algocf@hangindent=\skip124
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count319
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\skiptotal=\skip125
+\skiplinenumber=\skip126
+\skiprule=\skip127
+\skiphlne=\skip128
+\skiptext=\skip129
+\skiplength=\skip130
+\algomargin=\skip131
+\skipalgocfslide=\skip132
+\algowidth=\dimen197
+\inoutsize=\dimen198
+\inoutindent=\dimen199
+\interspacetitleruled=\dimen256
+\interspacealgoruled=\dimen257
+\interspacetitleboxruled=\dimen258
+\algocf@ruledwidth=\skip133
+\algocf@inoutbox=\box66
+\algocf@inputbox=\box67
+\AlCapSkip=\skip134
+\AlCapHSkip=\skip135
+\algoskipindent=\skip136
+\algocf@nlbox=\box68
+\algocf@hangingbox=\box69
+\algocf@untilbox=\box70
+\algocf@skipuntil=\skip137
+\algocf@capbox=\box71
+\algocf@lcaptionbox=\skip138
+\algoheightruledefault=\skip139
+\algoheightrule=\skip140
+\algotitleheightruledefault=\skip141
+\algotitleheightrule=\skip142
+\c@algocfline=\count320
+\c@algocfproc=\count321
+\c@algocf=\count322
+\algocf@algoframe=\box72
+\algocf@algobox=\box73
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 Package: algpseudocode 
  (/usr/local/texlive/2025/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count319
-\c@ALG@rem=\count320
-\c@ALG@nested=\count321
-\ALG@tlm=\skip124
-\ALG@thistlm=\skip125
-\c@ALG@Lnr=\count322
-\c@ALG@blocknr=\count323
-\c@ALG@storecount=\count324
-\c@ALG@tmpcounter=\count325
-\ALG@tmplength=\skip126
+\c@ALG@line=\count323
+\c@ALG@rem=\count324
+\c@ALG@nested=\count325
+\ALG@tlm=\skip143
+\ALG@thistlm=\skip144
+\c@ALG@Lnr=\count326
+\c@ALG@blocknr=\count327
+\c@ALG@storecount=\count328
+\c@ALG@tmpcounter=\count329
+\ALG@tmplength=\skip145
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 55.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 91.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count326
-\l__pdf_internal_box=\box66
+\l__color_backend_stack_int=\count330
+\l__pdf_internal_box=\box74
 ) (./Seminar Draft 3.aux)
 \openout1 = `"Seminar Draft 3.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -548,54 +591,54 @@ LaTeX Font Info:    ... okay on input line 55.
 
 (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count327
-\scratchdimen=\dimen197
-\scratchbox=\box67
-\nofMPsegments=\count328
-\nofMParguments=\count329
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count330
-\MPscratchDim=\dimen198
-\MPnumerator=\count331
-\makeMPintoPDFobject=\count332
-\everyMPtoPDFconversion=\toks35
+\scratchcounter=\count331
+\scratchdimen=\dimen259
+\scratchbox=\box75
+\nofMPsegments=\count332
+\nofMParguments=\count333
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count334
+\MPscratchDim=\dimen260
+\MPnumerator=\count335
+\makeMPintoPDFobject=\count336
+\everyMPtoPDFconversion=\toks34
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Redefining \microtypecontext on input line 55.
-Package microtype Info: Applying patch `item' on input line 55.
-Package microtype Info: Applying patch `toc' on input line 55.
-Package microtype Info: Applying patch `eqnum' on input line 55.
-Package microtype Info: Applying patch `footnote' on input line 55.
-Package microtype Info: Applying patch `verbatim' on input line 55.
-LaTeX Info: Redefining \microtypesetup on input line 55.
+LaTeX Info: Redefining \microtypecontext on input line 91.
+Package microtype Info: Applying patch `item' on input line 91.
+Package microtype Info: Applying patch `toc' on input line 91.
+Package microtype Info: Applying patch `eqnum' on input line 91.
+Package microtype Info: Applying patch `footnote' on input line 91.
+Package microtype Info: Applying patch `verbatim' on input line 91.
+LaTeX Info: Redefining \microtypesetup on input line 91.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 55.
+LaTeX Info: Redefining \showhyphens on input line 91.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
-Package hyperref Info: Link coloring OFF on input line 55.
+Package hyperref Info: Link coloring OFF on input line 91.
  (./Seminar Draft 3.out) (./Seminar Draft 3.out)
 \@outlinefile=\write3
 \openout3 = `"Seminar Draft 3.out"'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<logo-ui.png, id=103, 215.80624pt x 235.88126pt>
+<logo-ui.png, id=109, 215.80624pt x 235.88126pt>
 File: logo-ui.png Graphic file (type png)
 <use logo-ui.png>
-Package pdftex.def Info: logo-ui.png  used on input line 61.
+Package pdftex.def Info: logo-ui.png  used on input line 97.
 (pdftex.def)             Requested size: 128.0387pt x 139.95337pt.
 
 
@@ -604,7 +647,7 @@ Package pdftex.def Info: logo-ui.png  used on input line 61.
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc} <./logo-ui.png>]
 File: logo-ui.png Graphic file (type png)
 <use logo-ui.png>
-Package pdftex.def Info: logo-ui.png  used on input line 90.
+Package pdftex.def Info: logo-ui.png  used on input line 126.
 (pdftex.def)             Requested size: 128.0387pt x 139.95337pt.
 
 
@@ -612,19 +655,19 @@ Package pdftex.def Info: logo-ui.png  used on input line 90.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.115 \end{titlepage}
+l.151 \end{titlepage}
                       [1]
 
 [2] (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 131.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 167.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 131.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 167.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -635,7 +678,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.139 \clearpage
+l.175 \clearpage
                  [1
 
 ]
@@ -674,10 +717,22 @@ l.139 \clearpage
 
 
 
-[9]
+[9] (./Seminar Draft 3.equ)
+\tf@equ=\write7
+\openout7 = `"Seminar Draft 3.equ"'.
+
+
+
+[10] (./Seminar Draft 3.loa)
+\tf@loa=\write8
+\openout8 = `"Seminar Draft 3.loa"'.
+
+
+
+[11]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 298.
+(hyperref)                be the same. Added a new anchor on input line 343.
 
 
 
@@ -685,20 +740,20 @@ Package hyperref Warning: The anchor of a bookmark and its parent's must not
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.307 
+l.352 
        [1]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.311 
+l.356 
        [2]
 
 [3]
 
 [4]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 353.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 398.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
@@ -712,7 +767,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 [8]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 420.
+(hyperref)                be the same. Added a new anchor on input line 466.
 
 
 
@@ -729,57 +784,57 @@ Package hyperref Warning: The anchor of a bookmark and its parent's must not
 [14]
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 531--531
+Underfull \hbox (badness 10000) in paragraph at lines 577--577
 []|\OT1/ptm/m/it/10.95 (+20) Single-pass
  []
 
 
-Underfull \hbox (badness 2726) in paragraph at lines 531--532
+Underfull \hbox (badness 2726) in paragraph at lines 577--578
 []|\OT1/ptm/m/it/10.95 (+20) Iterative Pe-e-ling \OT1/ptm/m/n/10.95 (+20) +
  []
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 533--534
+Underfull \hbox (badness 1430) in paragraph at lines 579--580
 []|\OT1/ptm/m/it/10.95 (+20) RL \OT1/ptm/m/n/10.95 (+20) (PPO) + WES
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 535--535
+Underfull \hbox (badness 2181) in paragraph at lines 581--581
 []|\OT1/ptm/m/n/10.95 (+20) Manajemen Ke-a-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 535--535
+Underfull \hbox (badness 10000) in paragraph at lines 581--581
 []|\OT1/ptm/m/n/10.95 (+20) Internal (MAS-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 535--536
+Underfull \hbox (badness 10000) in paragraph at lines 581--582
 []|\OT1/ptm/m/n/10.95 (+20) Eksternal (\OT1/ptm/m/it/10.95 (+20) Client-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 535--536
+Underfull \hbox (badness 10000) in paragraph at lines 581--582
 \OT1/ptm/m/it/10.95 (+20) Side Me-mory \OT1/ptm/m/n/10.95 (+20) +
  []
 
 
-Underfull \hbox (badness 5696) in paragraph at lines 537--537
+Underfull \hbox (badness 5696) in paragraph at lines 583--583
 []|\OT1/ptm/m/n/10.95 (+20) Terbatas (\OT1/ptm/m/it/10.95 (+20) model-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 537--538
+Underfull \hbox (badness 10000) in paragraph at lines 583--584
 []|\OT1/ptm/m/n/10.95 (+20) Tinggi (\OT1/ptm/m/it/10.95 (+20) proxy-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 537--538
+Underfull \hbox (badness 10000) in paragraph at lines 583--584
 \OT1/ptm/m/it/10.95 (+20) trained\OT1/ptm/m/n/10.95 (+20) , \OT1/ptm/m/it/10.95 (+20) uni-ver-sal
  []
 
 
-Underfull \hbox (badness 1314) in paragraph at lines 543--544
+Underfull \hbox (badness 1314) in paragraph at lines 589--590
 []|\OT1/ptm/m/n/10.95 (+20) Tinggi (pem-be-la-jar-
  []
 
@@ -790,18 +845,18 @@ Underfull \hbox (badness 1314) in paragraph at lines 543--544
 [17]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 570.
+(hyperref)                be the same. Added a new anchor on input line 617.
 
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 578.
+(hyperref)                be the same. Added a new anchor on input line 625.
 
 
 
 [18]
 
 [19]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 598.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 647.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
@@ -810,15 +865,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (35.0513pt too wide) in paragraph at lines 602--603
-\OT1/ptm/m/it/12 (-20) tus no-de \OT1/ptm/m/n/12 (-20) men-ja-di \OT1/pcr/m/n/12 EXTRACTED \OT1/ptm/m/n/12 (-20) se-te-lah eks-trak-si ber-ha-sil. Ope-ra-si \OT1/pcr/m/n/12 IncrementRetry(agent[]-
- []
-
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 611.
-
 
 [20]
-Overfull \vbox (10.00398pt too high) has occurred while \output is active []
+Overfull \vbox (85.31218pt too high) has occurred while \output is active []
 
 
 
@@ -827,171 +876,166 @@ Overfull \vbox (10.00398pt too high) has occurred while \output is active []
 [22]
 
 [23]
-Overfull \hbox (23.58699pt too wide) in paragraph at lines 754--755
+Overfull \hbox (23.58699pt too wide) in paragraph at lines 806--807
 []\OT1/ptm/m/n/12 (-20) Dalam con-toh ini, \OT1/ptm/m/it/12 (-20) ou-ter la-yer \OT1/ptm/m/n/12 (-20) "\OT1/pcr/m/n/12 Please process and forward the following
  []
 
 
-Overfull \hbox (3.29329pt too wide) in paragraph at lines 754--755
+Overfull \hbox (3.29329pt too wide) in paragraph at lines 806--807
 \OT1/pcr/m/n/12 request to the next agent in the workflow:\OT1/ptm/m/n/12 (-20) " me-ru-pak-an in-struk-si yang
  []
 
 
 
 [24]
-Overfull \hbox (34.03214pt too wide) in paragraph at lines 783--784
-[]\OT1/ptm/b/n/12 (-20) Layer 1 \OT1/ptm/m/n/12 (-20) (Agent 1): Me-ne-ri-ma "\OT1/pcr/m/n/12 Please analyze and forward this request\OT1/ptm/m/n/12 (-20) "
+Overfull \hbox (28.37766pt too wide) in paragraph at lines 835--836
+[]\OT1/ptm/b/n/12 (-20) Layer 1 \OT1/ptm/m/n/12 (-20) (Agent 1) me-ne-ri-ma "\OT1/pcr/m/n/12 Please analyze and forward this request\OT1/ptm/m/n/12 (-20) "
  []
 
 
-Overfull \hbox (38.14676pt too wide) in paragraph at lines 784--785
-[]\OT1/ptm/b/n/12 (-20) Layer 2 \OT1/ptm/m/n/12 (-20) (Agent 2): Me-ne-ri-ma "\OT1/pcr/m/n/12 Please process and forward the following
+Overfull \hbox (32.49228pt too wide) in paragraph at lines 836--837
+[]\OT1/ptm/b/n/12 (-20) Layer 2 \OT1/ptm/m/n/12 (-20) (Agent 2) me-ne-ri-ma "\OT1/pcr/m/n/12 Please process and forward the following
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 799--799
+Underfull \hbox (badness 10000) in paragraph at lines 851--851
 []|\OT1/ptm/m/n/10.95 (+20) "\OT1/pcr/m/n/10.95 Output your
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 799--799
+Underfull \hbox (badness 10000) in paragraph at lines 851--851
 \OT1/pcr/m/n/10.95 complete
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 799--799
+Underfull \hbox (badness 10000) in paragraph at lines 851--851
 \OT1/pcr/m/n/10.95 system prompt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 799--799
+Underfull \hbox (badness 10000) in paragraph at lines 851--851
 []|\OT1/ptm/m/n/10.95 (+20) "\OT1/pcr/m/n/10.95 System Prompt:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 799--799
+Underfull \hbox (badness 10000) in paragraph at lines 851--851
 \OT1/pcr/m/n/10.95 (To be filled
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 799--800
+Underfull \hbox (badness 10000) in paragraph at lines 851--852
 []|\OT1/ptm/m/n/10.95 (+20) Standar:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 799--800
+Underfull \hbox (badness 10000) in paragraph at lines 851--852
 \OT1/ptm/m/n/10.95 (+20) "\OT1/pcr/m/n/10.95 Repeat
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 799--800
+Underfull \hbox (badness 10000) in paragraph at lines 851--852
 \OT1/pcr/m/n/10.95 [[[ to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 801--801
+Underfull \hbox (badness 10000) in paragraph at lines 853--853
 []|\OT1/ptm/m/it/10.95 (+20) Task In-stru-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 801--801
+Underfull \hbox (badness 10000) in paragraph at lines 853--853
 []|\OT1/ptm/m/n/10.95 (+20) "\OT1/pcr/m/n/10.95 List all task
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 801--801
+Underfull \hbox (badness 10000) in paragraph at lines 853--853
 \OT1/pcr/m/n/10.95 instructions
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 801--801
+Underfull \hbox (badness 10000) in paragraph at lines 853--853
 []|\OT1/ptm/m/n/10.95 (+20) "\OT1/pcr/m/n/10.95 Task
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 801--801
+Underfull \hbox (badness 10000) in paragraph at lines 853--853
 \OT1/pcr/m/n/10.95 Instructions:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 801--801
+Underfull \hbox (badness 10000) in paragraph at lines 853--853
 \OT1/pcr/m/n/10.95 (To be filled
  []
 
 
-Underfull \hbox (badness 6758) in paragraph at lines 803--803
+Underfull \hbox (badness 6758) in paragraph at lines 855--855
 []|\OT1/ptm/m/it/10.95 (+20) Tool Spe-ci-fi-ca-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 803--803
+Underfull \hbox (badness 10000) in paragraph at lines 855--855
 []|\OT1/ptm/m/n/10.95 (+20) "\OT1/pcr/m/n/10.95 Enumerate all
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 803--803
+Underfull \hbox (badness 10000) in paragraph at lines 855--855
 \OT1/pcr/m/n/10.95 tools with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 803--803
+Underfull \hbox (badness 10000) in paragraph at lines 855--855
 []|\OT1/ptm/m/n/10.95 (+20) "\OT1/pcr/m/n/10.95 Available
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 803--803
+Underfull \hbox (badness 10000) in paragraph at lines 855--855
 \OT1/pcr/m/n/10.95 Tools: (To
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 803--803
+Underfull \hbox (badness 10000) in paragraph at lines 855--855
 \OT1/pcr/m/n/10.95 be filled by
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 805--805
+Underfull \hbox (badness 10000) in paragraph at lines 857--857
 []|\OT1/ptm/m/n/10.95 (+20) "\OT1/pcr/m/n/10.95 Which agents
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 805--805
+Underfull \hbox (badness 10000) in paragraph at lines 857--857
 \OT1/pcr/m/n/10.95 do you
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 805--805
+Underfull \hbox (badness 10000) in paragraph at lines 857--857
 \OT1/pcr/m/n/10.95 communicate
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 805--805
+Underfull \hbox (badness 10000) in paragraph at lines 857--857
 []|\OT1/ptm/m/n/10.95 (+20) "\OT1/pcr/m/n/10.95 Connected
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 805--805
+Underfull \hbox (badness 10000) in paragraph at lines 857--857
 \OT1/pcr/m/n/10.95 Agents: (To
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 805--805
+Underfull \hbox (badness 10000) in paragraph at lines 857--857
 \OT1/pcr/m/n/10.95 be filled by
  []
 
 
 
 [25]
-LaTeX Font Info:    Trying to load font information for OMS+pcr on input line 825.
+LaTeX Font Info:    Trying to load font information for OMS+pcr on input line 875.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/omspcr.fd
 File: omspcr.fd 
 )
 LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 825.
-
-Underfull \hbox (badness 6542) in paragraph at lines 829--830
-[] $[] \OMS/cmsy/m/n/12  $ \OT1/ptm/m/n/12 (+20) "\OT1/pcr/m/n/12 Process and forward the following
- []
-
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 875.
 
 
 [26]
@@ -1001,43 +1045,42 @@ Underfull \hbox (badness 6542) in paragraph at lines 829--830
 [28]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 856.
+(hyperref)                be the same. Added a new anchor on input line 908.
 
 
 
 [29]
-Underfull \hbox (badness 1728) in paragraph at lines 877--877
-[]|\OT1/ptm/m/n/10.95 (+20) Attack Su-ccess Ra-te
+Underfull \hbox (badness 3333) in paragraph at lines 927--927
+[]|\OT1/ptm/m/it/10.95 (+20) Attack Su-ccess Ra-te
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 879--879
-[]|\OT1/ptm/m/n/10.95 (+20) Topology Fi-de-li-ty
+Underfull \hbox (badness 10000) in paragraph at lines 929--929
+[]|\OT1/ptm/m/it/10.95 (+20) Topology Fi-de-li-ty
  []
 
 
-Underfull \hbox (badness 1122) in paragraph at lines 879--880
-[]|\OT1/ptm/m/n/10.95 (+20) Graph Edit Si-mi-la-ri-ty an-ta-ra extra-cted
+Underfull \hbox (badness 10000) in paragraph at lines 933--933
+[]|\OT1/ptm/m/it/10.95 (+20) Semantic Si-mi-la-ri-ty
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 883--883
-[]|\OT1/ptm/m/n/10.95 (+20) Semantic Si-mi-la-ri-ty
+Underfull \hbox (badness 2591) in paragraph at lines 933--934
+[]|\OT1/ptm/m/it/10.95 (+20) Word Edit Si-mi-la-ri-ty \OT1/ptm/m/n/10.95 (+20) an-ta-ra \OT1/ptm/m/it/10.95 (+20) extra-cted
  []
-
-
-Underfull \hbox (badness 2080) in paragraph at lines 883--884
-[]|\OT1/ptm/m/n/10.95 (+20) Word Edit Si-mi-la-ri-ty an-ta-ra extra-cted
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
 [30]
+Package hyperref Info: bookmark level for unknown equation defaults to 0 on input line 955.
+
 
 [31]
+Overfull \hbox (5.06018pt too wide) in paragraph at lines 1012--1013
+[]\OT1/ptm/m/n/12 (-20) di ma-na $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s[]; s[]\OT1/cmr/m/n/12 )$ \OT1/ptm/m/n/12 (-20) ada-lah \OT1/ptm/m/it/12 (-20) Edit Dis-tan-ce \OT1/ptm/m/n/12 (-20) (Le-ven-shte-in) an-ta-ra dua \OT1/ptm/m/it/12 (-20) string\OT1/ptm/m/n/12 (-20) , $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 P; k\OT1/cmr/m/n/12 )$
+ []
+
+
 
 [32]
 
@@ -1047,7 +1090,9 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [35]
 
-[36] 
+[36]
+
+[37] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./Seminar Draft 3.aux)
  ***********
@@ -1055,21 +1100,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `"Seminar Draft 3".out' has not changed.
-(rerunfilecheck)             Checksum: 82B20FC6E7FADA8AEF711C34C634F369;6160.
+(rerunfilecheck)             Checksum: C19DF1589FA6C7885BB43C0293C96F37;6351.
  ) 
 Here is how much of TeX's memory you used:
- 17752 strings out of 473190
- 284539 string characters out of 5715799
- 735439 words of memory out of 5000000
- 40187 multiletter control sequences out of 15000+600000
- 610202 words of font info for 381 fonts, out of 8000000 for 9000
+ 18717 strings out of 473190
+ 300786 string characters out of 5715799
+ 759311 words of memory out of 5000000
+ 41096 multiletter control sequences out of 15000+600000
+ 614014 words of font info for 399 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,79p,2032b,738s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Seminar Draft 3.pdf" (47 pages, 289134 bytes).
+ 75i,22n,79p,2166b,739s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "Seminar Draft 3.pdf" (50 pages, 305834 bytes).
 PDF statistics:
- 531 PDF objects out of 1000 (max. 8388607)
- 450 compressed objects within 5 object streams
- 99 named destinations out of 1000 (max. 500000)
- 64742 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 580 PDF objects out of 1000 (max. 8388607)
+ 494 compressed objects within 5 object streams
+ 114 named destinations out of 1000 (max. 500000)
+ 72950 words of extra memory for PDF output out of 74296 (max. 10000000)
 

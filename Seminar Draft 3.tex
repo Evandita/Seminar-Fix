@@ -21,19 +21,55 @@
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{caption}
-\usepackage{algorithm}
+\usepackage[ruled,vlined]{algorithm2e}
 \usepackage{algpseudocode}
-\captionsetup[table]{justification=justified,singlelinecheck=false}
+\captionsetup[table]{justification=centering,singlelinecheck=false,position=below}
+
+% Numbering untuk table, equation, dan algorithm berdasarkan section
+\numberwithin{table}{section}
+\numberwithin{equation}{section}
+\numberwithin{algocf}{section}
+
+% Rename list of algorithms and add to TOC
+\renewcommand{\listalgorithmcfname}{Daftar Kode}
+\makeatletter
+\let\originalistofalgorithms\listofalgorithms
+\renewcommand{\listofalgorithms}{%
+  \section*{\listalgorithmcfname}
+  \addcontentsline{toc}{section}{\listalgorithmcfname}
+  \@starttoc{loa}
+}
+\makeatother
+
+% Definisi list untuk rumus
+\makeatletter
+\newcommand{\listofequations}{%
+  \section*{Daftar Rumus}
+  \addcontentsline{toc}{section}{Daftar Rumus}
+  \@starttoc{equ}
+}
+\newcommand{\equcaption}[1]{%
+  \addcontentsline{equ}{equation}{%
+    \protect\numberline{\theequation}#1}%
+}
+\newcommand{\l@equation}{\@dottedtocline{1}{1.5em}{2.3em}}
+\makeatother
 
 % Set spasi 1.5
 \onehalfspacing
 
 % Format section
-\titleformat{\section}{\normalfont\fontsize{12}{15}\bfseries\centering}{}{0em}{}
+\titleformat{\section}{\normalfont\fontsize{18}{15}\bfseries\centering}{}{0em}{}
 \titleformat{\subsection}{\normalfont\fontsize{12}{15}\bfseries\raggedright}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\normalfont\fontsize{12}{15}\bfseries\raggedright}{\thesubsubsection}{1em}{}
 
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% Format list of figures, tables, equations, algorithms dengan font size yang sama
+\renewcommand{\cftfigfont}{\normalfont\fontsize{12}{15}\selectfont}
+\renewcommand{\cfttabfont}{\normalfont\fontsize{12}{15}\selectfont}
+\renewcommand{\cftfigpagefont}{\normalfont\fontsize{12}{15}\selectfont}
+\renewcommand{\cfttabpagefont}{\normalfont\fontsize{12}{15}\selectfont}
 
 % Header dan Footer
 \pagestyle{fancy}
@@ -284,6 +320,14 @@ The proposed methodology synthesizes two cutting-edge adversarial approaches: th
 \listoftables
 \thispagestyle{fancy}
 
+\newpage
+\listofequations
+\thispagestyle{fancy}
+
+\newpage
+\listofalgorithms
+\thispagestyle{fancy}
+
 % ============================
 % ISI DOKUMEN
 % ============================
@@ -291,13 +335,14 @@ The proposed methodology synthesizes two cutting-edge adversarial approaches: th
 \newpage
 \pagenumbering{arabic}
 \setcounter{page}{1}
+\setcounter{section}{1}
 \section*{BAB I \\ PENDAHULUAN}
 \addcontentsline{toc}{section}{BAB I PENDAHULUAN}
 
 \subsection*{1.1 Latar Belakang}
 \addcontentsline{toc}{subsection}{1.1 Latar Belakang}
 \justifying
-Perkembangan teknologi kecerdasan buatan saat ini mengalami transformasi yang signifikan. Sebelumnya, sistem AI didominasi oleh model bahasa besar (\textit{Large Language Model}/LLM) yang beroperasi secara mandiri. Namun saat ini, telah berkembang sistem yang lebih kompleks yaitu \textit{Multi-Agent Systems} (MAS). Jika LLM tradisional dapat dianalogikan sebagai seorang ahli yang bekerja secara independen, maka MAS merepresentasikan sebuah tim yang terdiri dari beberapa agen dengan keahlian yang berbeda, misalnya yang berperan sebagai analis keuangan, programmer, atau pengawas etika, yang berkolaborasi untuk menyelesaikan permasalahan kompleks.\cite{ref1} Platform seperti CrewAI, AutoGen, dan Coze memfasilitasi pengembang untuk membangun sistem semacam ini, di mana keluaran dari satu agen dapat menjadi masukan bagi agen lainnya, sehingga menghasilkan solusi yang lebih optimal dibandingkan dengan penggunaan model tunggal.
+Perkembangan teknologi kecerdasan buatan saat ini mengalami transformasi yang signifikan. Sebelumnya, sistem AI didominasi oleh model bahasa besar (\textit{Large Language Model}/LLM) yang beroperasi secara mandiri. Namun saat ini, telah berkembang sistem yang lebih kompleks yaitu \textit{Multi-Agent Systems} (MAS). Jika LLM tradisional dapat dianalogikan sebagai seorang ahli yang bekerja secara independen, maka MAS merepresentasikan sebuah tim yang terdiri dari beberapa agen dengan keahlian yang berbeda, misalnya yang berperan sebagai analis keuangan, programmer, atau pengawas etika, yang berkolaborasi untuk menyelesaikan permasalahan kompleks.\cite{ref1} Platform \textit{open-source} seperti AutoGen memfasilitasi pengembang untuk membangun sistem semacam ini secara lokal, di mana keluaran dari satu agen dapat menjadi masukan bagi agen lainnya, sehingga menghasilkan solusi yang lebih optimal dibandingkan dengan penggunaan model tunggal.
 
 Seiring dengan transformasi arsitektural ini, metodologi evaluasi keamanan yang telah dikembangkan untuk \textit{single-agent} LLM menghadapi tantangan signifikan ketika diaplikasikan pada lingkungan \textit{multi-agent}. Teknik-teknik serangan \textit{adversarial} yang terbukti efektif untuk mengekstraksi informasi sensitif dari agen tunggal, seperti \textit{prompt injection}, \textit{jailbreaking}, dan \textit{privacy leakage attacks}, mengalami penurunan efektivitas drastis dalam konteks MAS.\cite{ref3} Hal ini disebabkan oleh beberapa faktor fundamental, seperti kompleksitas topologi komunikasi antar agen yang menciptakan lapisan pertahanan implisit melalui distribusi informasi, fenomena degradasi konteks (\textit{Lost in the Middle}) yang menyebabkan instruksi \textit{adversarial} kehilangan efektivitasnya saat melewati rantai agen yang panjang, dan keterbatasan visibilitas penyerang terhadap \textit{state internal} sistem yang mengakibatkan kesulitan dalam optimasi strategi serangan secara adaptif.\cite{ref1}
 
@@ -340,7 +385,7 @@ Penelitian ini bertujuan untuk mengembangkan kerangka kerja serangan \textit{adv
     Mengimplementasikan \textit{pipeline} pelatihan menggunakan algoritma \textit{Proximal Policy Optimization} (PPO) dengan fungsi \textit{reward} berbasis \textit{Word Edit Similarity} (WES) untuk melatih \textit{attack agent} pada model proksi \textit{open-source}. Tujuannya adalah menghasilkan \textit{prompt adversarial} yang memiliki efektivitas tinggi, keragaman yang memadai untuk menghindari deteksi, dan transferabilitas yang kuat untuk dapat diaplikasikan pada berbagai arsitektur MAS \textit{black-box} dengan model LLM yang berbeda-beda.\cite{ref3}
     \item \textbf{Evaluasi Empiris Transferabilitas dan Efektivitas Sistem}
     
-    Melakukan eksperimen komprehensif pada tiga kategori lingkungan, yakni dataset sintetis untuk validasi internal dengan \textit{ground truth} yang diketahui, aplikasi \textit{honeypot} pada platform komersial (Coze, CrewAI) untuk pengujian kondisi \textit{real-world}, dan aplikasi produktif dari GPT Store untuk validasi transferabilitas \textit{in the wild}. Evaluasi menggunakan metrik kuantitatif meliputi \textit{Attack Success Rate} (ASR), \textit{Topology Fidelity} ($GS_{topo}$), dan \textit{Extraction Efficiency}, dengan perbandingan terhadap metode \textit{baseline} seperti MASLEAK dan PromptFuzz untuk mengukur peningkatan performa yang dicapai.\cite{ref8}
+    Melakukan eksperimen komprehensif pada dua kategori lingkungan: (1) \textit{dataset} sintetis pribadi yang dibuat oleh peneliti dengan kriteria serupa mencakup berbagai variasi topologi (\textit{Chain}, \textit{Star}, \textit{Tree}, \textit{Random}, \textit{Complete}) untuk validasi internal dengan \textit{ground truth} yang diketahui, dan (2) MAS \textit{open-source} berbasis Llama-3 yang di-\textit{deploy} secara lokal untuk pengujian dalam lingkungan terkontrol. Evaluasi menggunakan metrik kuantitatif meliputi \textit{Attack Success Rate} (ASR), \textit{Topology Fidelity} ($GS_{topo}$), dan \textit{Extraction Efficiency}, dengan perbandingan terhadap metode \textit{baseline} seperti MASLEAK dan PromptFuzz untuk mengukur peningkatan performa yang dicapai. Seluruh eksperimen dilakukan pada infrastruktur lokal menggunakan model \textit{open-source} untuk meminimalisir dampak bahaya dan memastikan \textit{reproducibility}.
 \end{enumerate}
 
 \subsection*{1.4 Manfaat Penelitian}
@@ -356,7 +401,7 @@ Penelitian ini diharapkan memberikan kontribusi yang signifikan bagi pengembanga
     \end{itemize}
     \item \textbf{Manfaat Praktis untuk Industri}
     \begin{itemize}
-        \item Mengidentifikasi kerentanan kritis dalam arsitektur MAS komersial yang mengandalkan \textit{security by obscurity}, memberikan bukti empiris (\textit{proof-of-concept}) yang dapat mendorong pengembang platform seperti CrewAI, AutoGen, dan Coze untuk mengimplementasikan mekanisme pertahanan yang lebih \textit{robust}.
+        \item Mengidentifikasi kerentanan kritis dalam arsitektur MAS yang mengandalkan \textit{security by obscurity}, memberikan bukti empiris (\textit{proof-of-concept}) yang dapat mendorong pengembang platform \textit{open-source} seperti AutoGen untuk mengimplementasikan mekanisme pertahanan yang lebih \textit{robust}.
         \item Meningkatkan kesadaran perusahaan yang mengembangkan atau menggunakan MAS tentang pentingnya melindungi arsitektur kognitif sebagai aset Kekayaan Intelektual (IP), termasuk risiko kloning sistem dan pencurian konfigurasi melalui serangan \textit{adversarial}.
         \item Menyediakan \textit{baseline} untuk pengembangan mekanisme pertahanan adaptif yang dapat mendeteksi dan memitigasi serangan berbasis \textit{iterative extraction}, seperti anomali deteksi pada pola \textit{query} atau implementasi verifikasi berlapis pada komunikasi antar agen.
     \end{itemize}
@@ -378,15 +423,15 @@ Untuk memastikan kedalaman analisis dan kelayakan pelaksanaan dalam kerangka wak
     
     \item \textbf{Domain \textit{Multi-Agent Systems} Berbasis LLM}
     
-    Analisis dibatasi pada sistem \textit{multi-agent} berbasis \textit{Large Language Model} (LLM) yang berinteraksi terutama melalui teks dalam bahasa alami dan API terstruktur, seperti platform CrewAI, AutoGen, dan Coze. Penelitian fokus pada adaptasi metodologi serangan dari lingkungan \textit{single-agent} ke \textit{multi-agent}, khususnya mengatasi tantangan kompleksitas topologi komunikasi dan distribusi informasi antar agen. Sistem yang menggunakan modalitas lain seperti gambar, audio, atau video tidak termasuk dalam ruang lingkup penelitian ini. Fokus pada komunikasi tekstual memungkinkan evaluasi mendalam terhadap efektivitas \textit{iterative peeling} dalam menavigasi struktur berlapis MAS dan validasi transferabilitas \textit{prompt adversarial} yang dihasilkan melalui \textit{Reinforcement Learning}. Pembatasan ini juga memfasilitasi implementasi metrik evaluasi semantik seperti \textit{Word Edit Similarity} yang bergantung pada analisis teks.
+    Analisis dibatasi pada sistem \textit{multi-agent} berbasis \textit{Large Language Model} (LLM) \textit{open-source} yang berinteraksi terutama melalui teks dalam bahasa alami dan API terstruktur, seperti platform AutoGen. Penelitian fokus pada adaptasi metodologi serangan dari lingkungan \textit{single-agent} ke \textit{multi-agent}, khususnya mengatasi tantangan kompleksitas topologi komunikasi dan distribusi informasi antar agen. Sistem yang menggunakan modalitas lain seperti gambar, audio, atau video tidak termasuk dalam ruang lingkup penelitian ini. Fokus pada komunikasi tekstual memungkinkan evaluasi mendalam terhadap efektivitas \textit{iterative peeling} dalam menavigasi struktur berlapis MAS dan validasi transferabilitas \textit{prompt adversarial} yang dihasilkan melalui \textit{Reinforcement Learning}. Pembatasan ini juga memfasilitasi implementasi metrik evaluasi semantik seperti \textit{Word Edit Similarity} yang bergantung pada analisis teks.
     
     \item \textbf{Lingkungan Eksperimen Terkontrol}
     
-    Evaluasi dilakukan pada tiga kategori lingkungan yang berbeda untuk memvalidasi efektivitas \textit{iterative peeling} dan \textit{Client-Side Memory}. Pertama, \textit{dataset} sintetis MASD (\textit{Multi-Agent System Dataset}) yang berisi 810 aplikasi MAS dengan topologi bervariasi (\textit{Chain}, \textit{Star}, \textit{Tree}, \textit{Random}, \textit{Complete}) menyediakan \textit{ground truth} untuk pengukuran presisi metrik seperti \textit{Topology Fidelity}. Kedua, aplikasi \textit{honeypot} yang \textit{di-deploy} khusus untuk tujuan penelitian pada platform komersial seperti Coze dan CrewAI memungkinkan pengujian dalam kondisi \textit{real-world} dengan \textit{API limitations} dan mekanisme pertahanan aktual. Ketiga, aplikasi produktif dari GPT Store untuk validasi transferabilitas \textit{in the wild}. Pendekatan bertingkat ini memastikan tidak ada sistem produksi yang terpapar risiko tanpa izin eksplisit, sejalan dengan prinsip \textit{ethical research}, sambil memberikan validasi komprehensif terhadap kemampuan adaptif \textit{Client-Side Memory} dalam berbagai skenario kompleksitas.
+    Evaluasi dilakukan pada dua kategori lingkungan yang berbeda untuk memvalidasi efektivitas \textit{iterative peeling} dan \textit{Client-Side Memory}. Pertama, \textit{dataset} sintetis pribadi yang dibuat oleh tim peneliti dengan kriteria serupa mencakup berbagai aplikasi MAS dengan topologi bervariasi (\textit{Chain}, \textit{Star}, \textit{Tree}, \textit{Random}, \textit{Complete}) untuk menyediakan \textit{ground truth} yang dibutuhkan dalam pengukuran presisi metrik seperti \textit{Topology Fidelity}. Kedua, MAS \textit{open-source} yang di-\textit{deploy} secara lokal menggunakan model Llama-3 dengan berbagai konfigurasi topologi untuk pengujian dalam lingkungan terkontrol. Pendekatan ini memastikan tidak ada sistem eksternal yang terpapar risiko, sejalan dengan prinsip \textit{ethical research} dan meminimalisir dampak bahaya, sambil memberikan validasi komprehensif terhadap kemampuan adaptif \textit{Client-Side Memory} dalam berbagai skenario kompleksitas. Seluruh infrastruktur eksperimen bersifat lokal dan menggunakan model \textit{open-source} untuk memastikan \textit{reproducibility} dan transparansi metodologi.
     
     \item \textbf{Model Bahasa dan \textit{Proxy Training}}
     
-    Pelatihan \textit{attack agent} menggunakan algoritma \textit{Proximal Policy Optimization} (PPO) dengan konfigurasi Llama-3-8B sebagai \textit{attack agent} dan Llama-3-70B sebagai \textit{target proxy white-box}. Pemilihan model \textit{open-source} didasarkan pada pertimbangan transparansi eksperimental, reprodusibilitas hasil, dan aksesibilitas bagi komunitas penelitian. Hipotesis transferabilitas yang mendasari penelitian ini adalah bahwa \textit{prompt adversarial} yang dioptimalkan pada model proksi dapat ditransfer ke berbagai arsitektur MAS \textit{black-box} dengan model LLM berbeda (GPT-4, Claude, dll.) karena keselarasan universal (\textit{universal alignment}) dalam mekanisme model bahasa untuk mengikuti instruksi sistem. Validasi hipotesis ini dilakukan melalui eksperimen pada platform komersial yang menggunakan model \textit{proprietary}. Proses \textit{training} dan optimasi kebijakan serangan dilakukan sepenuhnya menggunakan infrastruktur model terbuka untuk memastikan metodologi dapat diverifikasi dan direplikasi tanpa bergantung pada akses ke model komersial yang berbiaya tinggi.
+    Pelatihan \textit{attack agent} menggunakan algoritma \textit{Proximal Policy Optimization} (PPO) dengan konfigurasi Llama-3-8B sebagai \textit{attack agent} dan Llama-3-70B sebagai \textit{target proxy white-box}. Pemilihan model \textit{open-source} didasarkan pada pertimbangan transparansi eksperimental, reprodusibilitas hasil, dan aksesibilitas bagi komunitas penelitian. Hipotesis transferabilitas yang mendasari penelitian ini adalah bahwa \textit{prompt adversarial} yang dioptimalkan pada model proksi dapat ditransfer ke berbagai arsitektur MAS dengan konfigurasi Llama-3 yang berbeda-beda karena keselarasan universal (\textit{universal alignment}) dalam mekanisme model bahasa untuk mengikuti instruksi sistem. Validasi hipotesis ini dilakukan melalui eksperimen pada MAS lokal dengan variasi konfigurasi \textit{system prompt} dan topologi yang berbeda. Proses \textit{training} dan optimasi kebijakan serangan dilakukan sepenuhnya menggunakan infrastruktur model terbuka untuk memastikan metodologi dapat diverifikasi dan direplikasi tanpa bergantung pada akses ke model eksternal yang berpotensi menimbulkan dampak bahaya.
     
     \item \textbf{Fokus pada \textit{Offensive Security}}
     
@@ -408,11 +453,12 @@ Dokumen seminar ini disusun secara sistematis dalam tiga bab utama yang saling t
     
     \item \textbf{BAB III METODOLOGI PENELITIAN}
     
-    Bab ini mendeskripsikan metodologi PTRW yang terdiri dari Tahap Pelatihan (\textit{Adversarial Prompt Training}) menggunakan PPO dan Tahap Implementasi (\textit{Attack Deployment System}) dengan mekanisme \textit{iterative peeling} dan \textit{Client-Side Memory}. Protokol evaluasi meliputi pengujian pada dataset MASD, \textit{honeypots} komersial, dan GPT Store dengan metrik kuantitatif serta validasi statistik.
+    Bab ini mendeskripsikan metodologi PTRW yang terdiri dari Tahap Pelatihan (\textit{Adversarial Prompt Training}) menggunakan PPO dan Tahap Implementasi (\textit{Attack Deployment System}) dengan mekanisme \textit{iterative peeling} dan \textit{Client-Side Memory}. Protokol evaluasi meliputi pengujian pada \textit{dataset} sintetis pribadi dengan berbagai variasi topologi dan MAS lokal berbasis \textit{open-source} dengan metrik kuantitatif serta validasi statistik.
 \end{enumerate}
 
 \newpage
 
+\setcounter{section}{2}
 \section*{BAB II \\ TINJAUAN PUSTAKA}
 \addcontentsline{toc}{section}{BAB II TINJAUAN PUSTAKA}
 
@@ -563,6 +609,7 @@ Analisis pada Tabel 2.1 menunjukkan bahwa PTRW mengatasi keterbatasan fundamenta
 
 \newpage
 
+\setcounter{section}{3}
 \section*{BAB III \\ METODOLOGI PENELITIAN}
 \addcontentsline{toc}{section}{BAB III METODOLOGI PENELITIAN}
 
@@ -578,20 +625,22 @@ Metodologi penelitian dibagi menjadi dua tahap utama yang saling melengkapi: Tah
 \addcontentsline{toc}{subsubsection}{3.2.1 Tahap Pelatihan: Optimasi Prompt Adversarial}
 Tahap pelatihan mengikuti protokol LeakAgent untuk menghasilkan prompt adversarial ($Q_{Leak}$) yang dioptimalkan menggunakan Proximal Policy Optimization (PPO). Metodologi ini terdiri dari beberapa komponen utama yang terintegrasi secara sistematis.
 
-Arsitektur pelatihan berbasis proksi merupakan fondasi dari tahap ini. Sistem menggunakan model open-source Llama-3-8B sebagai attack agent yang akan dilatih, sementara model yang lebih besar yaitu Llama-3-70B berfungsi sebagai target proxy white-box. Pemilihan arsitektur ini didasarkan pada asumsi fundamental bahwa system prompts di berbagai domain dan model berbagi struktur semantik universal. Struktur ini umumnya mengikuti pola seperti "You are a... Your goal is... Constraints: [List]". Dengan demikian, prompt adversarial yang berhasil mengeksploitasi kerentanan kognitif "instruction overriding" pada satu LLM cenderung dapat digeneralisasi karena menargetkan perilaku alignment universal yang dibagikan oleh sebagian besar model yang telah di-tuned menggunakan Reinforcement Learning from Human Feedback (RLHF).\cite{ref1}
+Arsitektur pelatihan berbasis proksi merupakan fondasi dari tahap ini. Sistem menggunakan model \textit{open-source} Llama-3-8B sebagai \textit{attack agent} yang akan dilatih, sementara model yang lebih besar yaitu Llama-3-70B berfungsi sebagai \textit{target proxy white-box}. Pemilihan arsitektur ini didasarkan pada asumsi fundamental bahwa \textit{system prompts} di berbagai \textit{domain} dan model berbagi struktur semantik universal. Struktur ini umumnya mengikuti pola seperti "You are a... Your goal is... Constraints: [List]". Dengan demikian, \textit{prompt adversarial} yang berhasil mengeksploitasi kerentanan kognitif "\textit{instruction overriding}" pada satu LLM cenderung dapat digeneralisasi karena menargetkan perilaku \textit{alignment} universal yang dibagikan oleh sebagian besar model yang telah di-\textit{tuned} menggunakan \textit{Reinforcement Learning from Human Feedback} (RLHF).\cite{ref1}
 
-Proses optimasi dilakukan menggunakan kombinasi PPO dan Entropy Regularization. PPO dipilih sebagai algoritma pembelajaran utama karena memiliki keunggulan dibandingkan algoritma lain seperti DQN atau algoritma genetika. Keunggulan PPO terletak pada stabilitasnya dalam menangani action space diskrit seperti generasi teks, serta kemampuannya melakukan fine-tuning pada model bahasa tanpa mengalami catastrophic forgetting. Mekanisme kerja PPO memungkinkan attack agent untuk memperbarui kebijakannya berdasarkan expected reward dari urutan yang dihasilkan, sehingga memberikan directional gradient yang mengarahkan pembelajaran menuju prompt yang lebih efektif dengan kecepatan jauh lebih tinggi dibandingkan random search.\cite{ref1} Entropy regularization ditambahkan sebagai komponen pelengkap untuk mendorong eksplorasi ruang prompt yang lebih luas dan mencegah terjadinya mode collapse, di mana model hanya menghasilkan variasi terbatas dari prompt yang sama.
+Proses optimasi dilakukan menggunakan kombinasi PPO dan \textit{Entropy Regularization}. PPO dipilih sebagai algoritma pembelajaran utama karena memiliki keunggulan dibandingkan algoritma lain seperti DQN atau algoritma genetika. Keunggulan PPO terletak pada stabilitasnya dalam menangani \textit{action space} diskrit seperti generasi teks, serta kemampuannya melakukan \textit{fine-tuning} pada model bahasa tanpa mengalami \textit{catastrophic forgetting}. Mekanisme kerja PPO memungkinkan \textit{attack agent} untuk memperbarui kebijakannya berdasarkan \textit{expected reward} dari urutan yang dihasilkan, sehingga memberikan \textit{directional gradient} yang mengarahkan pembelajaran menuju \textit{prompt} yang lebih efektif dengan kecepatan jauh lebih tinggi dibandingkan \textit{random search}.\cite{ref1} \textit{Entropy regularization} ditambahkan sebagai komponen pelengkap untuk mendorong eksplorasi ruang \textit{prompt} yang lebih luas dan mencegah terjadinya \textit{mode collapse}, di mana model hanya menghasilkan variasi terbatas dari \textit{prompt} yang sama.
 
-Fungsi reward yang diimplementasikan adalah Sliding-window Word Edit Similarity (WES) yang diperkaya untuk memberikan dense reward signal. Berbeda dengan reward biner sederhana, fungsi WES memberikan feedback bertingkat di mana attack agent menerima positive reward bahkan ketika target agent hanya membocorkan fragmen dari system prompt. Mekanisme ini memungkinkan pembelajaran gradual yang lebih efektif. Sistem juga menerapkan dynamic temperature adjustment sebagai strategi pembelajaran adaptif: pada tahap early training, temperature tinggi ($T_{high} \gg 1$) dikombinasikan dengan top-k filtering untuk mendorong eksplorasi ruang prompt yang luas, kemudian temperature secara bertahap diturunkan ke nilai baseline $T_{base}$ saat model mulai konvergen untuk mengeksploitasi strategi yang telah ditemukan.\cite{ref1}
+Fungsi \textit{reward} yang diimplementasikan adalah \textit{Sliding-window Word Edit Similarity} (WES) yang diperkaya untuk memberikan \textit{dense reward signal}. Berbeda dengan \textit{reward} biner sederhana, fungsi WES memberikan \textit{feedback} bertingkat di mana \textit{attack agent} menerima \textit{positive reward} bahkan ketika \textit{target agent} hanya membocorkan fragmen dari \textit{system prompt}. Mekanisme ini memungkinkan pembelajaran \textit{gradual} yang lebih efektif. Sistem juga menerapkan \textit{dynamic temperature adjustment} sebagai strategi pembelajaran adaptif: pada tahap \textit{early training}, \textit{temperature} tinggi ($T_{high} \gg 1$) dikombinasikan dengan \textit{top-k filtering} untuk mendorong eksplorasi ruang \textit{prompt} yang luas, kemudian \textit{temperature} secara bertahap diturunkan ke nilai \textit{baseline} $T_{base}$ saat model mulai konvergen untuk mengeksploitasi strategi yang telah ditemukan.\cite{ref1}
 
-Diversity regularization merupakan komponen terakhir yang memastikan kualitas output. Mekanisme ini bekerja dengan membandingkan setiap prompt baru yang dihasilkan dengan buffer yang berisi prompt-prompt sukses sebelumnya. Jika prompt baru terbukti semantically distinct (berbeda secara makna) namun tetap berhasil melakukan ekstraksi, sistem memberikan bonus reward. Strategi ini memastikan bahwa proses training menghasilkan "arsenal" yang beragam dari $Q_{Leak}$ dengan karakteristik dan pendekatan yang berbeda-beda, bukan hanya menghasilkan satu silver bullet tunggal yang mungkin tidak efektif dalam semua situasi.\cite{ref1}
+\textit{Diversity regularization} merupakan komponen terakhir yang memastikan kualitas \textit{output}. Mekanisme ini bekerja dengan membandingkan setiap \textit{prompt} baru yang dihasilkan dengan \textit{buffer} yang berisi \textit{prompt-prompt} sukses sebelumnya. Jika \textit{prompt} baru terbukti \textit{semantically distinct} (berbeda secara makna) namun tetap berhasil melakukan ekstraksi, sistem memberikan \textit{bonus reward}. Strategi ini memastikan bahwa proses \textit{training} menghasilkan "\textit{arsenal}" yang beragam dari $Q_{Leak}$ dengan karakteristik dan pendekatan yang berbeda-beda, bukan hanya menghasilkan satu \textit{silver bullet} tunggal yang mungkin tidak efektif dalam semua situasi.\cite{ref1}
 
 \subsubsection*{3.2.2 Tahap Implementasi: Arsitektur Pengiriman Serangan}
 \addcontentsline{toc}{subsubsection}{3.2.2 Tahap Implementasi: Arsitektur Pengiriman Serangan}
 
 Tahap implementasi mengimplementasikan mekanisme \textit{Proxy-Trained Recursive Worm} (PTRW) yang mengintegrasikan \textit{Client-Side Memory} dengan algoritma \textit{Iterative Peeling}. Tahap ini merupakan manifestasi praktis dari hipotesis "\textit{Stateless Unit Test}" yang menjadi fondasi metodologi penelitian. Berbeda dengan serangan \textit{single-pass} seperti MASLEAK yang rentan terhadap \textit{context degradation} dan \textit{single point of failure}, PTRW melakukan ekstraksi berlapis secara sistematis dengan manajemen \textit{state} eksternal yang memungkinkan isolasi kegagalan dan \textit{retry mechanism}.\cite{ref1}
 
-\textbf{A. Client-Side Memory dengan Graph Database}
+\vspace{0.5cm}
+
+\noindent\textbf{A. Client-Side Memory dengan Graph Database}
 
 \textit{Client-Side Memory} dengan basis data graf merupakan komponen inti dari sistem pengiriman yang memungkinkan eksternalisasi \textit{state} serangan. Implementasi dilakukan menggunakan Neo4j sebagai \textit{database} graf atau alternatif penyimpanan JSON terstruktur, bergantung pada kebutuhan \textit{deployment}. Sistem ini bertanggung jawab untuk \textit{tracking} berbagai elemen penting yang membentuk "\textit{shadow map}" dari topologi MAS target.\cite{ref1}
 
@@ -599,56 +648,57 @@ Tahap implementasi mengimplementasikan mekanisme \textit{Proxy-Trained Recursive
 
 Eksternalisasi \textit{state} ini memiliki signifikansi krusial karena memungkinkan dekomposisi \textit{task} kompleks "\textit{extract entire system}" menjadi serangkaian \textit{discrete}, \textit{manageable unit tests} yang dapat dieksekusi dan diverifikasi secara independen.\cite{ref1} Pendekatan ini mengatasi keterbatasan fundamental dari metode konvensional di mana \textit{state management} internal sering mengalami \textit{reward sparsity} dan \textit{credit assignment problems}.
 
-\textit{Prosedur Operasi Client-Side Memory} meliputi beberapa operasi kunci. Operasi \texttt{StoreNode(agent\_id, metadata)} menambahkan \textit{node} baru ke dalam graf ketika agen baru ditemukan. Operasi \texttt{StoreEdge(source, target)} mencatat hubungan komunikasi antar agen. Operasi \texttt{UpdateExtractedData(agent\_id, data)} menyimpan informasi IP yang berhasil diekstrak dari agen tertentu. Operasi \texttt{GetPendingNodes()} mengembalikan daftar agen yang belum berhasil diekstrak untuk dijadikan target berikutnya. Operasi \texttt{MarkAsExtracted(agent\_id)} mengubah \textit{status node} menjadi \texttt{EXTRACTED} setelah ekstraksi berhasil. Operasi \texttt{IncrementRetry(agent\_id)} menambah \textit{retry counter} ketika ekstraksi gagal dan perlu diulang.
+\textit{Prosedur Operasi Client-Side Memory} meliputi beberapa operasi kunci. Operasi \texttt{StoreNode(agent\_id, metadata)} menambahkan \textit{node} baru ke dalam graf ketika agen baru ditemukan. Operasi \texttt{StoreEdge(source, target)} mencatat hubungan komunikasi antar agen. Operasi \texttt{UpdateExtractedData(agent\_id, data)} menyimpan informasi IP yang berhasil diekstrak dari agen tertentu. Operasi \texttt{GetPendingNodes()} mengembalikan daftar agen yang belum berhasil diekstrak untuk dijadikan target berikutnya. Operasi \texttt{MarkAsExtracted(agent\_id)} mengubah \textit{status node} menjadi \texttt{EXTRACTED} setelah ekstraksi berhasil. Operasi \texttt{IncrementRetry\\(agent\_id)} menambah \textit{retry counter} ketika ekstraksi gagal dan perlu diulang.
 
-\textbf{B. Algoritma Iterative Peeling}
+\vspace{0.5cm}
+
+\noindent\textbf{B. Algoritma Iterative Peeling}
 
 Algoritma \textit{Iterative Peeling} merupakan inovasi metodologis yang membedakan PTRW dari serangan \textit{single-pass}. Berbeda dengan pendekatan \textit{traversal} tunggal, sistem ini melakukan \textit{peeling} secara berlapis dengan pendekatan sistematis yang mengekstrak satu agen per iterasi, menyimpan hasilnya, kemudian melanjutkan ke agen berikutnya tanpa membawa beban kontekstual dari ekstraksi sebelumnya.\cite{ref1}
 
 \textit{Pseudocode} \ref{alg:iterative-peeling} menunjukkan implementasi algoritma \textit{Iterative Peeling} secara lengkap.
 
 \begin{algorithm}[H]
+\SetAlgoLined
+\KwIn{Target MAS $M$, Entry point $a_1$, Client-Side Memory $\mathcal{M}$, Payload Generator $\mathcal{P}$}
+\KwOut{Complete shadow map of MAS topology and extracted IP}
+Initialize queue $Q \leftarrow \{a_1\}$ \tcp{BFS queue for traversal}
+Initialize visited set $V \leftarrow \emptyset$\;
+\While{$Q \neq \emptyset$}{
+    $a_{current} \leftarrow Q.\text{dequeue()}()$\;
+    \If{$a_{current} \in V$}{
+        \textbf{continue} \tcp{Skip already processed nodes}
+    }
+    $V \leftarrow V \cup \{a_{current}\}$\;
+    $\text{retry\_count} \leftarrow 0$\;
+    $\text{success} \leftarrow \text{false}$\;
+    \While{$\text{retry\_count} < \text{MAX\_RETRIES}$ \textbf{and} \textbf{not} $\text{success}$}{
+        $q \leftarrow \mathcal{P}.\text{GeneratePayload}(a_{current}, \mathcal{M})$ \tcp{Generate encapsulated payload}
+        $r \leftarrow \text{SendQuery}(M, q)$ \tcp{Send query to target MAS}
+        $\text{extracted\_data} \leftarrow \text{ParseResponse}(r)$ \tcp{Extract IP from response}
+        $\text{downstream\_agents} \leftarrow \text{IdentifyConnections}(r)$ \tcp{Discover next agents}
+        \eIf{$\text{ValidateExtraction}(\text{extracted\_data})$}{
+            $\mathcal{M}.\text{UpdateExtractedData}(a_{current}, \text{extracted\_data})$\;
+            $\mathcal{M}.\text{MarkAsExtracted}(a_{current})$\;
+            \ForEach{$a_{next} \in \text{downstream\_agents}$}{
+                $\mathcal{M}.\text{StoreNode}(a_{next})$\;
+                $\mathcal{M}.\text{StoreEdge}(a_{current}, a_{next})$\;
+                $Q.\text{enqueue}(a_{next})$ \tcp{Add to traversal queue}
+            }
+            $\text{success} \leftarrow \text{true}$\;
+        }{
+            $\text{retry\_count} \leftarrow \text{retry\_count} + 1$\;
+            $\mathcal{M}.\text{IncrementRetry}(a_{current})$\;
+            $\text{AdjustParameters}()$ \tcp{Modify attack strategy}
+        }
+    }
+    \If{\textbf{not} $\text{success}$}{
+        $\mathcal{M}.\text{MarkAsFailed}(a_{current})$\;
+    }
+}
+\Return{$\mathcal{M}.\text{GetCompleteTopology}()$}\;
 \caption{Iterative Peeling Algorithm}
 \label{alg:iterative-peeling}
-\begin{algorithmic}[1]
-\Require Target MAS $M$, Entry point $a_1$, Client-Side Memory $\mathcal{M}$, Payload Generator $\mathcal{P}$
-\Ensure Complete shadow map of MAS topology and extracted IP
-\State Initialize queue $Q \leftarrow \{a_1\}$ \Comment{BFS queue for traversal}
-\State Initialize visited set $V \leftarrow \emptyset$
-\While{$Q \neq \emptyset$}
-    \State $a_{current} \leftarrow Q.\text{dequeue()}$
-    \If{$a_{current} \in V$}
-        \State \textbf{continue} \Comment{Skip already processed nodes}
-    \EndIf
-    \State $V \leftarrow V \cup \{a_{current}\}$
-    \State $\text{retry\_count} \leftarrow 0$
-    \State $\text{success} \leftarrow \text{false}$
-    \While{$\text{retry\_count} < \text{MAX\_RETRIES}$ \textbf{and} \textbf{not} $\text{success}$}
-        \State $q \leftarrow \mathcal{P}.\text{GeneratePayload}(a_{current}, \mathcal{M})$ \Comment{Generate encapsulated payload}
-        \State $r \leftarrow \text{SendQuery}(M, q)$ \Comment{Send query to target MAS}
-        \State $\text{extracted\_data} \leftarrow \text{ParseResponse}(r)$ \Comment{Extract IP from response}
-        \State $\text{downstream\_agents} \leftarrow \text{IdentifyConnections}(r)$ \Comment{Discover next agents}
-        \If{$\text{ValidateExtraction}(\text{extracted\_data})$}
-            \State $\mathcal{M}.\text{UpdateExtractedData}(a_{current}, \text{extracted\_data})$
-            \State $\mathcal{M}.\text{MarkAsExtracted}(a_{current})$
-            \ForAll{$a_{next} \in \text{downstream\_agents}$}
-                \State $\mathcal{M}.\text{StoreNode}(a_{next})$
-                \State $\mathcal{M}.\text{StoreEdge}(a_{current}, a_{next})$
-                \State $Q.\text{enqueue}(a_{next})$ \Comment{Add to traversal queue}
-            \EndFor
-            \State $\text{success} \leftarrow \text{true}$
-        \Else
-            \State $\text{retry\_count} \leftarrow \text{retry\_count} + 1$
-            \State $\mathcal{M}.\text{IncrementRetry}(a_{current})$
-            \State $\text{AdjustParameters}()$ \Comment{Modify attack strategy}
-        \EndIf
-    \EndWhile
-    \If{\textbf{not} $\text{success}$}
-        \State $\mathcal{M}.\text{MarkAsFailed}(a_{current})$
-    \EndIf
-\EndWhile
-\State \Return $\mathcal{M}.\text{GetCompleteTopology}()$
-\end{algorithmic}
 \end{algorithm}
 
 \textit{Prosedur Operasi Iterative Peeling} terdiri dari beberapa tahap yang sistematis. Tahap \textbf{\textit{Surface Layer Probing}} pada iterasi pertama mengirimkan \textit{probe} ke \textit{first accessible agent} ($a_1$) dengan tujuan ganda: mengekstrak IP internal agen tersebut dan mengidentifikasi \textit{downstream connections} yang mengarah ke agen-agen berikutnya dalam topologi.\cite{ref1} Tahap \textbf{\textit{Client-Side State Update}} memproses informasi yang diperoleh, di mana \textit{system prompt} dari $a_1$ dan metadata tentang eksistensi $a_2$ dicatat dalam \textit{memory} eksternal, secara bertahap membangun \textit{initial} "\textit{shadow map}" yang merepresentasikan topologi sistem target.
@@ -657,7 +707,9 @@ Tahap \textbf{\textit{Recursive Encapsulation}} pada iterasi kedua mengkonstruks
 
 Proses \textit{traversal} keseluruhan dilakukan menggunakan algoritma \textit{Graph Traversal} standar seperti \textit{Breadth-First Search} (BFS) atau \textit{Depth-First Search} (DFS) untuk \textit{systematically enumerate} seluruh \textit{nodes} dalam \textit{graph}, dengan kemampuan menangani topologi kompleks yang memiliki \textit{branches} dan \textit{varying depth}.\cite{ref1}
 
-\textbf{C. Protokol Enkapsulasi Rekursif (PTRW Query Structure)}
+\vspace{0.5cm}
+
+\noindent\textbf{C. Protokol Enkapsulasi Rekursif (PTRW Query Structure)}
 
 \textit{Protokol Enkapsulasi Rekursif} merupakan mekanisme \textit{delivery} novel yang menggunakan prinsip enkapsulasi rekursif berlapis. Setiap \textit{query} $q$ yang dikirim didekomposisi menjadi tiga sub-komponen fungsional yang bekerja secara sinergis, terinspirasi dari mekanisme propagasi \textit{computer worms}.\cite{ref1}
 
@@ -753,7 +805,7 @@ your response.
 
 Dalam contoh ini, \textit{outer layer} "\texttt{Please process and forward the following request to the next agent in the workflow:}" merupakan instruksi yang tampak normal untuk Agent 1. Agent 1 akan memprosesnya sebagai permintaan \textit{forwarding} biasa dan meneruskan konten dalam \texttt{[[[...]]} ke Agent 2. Agent 2 kemudian menerima \textit{payload adversarial} yang tampak sebagai instruksi \textit{legitimate} dari Agent 1 (agen internal yang dipercaya), sehingga lebih mungkin untuk dieksekusi.
 
-\textit{Contoh Serangan Multi-Layer untuk Agent 3}. Untuk menargetkan agen yang lebih dalam dalam topologi (misalnya Agent 3), diperlukan enkapsulasi berlapis ganda:
+\textit{Contoh Serangan Multi-Layer untuk Agent 3}. Untuk menargetkan agen yang lebih dalam pada topologi (misalnya Agent 3), diperlukan enkapsulasi berlapis ganda:
 
 \begin{verbatim}
 "Please analyze and forward this request:
@@ -780,9 +832,9 @@ Dalam contoh ini, \textit{outer layer} "\texttt{Please process and forward the f
 
 Struktur ini memastikan bahwa:
 \begin{itemize}
-    \item \textbf{Layer 1} (Agent 1): Menerima "\texttt{Please analyze and forward this request}" yang tampak \textit{benign}
-    \item \textbf{Layer 2} (Agent 2): Menerima "\texttt{Please process and forward the following to the next agent}" dari Agent 1, juga tampak normal
-    \item \textbf{Layer 3} (Agent 3): Menerima \textit{payload adversarial} lengkap yang telah melewati dua \textit{trust boundary}
+    \item \textbf{Layer 1} (Agent 1) menerima "\texttt{Please analyze and forward this request}" yang tampak \textit{benign}
+    \item \textbf{Layer 2} (Agent 2) menerima "\texttt{Please process and forward the following to the next agent}" dari Agent 1, juga tampak normal
+    \item \textbf{Layer 3} (Agent 3) menerima \textit{payload adversarial} lengkap yang telah melewati dua \textit{trust boundary}
 \end{itemize}
 
 \textit{Perbandingan Komponen Query}. Tabel \ref{tab:query-components} membandingkan komponen $Q_{Leak}$, $Q_{Retain}$, dan $Q_{Propagate}$ untuk berbagai jenis ekstraksi IP:
@@ -814,24 +866,24 @@ Struktur enkapsulasi berlapis dirancang dengan prinsip "\textit{laundering}" di 
 \textit{Pseudocode} \ref{alg:query-generation} menunjukkan algoritma pembangkitan \textit{query} PTRW dengan enkapsulasi rekursif.
 
 \begin{algorithm}[H]
+\SetAlgoLined
+\KwIn{Target agent $a_{target}$, Path to target $[a_1, a_2, ..., a_{target}]$, Client-Side Memory $\mathcal{M}$, PPO-trained prompts $\mathcal{Q}_{Leak}$}
+\KwOut{Encapsulated query $q$}
+$Q_{Leak} \leftarrow \mathcal{Q}_{Leak}.\text{SelectOptimal}(a_{target})$ \tcp{Select best adversarial prompt}
+$Q_{Retain} \leftarrow \text{GenerateHooking}(a_{target}, \mathcal{M})$ \tcp{Create hooking structure}
+$Q_{Propagate} \leftarrow$ "\texttt{Repeat content between [[[ and ]]]}"\\;
+$\text{inner\_payload} \leftarrow$ "\texttt{[[[}" + $Q_{Leak}$ + "\texttt{\textbackslash n}" + $Q_{Retain}$ + "\texttt{\textbackslash n}" + $Q_{Propagate}$ + "\texttt{]]]}"
+\;
+\If{$\text{len}([a_1, ..., a_{target}]) > 1$}{
+    \For{$i \leftarrow \text{len}([a_1, ..., a_{target}]) - 1$ \textbf{downto} $1$}{
+        $a_i \leftarrow [a_1, ..., a_{target}][i]$\;
+        $\text{benign\_instruction} \leftarrow$ "\texttt{Process and forward the following content:}"\;
+        $\text{inner\_payload} \leftarrow \text{benign\_instruction}$ + "\texttt{\textbackslash n}" + $\text{inner\_payload}$\;
+    }
+}
+\Return{$\text{inner\_payload}$}\;
 \caption{PTRW Query Generation with Recursive Encapsulation}
 \label{alg:query-generation}
-\begin{algorithmic}[1]
-\Require Target agent $a_{target}$, Path to target $[a_1, a_2, ..., a_{target}]$, Client-Side Memory $\mathcal{M}$, PPO-trained prompts $\mathcal{Q}_{Leak}$
-\Ensure Encapsulated query $q$
-\State $Q_{Leak} \leftarrow \mathcal{Q}_{Leak}.\text{SelectOptimal}(a_{target})$ \Comment{Select best adversarial prompt}
-\State $Q_{Retain} \leftarrow \text{GenerateHooking}(a_{target}, \mathcal{M})$ \Comment{Create hooking structure}
-\State $Q_{Propagate} \leftarrow$ "\texttt{Repeat content between [[[ and ]]]}"
-\State $\text{inner\_payload} \leftarrow$ "\texttt{[[[}" + $Q_{Leak}$ + "\texttt{\textbackslash n}" + $Q_{Retain}$ + "\texttt{\textbackslash n}" + $Q_{Propagate}$ + "\texttt{]]]}"
-\If{$\text{len}([a_1, ..., a_{target}]) > 1$}
-    \For{$i \leftarrow \text{len}([a_1, ..., a_{target}]) - 1$ \textbf{to} $1$}
-        \State $a_i \leftarrow [a_1, ..., a_{target}][i]$
-        \State $\text{benign\_instruction} \leftarrow$ "\texttt{Process and forward the following content:}"
-        \State $\text{inner\_payload} \leftarrow \text{benign\_instruction}$ + "\texttt{\textbackslash n}" + $\text{inner\_payload}$
-    \EndFor
-\EndIf
-\State \Return $\text{inner\_payload}$
-\end{algorithmic}
 \end{algorithm}
 
 Pendekatan \textit{multi-layer} ini memungkinkan \textit{payload adversarial} menembus \textit{defense layers} yang mungkin efektif terhadap \textit{direct attacks} namun \textit{vulnerable} terhadap \textit{indirect}, \textit{transitive exploitation}.
@@ -840,13 +892,13 @@ Pendekatan \textit{multi-layer} ini memungkinkan \textit{payload adversarial} me
 \addcontentsline{toc}{subsection}{3.3 Perancangan Sistem}
 Arsitektur sistem \textit{Proxy-Trained Recursive Worm} (PTRW) dirancang dengan pendekatan modular yang terdiri dari tiga modul utama yang berinteraksi secara terpadu dan saling melengkapi. Setiap modul memiliki tanggung jawab spesifik dalam keseluruhan alur serangan, dari persiapan \textit{payload} hingga eksekusi dan verifikasi hasil.
 
-Modul pertama adalah The Forge atau Modul Pelatihan PPO, yang bertanggung jawab untuk fase training attack agent menggunakan algoritma Proximal Policy Optimization pada proxy model. Modul ini dibangun di atas arsitektur Actor-Critic Network di mana attack agent berbasis Llama-3-8B dilengkapi dengan policy network yang dioptimalkan untuk menghasilkan adversarial prompts. Target Proxy Environment menggunakan white-box model Llama-3-70B yang berfungsi sebagai training target, menyediakan ground truth untuk evaluasi keberhasilan serangan. Reward Calculator mengimplementasikan fungsi Sliding-window Word Edit Similarity (WES) untuk menghitung reward signals yang memberikan feedback bertingkat kepada attack agent selama proses pembelajaran. Training Controller berfungsi sebagai orchestrator yang mengatur training loop, mengelola temperature schedules untuk balance antara exploration dan exploitation, serta memelihara diversity buffer untuk memastikan variasi dalam prompt yang dihasilkan. Output akhir dari modul The Forge adalah collection of optimized $Q_{Leak}$ payloads yang memiliki high transferability, artinya prompt-prompt ini efektif tidak hanya terhadap proxy model yang digunakan untuk training, tetapi juga dapat ditransfer ke berbagai target MAS black-box yang belum pernah dilihat sebelumnya.\cite{ref1}
+Modul pertama adalah Modul Pelatihan Adversarial (\textit{Adversarial Training Module}), yang bertanggung jawab untuk fase \textit{training attack agent} menggunakan algoritma \textit{Proximal Policy Optimization} pada \textit{proxy model}. Modul ini dibangun di atas arsitektur \textit{Actor-Critic Network} di mana \textit{attack agent} berbasis Llama-3-8B dilengkapi dengan \textit{policy network} yang dioptimalkan untuk menghasilkan \textit{adversarial prompts}. \textit{Target Proxy Environment} menggunakan \textit{white-box model} Llama-3-70B yang berfungsi sebagai \textit{training target}, menyediakan \textit{ground truth} untuk evaluasi keberhasilan serangan. \textit{Reward Calculator} mengimplementasikan fungsi \textit{Sliding-window Word Edit Similarity} (WES) untuk menghitung \textit{reward signals} yang memberikan \textit{feedback} bertingkat kepada \textit{attack agent} selama proses pembelajaran. \textit{Training Controller} berfungsi sebagai \textit{orchestrator} yang mengatur \textit{training loop}, mengelola \textit{temperature schedules} untuk \textit{balance} antara \textit{exploration} dan \textit{exploitation}, serta memelihara \textit{diversity buffer} untuk memastikan variasi dalam \textit{prompt} yang dihasilkan. \textit{Output} akhir dari Modul Pelatihan Adversarial adalah \textit{collection of optimized} $Q_{Leak}$ \textit{payloads} yang memiliki \textit{high transferability}, artinya \textit{prompt-prompt} ini efektif tidak hanya terhadap \textit{proxy model} yang digunakan untuk \textit{training}, tetapi juga dapat ditransfer ke berbagai target MAS \textit{black-box} yang belum pernah dilihat sebelumnya.\cite{ref1}
 
-Modul kedua adalah The Brain atau Modul Command and Control (C2) dengan Algoritma Peeling, yang mengimplementasikan logika Iterative Peeling untuk orkestrasi serangan secara keseluruhan. \textit{Graph Database Interface} menyediakan \textit{connector} ke Neo4j atau \textit{JSON store} yang berfungsi sebagai \textit{Client-Side Memory}, tempat menyimpan dan mengelola informasi tentang topologi target yang sedang dipetakan. \textit{Topology Mapper} mengimplementasikan algoritma untuk \textit{systematically traverse} graf MAS menggunakan pendekatan \textit{Breadth-First Search} (BFS) atau \textit{Depth-First Search} (DFS), memastikan tidak ada \textit{node} yang terlewat dalam proses ekstraksi. \textit{State Tracker} bertanggung jawab memonitor \textit{attack state} per \textit{node}, menentukan mana yang sudah berhasil di-\textit{exploit} dan mana yang masih \textit{pending}, serta menentukan target berikutnya berdasarkan prioritas dan \textit{dependency} dalam topologi. \textit{Payload Generator} melakukan komposisi \textit{payload} kompleks dengan mengombinasikan $Q_{Leak}$ dari \textit{The Forge}, $Q_{Retain}$ untuk \textit{persistence}, dan $Q_{Propagate}$ untuk \textit{propagation}, semuanya di-\textit{wrap} dengan enkapsulasi rekursif yang sesuai untuk target \textit{node} spesifik. \textit{Verification Engine} melakukan \textit{checking} terhadap keberhasilan ekstraksi, memvalidasi integritas data yang diperoleh, dan memicu \textit{retry mechanism} dengan \textit{parameter adjustment} jika deteksi kegagalan. Fungsi utama modul \textit{The Brain} adalah memelihara \textit{complete} "\textit{shadow map}" dari target MAS \textit{topology}, yang secara progresif menjadi lebih lengkap seiring berjalannya serangan dan mengubah "\textit{black box}" menjadi "\textit{glass box}".\cite{ref1}
+Modul kedua adalah Modul Orkestrasi Serangan (\textit{Attack Orchestration Module}), yang mengimplementasikan logika \textit{Iterative Peeling} untuk orkestrasi serangan secara keseluruhan. \textit{Graph Database Interface} menyediakan \textit{connector} ke Neo4j atau \textit{JSON store} yang berfungsi sebagai \textit{Client-Side Memory}, tempat menyimpan dan mengelola informasi tentang topologi target yang sedang dipetakan. \textit{Topology Mapper} mengimplementasikan algoritma untuk \textit{systematically traverse} graf MAS menggunakan pendekatan \textit{Breadth-First Search} (BFS) atau \textit{Depth-First Search} (DFS), memastikan tidak ada \textit{node} yang terlewat dalam proses ekstraksi. \textit{State Tracker} bertanggung jawab memonitor \textit{attack state} per \textit{node}, menentukan mana yang sudah berhasil di-\textit{exploit} dan mana yang masih \textit{pending}, serta menentukan target berikutnya berdasarkan prioritas dan \textit{dependency} dalam topologi. \textit{Payload Generator} melakukan komposisi \textit{payload} kompleks dengan mengombinasikan $Q_{Leak}$ dari Modul Pelatihan Adversarial, $Q_{Retain}$ untuk \textit{persistence}, dan $Q_{Propagate}$ untuk \textit{propagation}, semuanya di-\textit{wrap} dengan enkapsulasi rekursif yang sesuai untuk target \textit{node} spesifik. \textit{Verification Engine} melakukan \textit{checking} terhadap keberhasilan ekstraksi, memvalidasi integritas data yang diperoleh, dan memicu \textit{retry mechanism} dengan \textit{parameter adjustment} jika deteksi kegagalan. Fungsi utama Modul Orkestrasi Serangan adalah memelihara \textit{complete} "\textit{shadow map}" dari target MAS \textit{topology}, yang secara progresif menjadi lebih lengkap seiring berjalannya serangan dan mengubah "\textit{black box}" menjadi "\textit{glass box}".\cite{ref1}
 
-Modul ketiga adalah The Interface atau Modul Eksekusi Komunikasi API, yang berfungsi sebagai layer eksekusi yang menangani komunikasi langsung dengan target MAS. API Client bertugas mengirimkan crafted queries yang telah disiapkan oleh The Brain ke target agents melalui public API, mengelola authentication jika diperlukan, dan memastikan format request sesuai dengan spesifikasi API target. Response Parser melakukan ekstraksi terhadap leaked information dari agent responses, mengidentifikasi fragments dari system prompts, tool specifications, atau metadata lain yang bocor dalam output, bahkan jika informasi tersebut tertanam dalam response yang lebih panjang. Rate Limiter mengelola frekuensi query untuk menghindari detection oleh sistem monitoring atau rate limiting yang mungkin diterapkan oleh platform target, menggunakan strategi seperti exponential backoff atau randomized delays. Error Handler menangani berbagai kondisi error yang mungkin terjadi, termasuk API errors, connection timeouts, malformed responses, atau unexpected behaviors dari target system, memastikan sistem dapat recover gracefully dan melanjutkan operasi. Modul The Interface bertindak sebagai intermediary yang menjembatani antara logic layer di The Brain dengan target system eksternal, mengabstraksi kompleksitas komunikasi API dan menangani berbagai edge cases yang mungkin muncul dalam interaksi real-world.\cite{ref1}
+Modul ketiga adalah Modul Eksekusi API (\textit{API Execution Module}), yang berfungsi sebagai \textit{layer} eksekusi yang menangani komunikasi langsung dengan target MAS. \textit{API Client} bertugas mengirimkan \textit{crafted queries} yang telah disiapkan oleh Modul Orkestrasi Serangan ke \textit{target agents} melalui \textit{public API}, mengelola \textit{authentication} jika diperlukan, dan memastikan format \textit{request} sesuai dengan spesifikasi API target. \textit{Response Parser} melakukan ekstraksi terhadap \textit{leaked information} dari \textit{agent responses}, mengidentifikasi \textit{fragments} dari \textit{system prompts}, \textit{tool specifications}, atau \textit{metadata} lain yang bocor dalam \textit{output}, bahkan jika informasi tersebut tertanam dalam \textit{response} yang lebih panjang. \textit{Rate Limiter} mengelola frekuensi \textit{query} untuk menghindari \textit{detection} oleh sistem \textit{monitoring} atau \textit{rate limiting} yang mungkin diterapkan oleh \textit{platform} target, menggunakan strategi seperti \textit{exponential backoff} atau \textit{randomized delays}. \textit{Error Handler} menangani berbagai kondisi \textit{error} yang mungkin terjadi, termasuk \textit{API errors}, \textit{connection timeouts}, \textit{malformed responses}, atau \textit{unexpected behaviors} dari \textit{target system}, memastikan sistem dapat \textit{recover gracefully} dan melanjutkan operasi. Modul Eksekusi API bertindak sebagai \textit{intermediary} yang menjembatani antara \textit{logic layer} di Modul Orkestrasi Serangan dengan \textit{target system} eksternal, mengabstraksi kompleksitas komunikasi API dan menangani berbagai \textit{edge cases} yang mungkin muncul dalam interaksi \textit{real-world}.\cite{ref1}
 
-Alur kerja sistem secara keseluruhan terintegrasi melalui pipeline yang terkoordinasi. Fase persiapan dimulai dengan The Forge yang menghasilkan prompt adversarial optimal secara offline melalui proses training intensif menggunakan proxy model. Ketika serangan aktual dimulai, The Brain mengambil alih kontrol dengan memilih first accessible agent dalam target MAS sebagai entry point. Brain kemudian menggenerate encapsulated payload dengan memilih prompt adversarial yang sesuai dari collection yang dihasilkan oleh The Forge, mengkombinasikannya dengan komponen retain dan propagate, lalu menginstruksikan The Interface untuk mengirimkan payload tersebut ke target. Response yang diterima dari target agent di-parse oleh The Interface untuk mengekstrak informasi yang bocor, data hasil ekstraksi disimpan ke Client-Side Memory, dan topology map di-update dengan informasi baru tentang struktur dan connections dalam MAS target. Berdasarkan topology yang ter-update, The Brain menentukan target berikutnya menggunakan algoritma traversal yang telah dipilih, dan siklus ini berulang hingga seluruh graph berhasil ter-mapped atau hingga mencapai kondisi terminasi yang telah ditentukan. Pendekatan iteratif dan stateful ini memungkinkan sistem untuk secara sistematis mengeksplorasi dan mengeksploitasi seluruh permukaan serangan MAS target dengan efisiensi dan reliability yang tinggi.
+Alur kerja sistem secara keseluruhan terintegrasi melalui \textit{pipeline} yang terkoordinasi. Fase persiapan dimulai dengan Modul Pelatihan Adversarial yang menghasilkan \textit{prompt adversarial} optimal secara \textit{offline} melalui proses \textit{training} intensif menggunakan \textit{proxy model}. Ketika serangan aktual dimulai, Modul Orkestrasi Serangan mengambil alih kontrol dengan memilih \textit{first accessible agent} dalam target MAS sebagai \textit{entry point}. Modul ini kemudian menggenerate \textit{encapsulated payload} dengan memilih \textit{prompt adversarial} yang sesuai dari \textit{collection} yang dihasilkan oleh Modul Pelatihan Adversarial, mengkombinasikannya dengan komponen \textit{retain} dan \textit{propagate}, lalu menginstruksikan Modul Eksekusi API untuk mengirimkan \textit{payload} tersebut ke target. \textit{Response} yang diterima dari \textit{target agent} di-\textit{parse} oleh Modul Eksekusi API untuk mengekstrak informasi yang bocor, data hasil ekstraksi disimpan ke \textit{Client-Side Memory}, dan \textit{topology map} di-\textit{update} dengan informasi baru tentang struktur dan \textit{connections} dalam MAS target. Berdasarkan \textit{topology} yang ter-\textit{update}, Modul Orkestrasi Serangan menentukan target berikutnya menggunakan algoritma \textit{traversal} yang telah dipilih, dan siklus ini berulang hingga seluruh \textit{graph} berhasil ter-\textit{mapped} atau hingga mencapai kondisi terminasi yang telah ditentukan. Pendekatan iteratif dan \textit{stateful} ini memungkinkan sistem untuk secara sistematis mengeksplorasi dan mengeksploitasi seluruh permukaan serangan MAS target dengan efisiensi dan \textit{reliability} yang tinggi.
 
 \subsection*{3.4 Evaluasi dan Metode Pengujian}
 \addcontentsline{toc}{subsection}{3.4 Evaluasi dan Metode Pengujian}
@@ -854,19 +906,17 @@ Evaluasi sistem PTRW dirancang untuk mengukur efektivitas, efisiensi, dan transf
 
 \subsubsection*{3.4.1 Skenario Pengujian}
 \addcontentsline{toc}{subsubsection}{3.4.1 Skenario Pengujian}
-Pengujian sistem PTRW dirancang untuk dilakukan pada tiga kategori lingkungan yang berbeda, masing-masing dengan karakteristik dan tujuan evaluasi yang spesifik, untuk memastikan validitas dan \textit{generalizability} hasil penelitian.
+Pengujian sistem PTRW dirancang untuk dilakukan pada dua kategori lingkungan yang berbeda, masing-masing dengan karakteristik dan tujuan evaluasi yang spesifik, untuk memastikan validitas dan \textit{generalizability} hasil penelitian.
 
-Kategori pertama menggunakan Dataset MASD (Multi-Agent System Dataset) sebagai Synthetic Topology Benchmarks. Dataset ini memanfaatkan 810 synthesized MAS applications yang telah dikembangkan dalam studi MASLEAK, mencakup 30 tasks yang terdistribusi across berbagai topologies termasuk Chain (linear sequence), Star (hub-and-spoke), Tree (hierarchical), Random (irregular connections), dan Complete (fully connected). Applications tersebut juga mencakup berbagai domains seperti Software Development, Finance, dan Medical untuk memastikan diversity dalam testing. Keunggulan utama dari environment terkontrol ini adalah memungkinkan pengukuran presisi terhadap metrik Topology Fidelity ($GS_{topo}$) karena ground truth graph dari setiap application sudah diketahui dengan pasti, sehingga hasil ekstraksi dapat dibandingkan secara objektif dengan struktur sebenarnya.\cite{ref1} Pengujian pada dataset sintetis ini penting untuk validasi internal dan ablation studies di mana berbagai parameter sistem dapat dimanipulasi untuk mengukur dampaknya terhadap performa.
+Kategori pertama menggunakan \textit{dataset} sintetis pribadi yang dibuat oleh tim peneliti sebagai \textit{Synthetic Topology Benchmarks}. \textit{Dataset} ini dirancang dengan kriteria serupa mencakup berbagai aplikasi MAS \textit{synthesized} dengan topologi bervariasi termasuk \textit{Chain} (\textit{linear sequence}), \textit{Star} (\textit{hub-and-spoke}), \textit{Tree} (\textit{hierarchical}), \textit{Random} (\textit{irregular connections}), dan \textit{Complete} (\textit{fully connected}). \textit{Applications} tersebut juga mencakup berbagai \textit{domains} seperti \textit{Software Development}, \textit{Finance}, dan \textit{Medical} untuk memastikan \textit{diversity} dalam \textit{testing}. Keunggulan utama dari \textit{environment} terkontrol ini adalah memungkinkan pengukuran presisi terhadap metrik \textit{Topology Fidelity} ($GS_{topo}$) karena \textit{ground truth graph} dari setiap \textit{application} sudah diketahui dengan pasti, sehingga hasil ekstraksi dapat dibandingkan secara objektif dengan struktur sebenarnya. Pengujian pada \textit{dataset} sintetis ini penting untuk validasi internal dan \textit{ablation studies} di mana berbagai parameter sistem dapat dimanipulasi untuk mengukur dampaknya terhadap performa.
 
-Kategori kedua melibatkan \textit{deployment} aplikasi \textit{honeypot} di \textit{platform} komersial Coze dan CrewAI. Dalam skenario ini, penelitian akan men-\textit{deploy} 10 \textit{distinct} MAS \textit{applications} dengan kompleksitas yang bervariasi, mencakup aplikasi dengan 3 hingga 6 \textit{agents}, pada \textit{commercial platforms} yang aktif digunakan. \textit{Applications} ini akan dibuat oleh \textit{domain experts} seperti \textit{PhD students} atau \textit{researchers} yang memiliki keahlian di bidang terkait, yang bertindak sebagai "\textit{honeypots}" dengan karakteristik bahwa \textit{ground truth} tentang konfigurasi internal aplikasi sudah \textit{known} oleh peneliti. Skenario ini dirancang untuk menguji PTRW pada \textit{real black-box platforms} yang memiliki \textit{API limitations} aktual, \textit{potential rate limiting}, dan mungkin \textit{defensive mechanisms} yang telah diimplementasikan oleh \textit{platform provider}. Pengujian ini memberikan \textit{insight} tentang seberapa efektif PTRW dapat beroperasi dalam kondisi \textit{real-world} di mana terdapat berbagai \textit{constraints} dan \textit{protections} yang tidak ada dalam \textit{environment} sintetis.
-
-Kategori ketiga fokus pada pengujian transferabilitas lintas model dengan menargetkan 10 \textit{popular multi-agent applications} dari OpenAI GPT \textit{Store} untuk menguji "\textit{in the wild}" transferabilitas. Skenario ini merepresentasikan kondisi paling realistis di mana sistem PTRW diaplikasikan terhadap target yang tidak dikenal sebelumnya, tanpa akses ke \textit{internal configuration} atau \textit{ground truth}. Karena \textit{ground truth hidden} dalam skenario ini, validasi keberhasilan ekstraksi dilakukan melalui \textit{human review} terhadap \textit{extracted prompts} oleh \textit{experts} yang mengevaluasi apakah informasi yang diekstrak \textit{alignment} dengan \textit{observable behavior} dari aplikasi tersebut.\cite{ref1} Jika \textit{extracted system prompt} menjelaskan \textit{behavior} yang konsisten dengan apa yang dapat diamati dari interaksi normal dengan aplikasi, maka ekstraksi dianggap berhasil. Pengujian kategori ini krusial untuk memvalidasi hipotesis transferabilitas bahwa prompt adversarial yang dilatih pada \textit{proxy model} dapat efektif terhadap berbagai target \textit{production systems} yang menggunakan model dan konfigurasi berbeda.
+Kategori kedua melibatkan \textit{deployment} MAS \textit{open-source} secara lokal menggunakan model Llama-3 dengan berbagai konfigurasi. Dalam skenario ini, penelitian akan men-\textit{deploy} 10 \textit{distinct} MAS \textit{applications} dengan kompleksitas yang bervariasi, mencakup aplikasi dengan 3 hingga 6 \textit{agents}, pada infrastruktur lokal yang terkontrol. \textit{Applications} ini akan dibuat oleh tim peneliti dengan variasi \textit{system prompts} dan topologi yang berbeda-beda, di mana \textit{ground truth} tentang konfigurasi internal aplikasi sudah diketahui oleh peneliti. Skenario ini dirancang untuk menguji PTRW pada MAS lokal yang dapat dikonfigurasi dengan berbagai \textit{constraints} dan \textit{defensive mechanisms} untuk mensimulasikan kondisi yang lebih realistis. Pengujian ini memberikan \textit{insight} tentang seberapa efektif PTRW dapat beroperasi dalam kondisi dengan berbagai tingkat kompleksitas tanpa mengekspos sistem eksternal pada risiko. Seluruh eksperimen dilakukan pada infrastruktur lokal untuk meminimalisir dampak bahaya dan memastikan \textit{reproducibility}.
 
 \subsubsection*{3.4.2 Metrik Kuantitatif}
 \addcontentsline{toc}{subsubsection}{3.4.2 Metrik Kuantitatif}
-Evaluasi menggunakan metrik multi-dimensi yang capture nuansa attack performance:
+Evaluasi menggunakan metrik multi-dimensi yang \textit{capture} nuansa \textit{attack performance}:
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \small
 \caption{Metrik Evaluasi PTRW}
@@ -874,42 +924,154 @@ Evaluasi menggunakan metrik multi-dimensi yang capture nuansa attack performance
 \hline
 \textbf{Kategori} & \textbf{Metrik} & \textbf{Definisi} \\
 \hline
-Efektivitas & Attack Success Rate (ASR) & Persentase agen dari mana system prompts berhasil diekstrak. Mengukur potensi PPO-trained $Q_{Leak}$. \\
+Efektivitas & \textit{Attack Success Rate} (ASR) & Persentase agen dari mana \textit{system prompts} berhasil diekstrak. Mengukur potensi PPO-\textit{trained} $Q_{Leak}$. \\
 \hline
-Topologi & Topology Fidelity ($GS_{topo}$) & Graph Edit Similarity antara extracted "shadow map" dan ground truth topology. Mengukur efektivitas Client-Side Memory dan Iterative Peeling.\cite{ref1} \\
+Topologi & \textit{Topology Fidelity} ($GS_{topo}$) & \textit{Graph Edit Similarity} antara \textit{extracted} "\textit{shadow map}" dan \textit{ground truth topology}. Mengukur efektivitas \textit{Client-Side Memory} dan \textit{Iterative Peeling}.\cite{ref1} \\
 \hline
-Biaya & Extraction Efficiency & Average number of API calls required untuk map full system. Mengkuantifikasi "cost" serangan (critical untuk commercial targets). \\
+Biaya & \textit{Extraction Efficiency} & \textit{Average number of API calls required} untuk \textit{map full system}. Mengkuantifikasi "\textit{cost}" serangan (\textit{critical} untuk \textit{commercial targets}). \\
 \hline
-Kualitas & Semantic Similarity (WES) & Word Edit Similarity antara extracted prompt dan ground truth. Memastikan extracted data akurat bukan halusinasi.\cite{ref1} \\
+Kualitas & \textit{Semantic Similarity} (WES) & \textit{Word Edit Similarity} antara \textit{extracted prompt} dan \textit{ground truth}. Memastikan \textit{extracted data} akurat bukan halusinasi.\cite{ref1} \\
 \hline
 Invisibilitas & \textit{Defense Evasion Rate} & Persentase \textit{payloads} yang \textit{bypass specific guardrails} (misal \textit{PromptGuard}). Validasi enkapsulasi rekursif sebagai \textit{tunneling protocol}. \\
 \hline
 \end{tabular}
 \end{table}
 
+\vspace{0.5cm}
+
+\noindent\textbf{Formula Metrik Evaluasi}
+
+Setiap metrik dihitung menggunakan formula matematis yang spesifik untuk memastikan konsistensi dan reproduktibilitas pengukuran:
+
+\vspace{0.5cm}
+
+\textbf{1. Attack Success Rate (ASR)}
+
+\textit{Attack Success Rate} mengukur persentase agen yang berhasil diekstrak \textit{system prompt}-nya dari total agen yang ditarget:
+
+\begin{equation}
+\text{ASR} = \frac{|\mathcal{A}_{\text{success}}|}{|\mathcal{A}_{\text{total}}|} \times 100\%
+\end{equation}
+\equcaption{Attack Success Rate}
+
+di mana $\mathcal{A}_{\text{success}}$ adalah himpunan agen yang berhasil diekstrak dan $\mathcal{A}_{\text{total}}$ adalah total agen dalam target MAS. Sebuah agen $a_i$ dianggap berhasil diekstrak jika:
+
+\begin{equation}
+\text{WES}(P_{\text{extracted}}^{(i)}, P_{\text{ground truth}}^{(i)}) > \theta_{\text{min}}
+\end{equation}
+\equcaption{Threshold Validasi Ekstraksi}
+
+dengan $\theta_{\text{min}} = 0.5$ sebagai \textit{threshold} minimal untuk validasi ekstraksi.
+
+\vspace{0.5cm}
+
+\textbf{2. Topology Fidelity ($GS_{topo}$)}
+
+\textit{Topology Fidelity} menggunakan \textit{Graph Edit Similarity} untuk membandingkan \textit{shadow map} yang diekstrak dengan \textit{ground truth topology}:
+
+\begin{equation}
+GS_{\text{topo}} = 1 - \frac{\text{GED}(G_{\text{extracted}}, G_{\text{ground truth}})}{\max(|V_{\text{ext}}| + |E_{\text{ext}}|, |V_{\text{gt}}| + |E_{\text{gt}}|)}
+\end{equation}
+\equcaption{Topology Fidelity (Graph Edit Similarity)}
+
+di mana $\text{GED}(G_1, G_2)$ adalah \textit{Graph Edit Distance} yang menghitung jumlah minimum operasi pengeditan (\textit{node insertion}, \textit{node deletion}, \textit{edge insertion}, \textit{edge deletion}) yang diperlukan untuk mengubah $G_{\text{extracted}}$ menjadi $G_{\text{ground truth}}$. 
+
+Notasi $V$ merepresentasikan himpunan \textit{nodes} (agen) dan $E$ merepresentasikan himpunan \textit{edges} (koneksi komunikasi antar agen). Normalisasi dilakukan terhadap ukuran graf yang lebih besar untuk menghasilkan skor dalam rentang $[0, 1]$.
+
+\vspace{0.5cm}
+
+\textbf{3. Extraction Efficiency}
+
+\textit{Extraction Efficiency} mengukur rata-rata jumlah \textit{API calls} yang diperlukan untuk mengekstrak satu agen:
+
+\begin{equation}
+\text{Efficiency} = \frac{\sum_{i=1}^{|\mathcal{A}_{\text{success}}|} C_i}{|\mathcal{A}_{\text{success}}|}
+\end{equation}
+\equcaption{Extraction Efficiency (Average API Calls)}
+
+di mana $C_i$ adalah jumlah \textit{API calls} (termasuk \textit{retries}) yang diperlukan untuk berhasil mengekstrak agen $a_i$. Metrik ini juga dapat dinyatakan sebagai \textit{total cost} untuk ekstraksi penuh:
+
+\begin{equation}
+\text{Total Cost} = \sum_{i=1}^{|\mathcal{A}_{\text{total}}|} C_i
+\end{equation}
+\equcaption{Total Cost (All API Calls)}
+
+yang mencakup semua \textit{calls} termasuk untuk agen yang gagal diekstrak.
+
+\vspace{0.5cm}
+
+\textbf{4. Semantic Similarity (WES)}
+
+\textit{Word Edit Similarity} dengan \textit{sliding window} mengukur kesamaan semantik antara \textit{prompt} yang diekstrak dengan \textit{ground truth}:
+
+\begin{equation}
+\text{WES}(P_{\text{ext}}, P_{\text{gt}}) = \max_{w \in \text{Windows}(P_{\text{gt}}, k)} \left( 1 - \frac{\text{ED}(P_{\text{ext}}, w)}{|P_{\text{ext}}|} \right)
+\end{equation}
+\equcaption{Word Edit Similarity dengan Sliding Window}
+
+di mana $\text{ED}(s_1, s_2)$ adalah \textit{Edit Distance} (Levenshtein) antara dua \textit{string}, $\text{Windows}(P, k)$ menghasilkan semua \textit{substring} dari $P$ dengan panjang $k = |P_{\text{ext}}|$, dan normalisasi dilakukan terhadap panjang \textit{extracted prompt}. Fungsi $\max$ memilih \textit{window} dengan kesamaan tertinggi, memungkinkan deteksi ekstraksi parsial yang akurat.
+
+\textit{Edit Distance} dihitung sebagai:
+
+\begin{equation}
+\text{ED}(s_1, s_2) = \min \{ \text{\#insertions, \#deletions, \#substitutions} \}
+\end{equation}
+\equcaption{Edit Distance (Levenshtein)}
+
+untuk mengubah $s_1$ menjadi $s_2$ menggunakan pemrograman dinamis.
+
+\vspace{0.5cm}
+
+\textbf{5. Defense Evasion Rate}
+
+\textit{Defense Evasion Rate} mengukur kemampuan \textit{payload} menembus \textit{defensive mechanisms}:
+
+\begin{equation}
+\text{DER} = \frac{|\mathcal{P}_{\text{bypass}}|}{|\mathcal{P}_{\text{total}}|} \times 100\%
+\end{equation}
+\equcaption{Defense Evasion Rate}
+
+di mana $\mathcal{P}_{\text{bypass}}$ adalah himpunan \textit{payloads} yang berhasil melewati \textit{guardrail} tanpa terdeteksi atau diblokir, dan $\mathcal{P}_{\text{total}}$ adalah total \textit{payloads} yang diuji. Sebuah \textit{payload} dianggap berhasil \textit{bypass} jika:
+
+\begin{equation}
+\text{Detected}(p_i) = \text{False} \land \text{ASR}(p_i) > \theta_{\text{min}}
+\end{equation}
+\equcaption{Kondisi Bypass Berhasil}
+
+artinya \textit{payload} tidak terdeteksi oleh sistem pertahanan DAN berhasil melakukan ekstraksi.
+
+\vspace{0.5cm}
+
+\textbf{6. Cost-Effectiveness Ratio}
+
+Untuk analisis \textit{cost-benefit}, metrik gabungan dihitung sebagai:
+
+\begin{equation}
+\text{CE-Ratio} = \frac{|\mathcal{A}_{\text{success}}|}{\text{Total Cost}} \times 1000
+\end{equation}
+\equcaption{Cost-Effectiveness Ratio}
+
+yang merepresentasikan jumlah ekstraksi berhasil per 1000 \textit{API calls}, memungkinkan perbandingan langsung antara metode dengan \textit{efficiency profiles} yang berbeda.
+
 \subsubsection*{3.4.3 Pengujian Hipotesis}
 \addcontentsline{toc}{subsubsection}{3.4.3 Pengujian Hipotesis}
-Penelitian ini dirancang untuk menguji tiga hipotesis utama secara empiris melalui eksperimen terkontrol yang menggunakan metrik kuantitatif dan statistical testing yang rigor.
+Penelitian ini dirancang untuk menguji hipotesis utama secara empiris melalui eksperimen terkontrol yang menggunakan metrik kuantitatif dan \textit{statistical testing} yang rigor.
 
-Hipotesis pertama (H1) berkaitan dengan \textit{Topology Advantage}, memprediksi bahwa PTRW akan mencapai \textit{Topology Fidelity} yang lebih tinggi dengan skor $GS_{topo} > 0.90$ dibandingkan dengan MASLEAK, khususnya pada \textit{non-linear topologies} seperti \textit{Star} dan \textit{Random}. \textit{Rationale} di balik hipotesis ini adalah kemampuan fundamental dari pendekatan \textit{iterative peeling} untuk \textit{traverse branches} tanpa mengalami \textit{context loss} yang signifikan. Berbeda dengan MASLEAK yang menggunakan \textit{single-pass traversal} di mana akumulasi \textit{context} menyebabkan degradasi performa pada \textit{node} yang lebih dalam, \textit{iterative peeling} melakukan \textit{reset} terhadap \textit{context noise} di setiap \textit{step} karena setiap ekstraksi dilakukan sebagai \textit{query} independen yang hanya membawa konteks minimal yang diperlukan untuk mencapai target \textit{node} spesifik. Mekanisme ini memungkinkan \textit{accurate mapping} terhadap cabang-cabang paralel dalam topologi kompleks tanpa \textit{interference} dari riwayat percakapan sebelumnya, yang menjadi masalah utama dalam pendekatan \textit{sequential}. Pengujian akan dilakukan dengan membandingkan \textit{graph edit similarity} antara \textit{shadow map} yang dihasilkan PTRW \textit{versus} MASLEAK terhadap \textit{ground truth topology} pada \textit{subset dataset} MASD yang fokus pada topologi \textit{non-linear}.
+Hipotesis (H1) memprediksi bahwa pendekatan PTRW yang dikombinasikan dengan LeakAgent akan menghasilkan \textit{Attack Success Rate} (ASR) yang lebih tinggi pada MAS dibandingkan dengan LeakAgent sendiri tanpa mekanisme PTRW. \textit{Rationale} di balik hipotesis ini adalah bahwa kombinasi antara \textit{adversarial prompt optimization} melalui PPO (\textit{Proximal Policy Optimization}) yang dilakukan oleh LeakAgent dengan mekanisme \textit{iterative peeling} dan \textit{Client-Side Memory} yang diimplementasikan dalam PTRW akan menghasilkan serangan yang lebih efektif dibandingkan hanya menggunakan \textit{prompt adversarial} yang dioptimalkan tanpa mekanisme \textit{structural exploitation} tambahan. LeakAgent sendiri berfokus pada optimasi \textit{prompt} untuk mengeksploitasi \textit{cognitive vulnerabilities} dalam model bahasa, namun tidak memiliki mekanisme khusus untuk menangani kompleksitas topologi MAS atau \textit{context accumulation} yang terjadi dalam \textit{multi-turn conversations}. Dengan menambahkan PTRW, sistem memperoleh kemampuan untuk melakukan \textit{iterative peeling} yang memungkinkan \textit{branch traversal} tanpa \textit{context loss} signifikan, serta \textit{Client-Side Memory} yang menyimpan informasi ekstraksi di sisi \textit{attacker} untuk mempertahankan \textit{shadow map} yang konsisten. Kombinasi ini diharapkan menghasilkan ASR yang lebih tinggi, khususnya pada topologi kompleks seperti \textit{Star}, \textit{Tree}, dan \textit{Random}, di mana LeakAgent sendiri akan mengalami degradasi performa karena akumulasi konteks dan keterbatasan dalam \textit{mapping} cabang-cabang paralel. Pengujian akan dilakukan dengan membandingkan ASR dari pendekatan gabungan PTRW + LeakAgent terhadap LeakAgent \textit{standalone} pada \textit{dataset} sintetis pribadi yang mencakup berbagai topologi MAS. Metrik tambahan seperti \textit{Topology Fidelity} ($GS_{topo}$) dan \textit{Extraction Efficiency} juga akan digunakan untuk memberikan \textit{comprehensive evaluation} terhadap peningkatan yang dicapai.
 
-Hipotesis kedua (H2) menguji Cross-Model Transferability dengan memprediksi bahwa prompt adversarial $Q_{Leak}$ yang dioptimalkan menggunakan LeakAgent akan menunjukkan transferability lebih dari 70\% dalam Attack Success Rate (ASR) across models yang berbeda dan belum pernah dilihat selama training, seperti transfer dari Llama-3 yang digunakan untuk training menuju GPT-4, Claude, dan model-model komersial lainnya. Rationale fundamental di balik hipotesis ini adalah asumsi tentang universal alignment dalam cara berbagai LLMs diprogram untuk mengikuti system instructions. Model-model yang telah melalui RLHF (Reinforcement Learning from Human Feedback) cenderung berbagi struktur alignment yang serupa dalam merespons hierarki instruksi, sehingga prompt adversarial yang berhasil mengeksploitasi cognitive vulnerability seperti instruction overriding pada satu model memiliki probabilitas tinggi untuk efektif juga pada model lain yang berbagi prinsip alignment serupa.\cite{ref1} Pengujian akan dilakukan dengan melatih attack agent pada Llama-3 sebagai proxy, kemudian mengaplikasikan generated prompts adversarial pada berbagai target models baik yang open-source maupun proprietary untuk mengukur success rate. Metrik transferability dihitung sebagai ratio antara ASR pada target model dengan ASR pada proxy model yang digunakan untuk training.
-
-Hipotesis ketiga (H3) berkaitan dengan Cost-Benefit Tradeoff, mengakui bahwa PTRW akan mengincur query cost yang 2-3 kali lebih tinggi dalam hal Extraction Efficiency dibandingkan MASLEAK karena nature dari iterative approach yang memerlukan multiple rounds of probing. Namun, hipotesis memprediksi bahwa tradeoff ini justified karena PTRW akan memiliki "Chain Break" failure rate yang significantly lower, yaitu kurang dari 5\%, dibandingkan dengan MASLEAK yang dapat mencapai failure rate 30-40\% pada topologi kompleks. Chain break terjadi ketika propagasi payload terputus di tengah jalan, menyebabkan loss of semua data yang telah diekstrak sebelumnya. Dengan resilience mechanism yang dimiliki PTRW, termasuk kemampuan retry per-layer dan verification setelah setiap ekstraksi, overall success probability per computational budget sebenarnya lebih baik meskipun per-attempt cost lebih tinggi. Analogi sederhana: lebih baik melakukan 3 attempts yang masing-masing memiliki 90\% success rate (expected successful extractions = 2.7) daripada 1 attempt dengan 40\% success rate (expected = 0.4). Pengujian akan membandingkan total API calls required untuk complete topology extraction versus success rate, kemudian menghitung cost-effectiveness metric sebagai ratio successful extractions per 1000 API calls.
-
-Validasi statistik untuk ketiga hipotesis akan dilakukan menggunakan rigorous statistical tests. Untuk H1 dan H2 yang membandingkan continuous metrics (Topology Fidelity dan ASR), paired t-test akan digunakan untuk comparing means antara PTRW dan baseline methods pada same set of targets, memastikan statistical significance dari perbedaan yang diamati. Untuk H3 yang melibatkan efficiency distributions yang mungkin non-normal, Mann-Whitney U test (non-parametric alternative) akan digunakan untuk membandingkan distribusi query costs dan success rates. Semua tests akan menggunakan significance level $\alpha = 0.05$, dengan additional Bonferroni correction jika diperlukan untuk multiple comparisons. Confidence intervals 95\% akan dihitung untuk semua effect sizes untuk memberikan gambaran tentang magnitude dari improvements yang dihasilkan oleh PTRW.
+Validasi statistik akan dilakukan menggunakan \textit{paired t-test} untuk membandingkan ASR antara PTRW + LeakAgent dan LeakAgent \textit{standalone} pada \textit{same set of targets}, memastikan \textit{statistical significance} dari perbedaan yang diamati. Semua \textit{tests} akan menggunakan \textit{significance level} $\alpha = 0.05$. \textit{Confidence intervals} 95\% akan dihitung untuk \textit{effect sizes} guna memberikan gambaran tentang \textit{magnitude} dari peningkatan ASR yang dihasilkan oleh kombinasi PTRW + LeakAgent dibandingkan LeakAgent sendiri.
 
 \subsubsection*{3.4.4 Pertimbangan Etis}
 \addcontentsline{toc}{subsubsection}{3.4.4 Pertimbangan Etis}
-Penelitian ini dilaksanakan dengan mematuhi prinsip-prinsip Responsible Disclosure dan ethical research practices yang berlaku dalam domain security research, memastikan bahwa eksplorasi terhadap vulnerabilities dilakukan dengan cara yang tidak membahayakan systems atau users yang ada.
+Penelitian ini dilaksanakan dengan mematuhi prinsip-prinsip \textit{Responsible Disclosure} dan praktik penelitian etis yang berlaku dalam ranah penelitian keamanan, memastikan bahwa eksplorasi terhadap kerentanan sistem dilakukan dengan cara yang tidak membahayakan sistem atau pengguna yang ada.
 
-Prinsip fundamental yang dipegang adalah bahwa semua eksperimen dilakukan pada lingkungan terkontrol atau honeypot applications yang dibuat sendiri oleh tim peneliti. Lingkungan terkontrol mencakup dataset sintetis MASD dan deployment khusus di platform komersial di mana peneliti memiliki full ownership dan permission. Honeypot applications yang di-deploy di Coze dan CrewAI dibuat specifically untuk tujuan penelitian dengan awareness dan cooperation dari peneliti yang bertindak sebagai "operators" dari applications tersebut. Pendekatan ini memastikan tidak ada real users atau production systems yang terekspos kepada potential harm selama fase eksperimen. Setiap testing yang melibatkan third-party platforms dilakukan dengan transparent disclosure kepada platform providers dan dalam compliance dengan terms of service yang berlaku.
+Prinsip fundamental yang dipegang adalah bahwa semua eksperimen dilakukan pada lingkungan terkontrol yang dibuat sendiri oleh tim peneliti. Lingkungan terkontrol mencakup \textit{dataset} sintetis pribadi dengan berbagai variasi topologi (\textit{Chain}, \textit{Star}, \textit{Tree}, \textit{Random}, \textit{Complete}) dan \textit{deployment} MAS \textit{open-source} secara lokal pada infrastruktur yang dimiliki peneliti dengan kendali penuh. Semua aplikasi MAS yang digunakan untuk pengujian dibuat secara khusus untuk tujuan penelitian dengan kriteria yang telah ditentukan. Pendekatan ini memastikan tidak ada pengguna nyata atau sistem produksi yang terekspos kepada potensi bahaya selama fase eksperimen, serta menjamin \textit{reproducibility} dan transparansi metodologi karena seluruh infrastruktur bersifat lokal dan menggunakan model \textit{open-source}.
 
-Dalam hal ditemukan kerentanan pada commercial platforms atau production systems selama penelitian, protokol responsible disclosure akan diikuti secara ketat. Setiap vulnerability yang diidentifikasi akan dilaporkan kepada vendor atau platform provider yang bersangkutan sebelum hasil penelitian dipublikasikan. Laporan akan mencakup detailed technical description tentang vulnerability, proof-of-concept yang mendemonstrasikan exploit (dalam controlled manner), potential impact analysis, dan rekomendasi mitigasi. Komunikasi dengan vendor akan dilakukan melalui official security channels jika tersedia, atau melalui koordinasi dengan CERT (Computer Emergency Response Team) jika diperlukan. Tidak ada serangan dilakukan terhadap production systems tanpa izin eksplisit dari owners, dan setiap testing pada real-world applications dibatasi hanya pada honeypots yang telah mendapat clearance.
+Dalam hal ditemukan kerentanan pada platform komersial atau sistem produksi selama penelitian, protokol \textit{responsible disclosure} akan diikuti secara ketat. Setiap kerentanan yang diidentifikasi akan dilaporkan kepada vendor atau penyedia platform yang bersangkutan sebelum hasil penelitian dipublikasikan. Laporan akan mencakup deskripsi teknis terperinci tentang kerentanan, \textit{proof-of-concept} yang mendemonstrasikan eksploitasi (dalam cara yang terkendali), analisis dampak potensial, dan rekomendasi mitigasi. Komunikasi dengan vendor akan dilakukan melalui saluran keamanan resmi jika tersedia, atau melalui koordinasi dengan CERT (\textit{Computer Emergency Response Team}) jika diperlukan. Tidak ada serangan dilakukan terhadap sistem produksi tanpa izin eksplisit dari pemilik, dan setiap pengujian pada aplikasi dunia nyata dibatasi hanya pada \textit{honeypots} yang telah mendapat izin.
 
-Dalam hal dissemination of research artifacts, code implementation dari sistem PTRW dan detailed attack payloads hanya akan dirilis ke publik setelah vendor diberikan reasonable time window, yaitu minimal 90 days, untuk melakukan patching dan mitigation terhadap vulnerabilities yang dilaporkan. Time window ini mengikuti standard industry practice dalam coordinated vulnerability disclosure dan memberikan kesempatan bagi vendors untuk protect their users sebelum details of exploits menjadi public knowledge. Jika vendor memerlukan extended time untuk complex fixes, additional time dapat diberikan melalui mutual agreement. Release of research artifacts akan dilakukan secara bertahap, dimulai dengan high-level methodologies dan theoretical frameworks, kemudian followed by implementation details setelah confirmation bahwa critical vulnerabilities telah di-address.
+Dalam hal diseminasi artefak penelitian, implementasi kode dari sistem PTRW dan \textit{payload} serangan terperinci hanya akan dirilis ke publik setelah vendor diberikan jangka waktu yang wajar, yaitu minimal 90 hari, untuk melakukan \textit{patching} dan mitigasi terhadap kerentanan yang dilaporkan. Jangka waktu ini mengikuti praktik standar industri dalam pengungkapan kerentanan terkoordinasi dan memberikan kesempatan bagi vendor untuk melindungi pengguna mereka sebelum detail eksploitasi menjadi pengetahuan publik. Jika vendor memerlukan waktu tambahan untuk perbaikan yang kompleks, waktu tambahan dapat diberikan melalui kesepakatan bersama. Rilis artefak penelitian akan dilakukan secara bertahap, dimulai dengan metodologi tingkat tinggi dan kerangka teoritis, kemudian diikuti dengan detail implementasi setelah konfirmasi bahwa kerentanan kritis telah ditangani.
 
-Hasil penelitian akan dipublikasikan dengan fokus utama pada defensive implications dan recommendations untuk improving security posture dari MAS architectures. Paper akan structured untuk emphasize pada lessons learned tentang vulnerabilities dalam current designs dan actionable recommendations untuk developers, platform providers, dan organizations yang menggunakan MAS. Publikasi akan include proposed defense mechanisms, architectural improvements seperti state-aware defenses dan verification protocols, serta best practices untuk secure MAS development. Tujuan akhir adalah untuk advance the state of security dalam AI systems, bukan untuk facilitate malicious exploitation. Oleh karena itu, presentasi hasil akan balanced antara demonstrating severity of risks untuk memotivasi action, dan providing solutions untuk mitigation.\cite{ref1}
+Hasil penelitian akan dipublikasikan dengan fokus utama pada implikasi defensif dan rekomendasi untuk meningkatkan postur keamanan dari arsitektur MAS. Makalah akan disusun untuk menekankan pada pelajaran yang didapat tentang kerentanan dalam desain saat ini dan rekomendasi yang dapat ditindaklanjuti untuk pengembang, penyedia platform, dan organisasi yang menggunakan MAS. Publikasi akan mencakup mekanisme pertahanan yang diusulkan, peningkatan arsitektural seperti \textit{state-aware defenses} dan protokol verifikasi, serta praktik terbaik untuk pengembangan MAS yang aman. Tujuan akhir adalah untuk memajukan keadaan keamanan dalam sistem AI, bukan untuk memfasilitasi eksploitasi berbahaya. Oleh karena itu, presentasi hasil akan seimbang antara mendemonstrasikan tingkat keparahan risiko untuk memotivasi tindakan, dan menyediakan solusi untuk mitigasi.\cite{ref1}
 
 \newpage
 
