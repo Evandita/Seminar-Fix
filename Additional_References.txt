@@ -1,0 +1,64 @@
+REFERENSI TAMBAHAN UNTUK ITERATIVE PEELING DAN CLIENT-SIDE MEMORY
+
+ITERATIVE PEELING (TERINSPIRASI DARI GRAPH THEORY):
+
+[ref12] Bollobás, B., & Riordan, O. (2004). "The Diameter of a Scale-Free Random Graph". Combinatorica, 24(1), 5-34. DOI: 10.1007/s00493-004-0002-2
+(Catatan: Artikel ini membahas peeling algorithms dalam konteks graph decomposition dan analisis struktur graf kompleks)
+
+[ref13] Batagelj, V., & Zaveršnik, M. (2011). "Fast Algorithms for Determining (Generalized) Core Groups in Social Networks". Advances in Data Analysis and Classification, 5(2), 129-145. DOI: 10.1007/s11634-010-0079-y
+(Catatan: Artikel ini menjelaskan k-core decomposition dan peeling process untuk menganalisis struktur berlapis dalam graf)
+
+CLIENT-SIDE MEMORY (TERINSPIRASI DARI WEB DEVELOPMENT):
+
+[ref14] Hickson, I. (Ed.). (2011). "Web Storage (Second Edition)". W3C Recommendation. World Wide Web Consortium. URL: https://www.w3.org/TR/webstorage/
+(Catatan: Spesifikasi resmi W3C tentang localStorage dan sessionStorage API untuk penyimpanan data di sisi klien pada web browser)
+
+[ref15] Zakas, N. C. (2012). "Professional JavaScript for Web Developers" (3rd ed.). Wrox Press. ISBN: 978-1118026694, Chapter 23: "Offline Applications and Client-Side Storage"
+(Catatan: Buku referensi standar tentang client-side storage technologies dalam web development, termasuk localStorage, IndexedDB, dan application cache)
+
+INSTRUKSI PENAMBAHAN KE DAFTAR PUSTAKA:
+Referensi-referensi di atas perlu ditambahkan ke dalam file .bib atau daftar pustaka dokumen LaTeX Anda dengan format yang sesuai dengan gaya sitasi yang digunakan.
+
+Jika menggunakan BibTeX, format entrynya sebagai berikut:
+
+@article{ref12,
+  author = {Bollob\'{a}s, B\'{e}la and Riordan, Oliver},
+  title = {The Diameter of a Scale-Free Random Graph},
+  journal = {Combinatorica},
+  volume = {24},
+  number = {1},
+  pages = {5--34},
+  year = {2004},
+  doi = {10.1007/s00493-004-0002-2}
+}
+
+@article{ref13,
+  author = {Batagelj, Vladimir and Zaver\v{s}nik, Matja\v{z}},
+  title = {Fast Algorithms for Determining (Generalized) Core Groups in Social Networks},
+  journal = {Advances in Data Analysis and Classification},
+  volume = {5},
+  number = {2},
+  pages = {129--145},
+  year = {2011},
+  doi = {10.1007/s11634-010-0079-y}
+}
+
+@techreport{ref14,
+  author = {Hickson, Ian},
+  title = {Web Storage (Second Edition)},
+  institution = {World Wide Web Consortium},
+  type = {W3C Recommendation},
+  year = {2011},
+  url = {https://www.w3.org/TR/webstorage/}
+}
+
+@book{ref15,
+  author = {Zakas, Nicholas C.},
+  title = {Professional JavaScript for Web Developers},
+  edition = {3rd},
+  publisher = {Wrox Press},
+  year = {2012},
+  isbn = {978-1118026694},
+  chapter = {23},
+  pages = {745--784}
+}
