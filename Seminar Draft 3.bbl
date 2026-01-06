@@ -32,7 +32,7 @@ A.~Andam, J.~Bentahar, and M.~Hedabou, ``Constrained black-box attacks against m
 
 \bibitem{nie2025leakagentrlbasedredteamingagent}
 \BIBentryALTinterwordspacing
-Y.~Nie, Z.~Wang, Y.~Yu, X.~Wu, X.~Zhao, W.~Guo, and D.~Song, ``Leakagent: Rl-based red-teaming agent for llm privacy leakage,'' 2025. [Online]. Available: \url{https://arxiv.org/abs/2412.05734}
+Y.~Nie, Z.~Wang, Y.~Yu, X.~Wu, X.~Zhao, N.~D. Bastian, W.~Guo, and D.~Song, ``Leakagent: {RL}-based red-teaming agent for {LLM} privacy leakage,'' in \emph{Second Conference on Language Modeling}, 2025. [Online]. Available: \url{https://openreview.net/forum?id=WIfns41MAb}
 \BIBentrySTDinterwordspacing
 
 \bibitem{schulman2017proximalpolicyoptimizationalgorithms}
@@ -42,12 +42,12 @@ J.~Schulman, F.~Wolski, P.~Dhariwal, A.~Radford, and O.~Klimov, ``Proximal polic
 
 \bibitem{liu2023lostmiddlelanguagemodels}
 \BIBentryALTinterwordspacing
-N.~F. Liu, K.~Lin, J.~Hewitt, A.~Paranjape, M.~Bevilacqua, F.~Petroni, and P.~Liang, ``Lost in the middle: How language models use long contexts,'' 2023. [Online]. Available: \url{https://arxiv.org/abs/2307.03172}
+N.~F. Liu, K.~Lin, J.~Hewitt, A.~Paranjape, M.~Bevilacqua, F.~Petroni, and P.~Liang, ``Lost in the middle: How language models use long contexts,'' \emph{Transactions of the Association for Computational Linguistics}, vol.~12, 2024. [Online]. Available: \url{https://aclanthology.org/2024.tacl-1.9/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{chen2024llmarenaassessingcapabilitieslarge}
 \BIBentryALTinterwordspacing
-J.~Chen, X.~Hu, S.~Liu, S.~Huang, W.-W. Tu, Z.~He, and L.~Wen, ``Llmarena: Assessing capabilities of large language models in dynamic multi-agent environments,'' 2024. [Online]. Available: \url{https://arxiv.org/abs/2402.16499}
+J.~Chen, X.~Hu, S.~Liu, S.~Huang, W.-W. Tu, Z.~He, and L.~Wen, ``Llmarena: Assessing capabilities of large language models in dynamic multi-agent environments,'' in \emph{Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)}.\hskip 1em plus 0.5em minus 0.4em\relax Association for Computational Linguistics, 2024. [Online]. Available: \url{https://aclanthology.org/2024.acl-long.705/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{wang2025ipleakageattackstargeting}
@@ -57,7 +57,7 @@ L.~Wang, W.~Wang, S.~Wang, Z.~Li, Z.~Ji, Z.~Lyu, D.~Wu, and S.-C. Cheung, ``Ip l
 
 \bibitem{greshake2023youvesignedforcompromising}
 \BIBentryALTinterwordspacing
-K.~Greshake, S.~Abdelnabi, S.~Mishra, C.~Endres, T.~Holz, and M.~Fritz, ``Not what you've signed up for: Compromising real-world llm-integrated applications with indirect prompt injection,'' 2023. [Online]. Available: \url{https://arxiv.org/abs/2302.12173}
+K.~Greshake, S.~Abdelnabi, S.~Mishra, C.~Endres, T.~Holz, and M.~Fritz, ``Not what you've signed up for: Compromising real-world llm-integrated applications with indirect prompt injection,'' in \emph{Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security (AISec)}, 2023, pp. 79--90. [Online]. Available: \url{https://dl.acm.org/doi/10.1145/3605764.3623985}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Lee2024PromptIL}
@@ -82,7 +82,7 @@ S.~Cohen, R.~Bitton, and B.~Nassi, ``Here comes the ai worm: Unleashing zero-cli
 
 \bibitem{wang2025agentvigilgenericblackboxredteaming}
 \BIBentryALTinterwordspacing
-Z.~Wang, V.~Siu, Z.~Ye, T.~Shi, Y.~Nie, X.~Zhao, C.~Wang, W.~Guo, and D.~Song, ``Agentvigil: Generic black-box red-teaming for indirect prompt injection against llm agents,'' 2025. [Online]. Available: \url{https://arxiv.org/abs/2505.05849}
+Z.~Wang, V.~Siu, Z.~Ye, T.~Shi, Y.~Nie, X.~Zhao, C.~Wang, W.~Guo, and D.~Song, ``Agentvigil: Generic black-box red-teaming for indirect prompt injection against llm agents,'' in \emph{Findings of the Association for Computational Linguistics: EMNLP 2025}, 2025. [Online]. Available: \url{https://aclanthology.org/2025.findings-emnlp.1258/}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}
