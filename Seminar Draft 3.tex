@@ -456,17 +456,11 @@ Dalam konteks penelitian ini, terminologi "\textit{worm}" diadopsi untuk mendesk
 
 Nama "\textit{Proxy-Trained Recursive Worm}" (PTRW) lahir dari sintesis tiga konsep metodologis yang menjadi fondasi penelitian ini. Komponen "\textit{Proxy-Trained}" merujuk pada strategi pelatihan di mana \textit{adversarial prompts} dioptimalkan menggunakan model \textit{proxy open-source} (Llama-3) melalui \textit{Reinforcement Learning} dengan PPO, kemudian ditransfer ke berbagai target \textit{black-box} yang belum pernah dilihat selama \textit{training}. Pendekatan ini mengatasi keterbatasan akses terhadap model \textit{proprietary} sambil memanfaatkan \textit{universal alignment} dalam mekanisme \textit{instruction-following} yang dibagikan oleh sebagian besar \textit{LLMs} modern.\cite{ref1} Komponen "\textit{Recursive}" merujuk pada prinsip enkapsulasi berlapis rekursif di mana \textit{adversarial instructions} ditanamkan dalam \textit{multiple layers} of \textit{benign-looking wrappers}. \textit{Layer} terluar tampak sebagai \textit{legitimate inter-agent communication}, sementara \textit{layer} dalam membawa \textit{actual malicious payload} yang hanya \textit{ter-reveal} ketika diproses oleh \textit{target agent} yang dituju.\cite{ref1} Enkapsulasi berlapis ini memungkinkan \textit{payload} untuk "\textit{tunnel}" melewati \textit{trust boundaries} antar-agen dengan mengeksploitasi asumsi bahwa komunikasi internal dalam sistem dipercaya tanpa \textit{scrutiny} yang ketat. Komponen "\textit{Worm}" mendeskripsikan karakteristik propagasi yang memungkinkan sistem untuk \textit{autonomously traverse agent networks} melalui mekanisme \textit{Iterative Peeling} dan \textit{Client-Side Memory}, secara sistematis mengekstrak IP dari setiap \textit{node} sambil membangun \textit{comprehensive shadow map} dari topologi target.
 
-Integrasi ketiga komponen ini menghasilkan metodologi serangan yang unik di mana \textit{proxy-trained warheads} yang dioptimalkan melalui \textit{RL} di-\textit{deliver} menggunakan enkapsulasi rekursif berlapis untuk menembus \textit{inter-agent trust boundaries}, sambil mekanisme \textit{worm-like propagation} memungkinkan \textit{systematic extraction} across \textit{entire MAS topology}. Nama PTRW dengan demikian mengenkapsulasi \textit{essence} dari kontribusi metodologis penelitian ini: kombinasi dari \textit{machine learning-optimized payload generation}, \textit{cryptographic-inspired layered obfuscation}, dan \textit{network security-inspired autonomous propagation}, semuanya diadaptasi untuk domain novel dari \textit{LLM-based Multi-Agent Systems}.
-
 \subsubsection*{2.1.5 \textit{Proximal Policy Optimization} (PPO) dalam \textit{Adversarial Prompting}}
 \addcontentsline{toc}{subsubsection}{2.1.5 Proximal Policy Optimization (PPO) dalam Adversarial Prompting}
 \textit{Proximal Policy Optimization} (PPO) merupakan algoritma \textit{Reinforcement Learning} yang digunakan untuk menghasilkan \textit{prompt adversarial} yang stabil dan efektif, mengatasi keterbatasan pendekatan konvensional seperti \textit{PromptFuzz} yang mengandalkan teknik \textit{fuzzing} berbasis mutasi acak. Berbeda dengan algoritma genetika yang mengandalkan mutasi stokastik, PPO memungkinkan agen serangan memperbarui kebijakannya berdasarkan \textit{expected reward} dari urutan yang dihasilkan, sehingga memberikan \textit{gradient} terarah yang memandu agen menuju \textit{prompt} yang lebih efektif dengan kecepatan konvergensi yang jauh lebih tinggi dibandingkan pencarian acak.\cite{ref1}
 
-\textbf{Peran PPO dalam PTRW:}
-
 Dalam konteks kerangka kerja PTRW, PPO berfungsi sebagai komponen "\textit{warhead generation}" yang merekonseptualisasi ekstraksi IP MAS sebagai serangkaian "\textit{Stateless Unit Tests}" yang diorkestrasi secara eksternal. Pendekatan ini mengatasi keterbatasan fundamental dari metode konvensional yang sering kali gagal akibat kompleksitas ruang keadaan dan kelangkaan sinyal \textit{reward} pada pengaturan \textit{black-box}.\cite{ref1}
-
-\textbf{Formulasi Matematika:}
 
 Fungsi objektif PPO didefinisikan sebagai berikut:
 \[
@@ -475,15 +469,11 @@ L^{CLIP}(\theta) = \hat{\mathbb{E}}_t \left[ \min\left( r_t(\theta) \hat{A}_t, \
 
 Mekanisme \textit{clipping} pada PPO mencegah pembaruan kebijakan yang terlalu drastis yang dapat mendestabilkan proses pembelajaran. Mekanisme ini sangat krusial saat menavigasi lanskap \textit{reward} yang volatil dari serangan \textit{adversarial}, di mana perubahan kecil dalam struktur \textit{prompt} dapat mengubah hasil dari kondisi sukses menjadi penolakan.\cite{ref1}
 
-\textbf{Keunggulan Metodologis:}
-
 PPO memungkinkan definisi fungsi \textit{reward} yang kompleks dengan kemampuan untuk menghukum pelanggaran format sintaksis, secara efektif mengajarkan agen serangan untuk menghasilkan \textit{prompt} yang tidak hanya \textit{adversarial} dalam konten tetapi juga memenuhi persyaratan sintaksis yang benar untuk API target. Stabilitas pembelajaran dan kemampuan \textit{fine-tuning} tanpa mengalami \textit{catastrophic forgetting} menjadikan PPO pilihan optimal untuk optimasi \textit{prompt adversarial} dalam konteks MAS.\cite{ref1}
 
 \subsubsection*{2.1.6 Fungsi \textit{Reward} Semantik: \textit{Sliding-window Word Edit Similarity} (WES)}
 \addcontentsline{toc}{subsubsection}{2.1.6 Fungsi Reward Semantik: Sliding-window Word Edit Similarity (WES)}
 Fungsi \textit{reward} merupakan komponen esensial dalam proses optimasi menggunakan \textit{Reinforcement Learning}. \textit{Reward} biner sederhana yang memberikan nilai 1 untuk sukses dan 0 untuk gagal tidak memadai untuk pelatihan karena ekstraksi IP yang berhasil merupakan kejadian langka yang menghasilkan \textit{sparse reward signal}. Fungsi WES dirancang untuk memberikan sinyal \textit{reward} yang padat (\textit{dense reward}), di mana agen serangan menerima \textit{reward} positif bahkan ketika agen target hanya membocorkan fragmen dari \textit{system prompt}.\cite{ref1}
-
-\textbf{Formulasi Matematika:}
 
 Fungsi \textit{reward} WES didefinisikan sebagai berikut:
 \[
@@ -492,11 +482,7 @@ R(u, d) = (1 - \lambda) \cdot \text{SWES}_{\text{norm}}(u, d) + \lambda \cdot \f
 
 Dalam formulasi ini, $u$ merepresentasikan respons yang dihasilkan oleh model target, $d$ merepresentasikan informasi privat yang diinginkan (\textit{ground truth system prompt} dari model proksi), $\lambda$ adalah koefisien penyeimbang yang ditetapkan bernilai 0.1 berdasarkan spesifikasi \textit{LeakAgent}, dan $\text{SWES}_{\text{norm}}$ adalah skor kesamaan ternormalisasi yang diturunkan dari \textit{edit distance}.\cite{ref1}
 
-\textbf{Mekanisme \textit{Sliding Window}:}
-
 Metrik \textit{edit distance} standar mengalami kegagalan ketika \textit{output} target $u$ memiliki panjang yang jauh melebihi \textit{output} yang diinginkan $d$, misalnya ketika agen mengeluarkan \textit{system prompt} yang tertanam dalam respons percakapan yang panjang. \textit{Sliding-window Word Edit Similarity} mengatasi keterbatasan ini dengan menerapkan mekanisme \textit{sliding window} pada \textit{output} $u$ untuk menemukan \textit{substring} yang memiliki kecocokan optimal dengan $d$. Pendekatan ini memastikan bahwa kebocoran informasi yang tertanam dalam \textit{output} yang panjang tetap dapat diberi \textit{reward} dengan benar, sehingga membimbing agen serangan menuju ekstraksi yang lengkap dan akurat.\cite{ref1}
-
-\textbf{Signifikansi dalam Pembelajaran:}
 
 \textit{Dense reward signal} yang dihasilkan oleh fungsi WES memfasilitasi pembelajaran \textit{gradual} yang lebih efektif, di mana \textit{attack agent} dapat mempelajari strategi ekstraksi secara inkremental melalui \textit{feedback} bertingkat yang proporsional dengan tingkat keberhasilan parsial.
 
@@ -504,25 +490,25 @@ Metrik \textit{edit distance} standar mengalami kegagalan ketika \textit{output}
 \addcontentsline{toc}{subsection}{2.2 Penelitian Terkait}
 Beberapa penelitian terdahulu yang relevan dengan topik serangan adversarial pada MAS akan diulas berikut ini untuk mengidentifikasi celah metodologis yang diisi oleh PTRW:
 
-\begin{itemize}
-    \item \textbf{MASLEAK (IP \textit{Leakage Attacks Targeting LLM-Based Multi-Agent Systems}):}
+\begin{enumerate}
+    \item \textbf{MASLEAK}
     
     MASLEAK merupakan metodologi serangan berbentuk \textit{worm single-pass} yang dirancang untuk mengekstrak Kekayaan Intelektual dari MAS. Pendekatan ini mengandalkan propagasi \textit{payload} tunggal melalui seluruh rantai agen dalam satu eksekusi tunggal. Namun demikian, MASLEAK memiliki kerentanan signifikan terhadap fenomena "\textit{Lost in the Middle}" dan degradasi konteks. Ketika serangan melintasi rantai agen yang panjang, akumulasi riwayat percakapan menyebabkan agen di kedalaman rantai gagal memproses instruksi propagasi atau format data, sehingga memutus rantai serangan.\cite{ref7}
     
     Kelemahan fundamental MASLEAK terletak pada ketergantungannya terhadap manajemen status internal MAS yang mengakibatkan \textit{single point of failure}. Jika salah satu agen dalam rantai memutus alur serangan, seluruh informasi yang telah diekstrak sebelumnya akan hilang. MASLEAK tidak memiliki mekanisme \textit{Client-Side Memory} untuk menyimpan data hasil ekstraksi secara eksternal, sehingga sistem tidak dapat melakukan \textit{recovery} atau \textit{retry} pada agen spesifik yang mengalami kegagalan. Keterbatasan ini menunjukkan kebutuhan mendesak akan pendekatan yang lebih \textit{resilient} dengan kemampuan isolasi kegagalan.\cite{ref1}
     
-    \item \textbf{PromptFuzz (\textit{Fuzzing Techniques for Prompt Injection}):}
+    \item \textbf{PromptFuzz}
     
     \textit{PromptFuzz} menggunakan pendekatan \textit{fuzzing} berbasis mutasi untuk menemukan kerentanan \textit{prompt injection}. Metode ini mengandalkan mutasi acak atau heuristik tanpa panduan \textit{gradient}. Dalam ruang pencarian bahasa alami berdimensi tinggi, pendekatan ini mendegradasi menjadi pencarian acak yang tidak efisien secara komputasi.\cite{ref5} \textit{PromptFuzz} memerlukan ribuan \textit{kueri} untuk menemukan satu celah dan menghasilkan \textit{prompt} dengan transferabilitas rendah antar-model. Tanpa pemahaman semantik mengapa \textit{prompt} gagal, metode ini efektif merupakan \textit{random walk}. Lebih lanjut, \textit{PromptFuzz} efektif untuk \textit{single-agent} namun mengalami inefisiensi komputasional signifikan dalam ruang pencarian \textit{multi-agent} yang berdimensi tinggi, tidak mampu mengatasi kompleksitas struktural sistem \textit{multi-agent} dengan distribusi informasi dan degradasi konteks yang kompleks.\cite{ref1}
     
-    \item \textbf{LeakAgent (\textit{RL-based Red-teaming for Privacy Leakage}):}
+    \item \textbf{LeakAgent}
     
     \textit{LeakAgent} memperkenalkan penggunaan \textit{Reinforcement Learning} dengan PPO untuk menghasilkan \textit{prompt adversarial} optimal terhadap \textit{single-agent LLM}. Kerangka kerja ini menggunakan fungsi \textit{reward} WES yang padat dan \textit{dynamic temperature adjustment} untuk menghasilkan \textit{prompt} yang efektif dan beragam.\cite{ref3} \textit{LeakAgent} berhasil mengatasi keterbatasan \textit{fuzzing} acak dengan memberikan \textit{directional gradient} yang mengarahkan pembelajaran menuju \textit{prompt} yang lebih efektif. Namun, \textit{LeakAgent} dirancang untuk serangan \textit{single-agent} dan belum mendukung kompleksitas topologi MAS, tidak memiliki mekanisme untuk navigasi struktur berlapis, dan tidak menyediakan \textit{Client-Side Memory} untuk \textit{tracking state} eksternal. Penelitian ini mengadaptasi dan memperluas \textit{LeakAgent} sebagai komponen "\textit{warhead generation}" dalam PTRW, mengintegrasikannya dengan mekanisme \textit{Iterative Peeling} dan \textit{Client-Side Memory} untuk mengatasi tantangan \textit{multi-agent}.\cite{ref1}
     
-    \item \textbf{AgentFuzzer (\textit{Black-Box Fuzzing for LLM Agents}):}
+    \item \textbf{AgentFuzzer}
     
     \textit{AgentFuzzer} mengusulkan \textit{fuzzing black-box} generik untuk \textit{indirect prompt injection} terhadap \textit{LLM agents}. Pendekatan ini fokus pada identifikasi kerentanan melalui \textit{testing} sistematis tetapi tidak mengoptimalkan transferabilitas atau efisiensi ekstraksi dalam konteks MAS.\cite{ref11}
-\end{itemize}
+\end{enumerate}
 
 Dari tinjauan penelitian terkait, dapat disimpulkan bahwa terdapat celah metodologis signifikan antara serangan \textit{single-agent} dan \textit{multi-agent} yang memerlukan pendekatan fundamental berbeda. MASLEAK menunjukkan kelayakan serangan pada MAS tetapi terbatas oleh \textit{single-pass propagation} yang rentan terhadap \textit{Lost in the Middle} dan \textit{single point of failure} karena ketergantungan pada manajemen status internal MAS. \textit{PromptFuzz} efektif untuk \textit{single-agent} namun mengalami inefisiensi komputasional dalam ruang pencarian \textit{multi-agent} berdimensi tinggi tanpa \textit{gradient} terarah. \textit{LeakAgent} mendemonstrasikan kekuatan \textit{RL} dengan PPO untuk optimasi \textit{prompt} dan fungsi \textit{reward} WES yang padat, tetapi dirancang untuk \textit{single-agent} dan tidak menangani kompleksitas topologi \textit{multi-agen}.\cite{ref1}
 
@@ -557,13 +543,21 @@ Adaptabilitas & Tidak ada & Tidak ada & Tinggi (pembelajaran historis dari \text
 \end{tabular}
 \end{table}
 
-Analisis pada Tabel 2.1 menunjukkan bahwa PTRW mengatasi keterbatasan fundamental dari pendekatan \textit{existing} melalui tiga inovasi metodologis utama yang terintegrasi secara sinergis.
+Analisis pada Tabel 2.1 menunjukkan bahwa PTRW mengatasi keterbatasan fundamental dari pendekatan \textit{existing} melalui tiga inovasi metodologis utama yang terintegrasi secara sinergis:
 
-\textbf{Pertama, \textit{Iterative Peeling} untuk Mitigasi Degradasi Konteks:} MASLEAK terbatas oleh ketergantungan pada \textit{context window} dan kerentanan \textit{single-pass}, di mana fenomena \textit{Lost in the Middle} menyebabkan agen yang berada pada kedalaman rantai kurang memperhatikan instruksi propagasi. Kegagalan pada satu agen mengakibatkan hilangnya seluruh informasi yang telah diekstrak sebelumnya. PTRW menyelesaikan permasalahan ini melalui mekanisme \textit{Iterative Peeling}, di mana setiap agen diekstrak secara independen dalam iterasi terpisah. Sebagai ilustrasi, \textit{query} untuk mengekstrak Agen 3 hanya membawa konteks yang diperlukan untuk mencapai Agen 3, mengekstrak data, menyimpannya di \textit{Client-Side Memory}, kemudian memformulasikan \textit{query} baru untuk Agen 4 tanpa membawa beban kontekstual dari ekstraksi sebelumnya.\cite{ref1}
-
-\textbf{Kedua, Optimasi Berbasis \textit{Gradient} dengan PPO:} \textit{PromptFuzz} tanpa pemahaman semantik mengapa \textit{prompt} gagal secara efektif merupakan \textit{random walk} dalam ruang pencarian berdimensi tinggi. Sebaliknya, PPO dengan \textit{guided} WES \textit{reward} pada PTRW berkonvergensi dengan kecepatan yang jauh lebih tinggi menuju \textit{prompt adversarial} yang berhasil karena memiliki \textit{directional gradient} yang mengarahkan proses pembelajaran.
-
-\textbf{Ketiga, Resiliensi melalui \textit{Client-Side Memory}:} \textit{Client-Side Memory} memungkinkan PTRW melakukan isolasi kegagalan. Jika ekstraksi terhadap satu agen gagal, hal tersebut tidak mempengaruhi keberhasilan ekstraksi agen lain yang telah dilakukan. Sistem dapat melakukan \textit{retry} dengan \textit{parameter adjustment} berdasarkan pengetahuan historis yang tersimpan dalam \textit{memory}, secara progresif mengubah sistem target dari \textit{black box} menjadi \textit{glass box} yang transparan.\cite{ref1}
+\begin{enumerate}
+    \item \textbf{\textit{Iterative Peeling} untuk Mitigasi Degradasi Konteks}
+    
+    MASLEAK terbatas oleh ketergantungan pada \textit{context window} dan kerentanan \textit{single-pass}, di mana fenomena \textit{Lost in the Middle} menyebabkan agen yang berada pada kedalaman rantai kurang memperhatikan instruksi propagasi. Kegagalan pada satu agen mengakibatkan hilangnya seluruh informasi yang telah diekstrak sebelumnya. PTRW menyelesaikan permasalahan ini melalui mekanisme \textit{Iterative Peeling}, di mana setiap agen diekstrak secara independen dalam iterasi terpisah. Sebagai ilustrasi, \textit{query} untuk mengekstrak Agen 3 hanya membawa konteks yang diperlukan untuk mencapai Agen 3, mengekstrak data, menyimpannya di \textit{Client-Side Memory}, kemudian memformulasikan \textit{query} baru untuk Agen 4 tanpa membawa beban kontekstual dari ekstraksi sebelumnya.\cite{ref1}
+    
+    \item \textbf{Optimasi Berbasis \textit{Gradient} dengan PPO}
+    
+    \textit{PromptFuzz} tanpa pemahaman semantik mengapa \textit{prompt} gagal secara efektif merupakan \textit{random walk} dalam ruang pencarian berdimensi tinggi. Sebaliknya, PPO dengan \textit{guided} WES \textit{reward} pada PTRW berkonvergensi dengan kecepatan yang jauh lebih tinggi menuju \textit{prompt adversarial} yang berhasil karena memiliki \textit{directional gradient} yang mengarahkan proses pembelajaran.
+    
+    \item \textbf{Resiliensi melalui \textit{Client-Side Memory}}
+    
+    \textit{Client-Side Memory} memungkinkan PTRW melakukan isolasi kegagalan. Jika ekstraksi terhadap satu agen gagal, hal tersebut tidak mempengaruhi keberhasilan ekstraksi agen lain yang telah dilakukan. Sistem dapat melakukan \textit{retry} dengan \textit{parameter adjustment} berdasarkan pengetahuan historis yang tersimpan dalam \textit{memory}, secara progresif mengubah sistem target dari \textit{black box} menjadi \textit{glass box} yang transparan.\cite{ref1}
+\end{enumerate}
 
 \newpage
 

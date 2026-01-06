@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.12.21)  6 JAN 2026 10:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.12.21)  6 JAN 2026 10:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -567,7 +567,7 @@ Package hyperref Info: Link coloring OFF on input line 53.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<logo-ui.png, id=101, 215.80624pt x 235.88126pt>
+<logo-ui.png, id=102, 215.80624pt x 235.88126pt>
 File: logo-ui.png Graphic file (type png)
 <use logo-ui.png>
 Package pdftex.def Info: logo-ui.png  used on input line 59.
@@ -704,57 +704,57 @@ Package hyperref Warning: The anchor of a bookmark and its parent's must not
 [14]
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 543--543
+Underfull \hbox (badness 10000) in paragraph at lines 529--529
 []|\OT1/ptm/m/it/10.95 (+20) Single-pass
  []
 
 
-Underfull \hbox (badness 2726) in paragraph at lines 543--544
+Underfull \hbox (badness 2726) in paragraph at lines 529--530
 []|\OT1/ptm/m/it/10.95 (+20) Iterative Pe-e-ling \OT1/ptm/m/n/10.95 (+20) +
  []
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 545--546
+Underfull \hbox (badness 1430) in paragraph at lines 531--532
 []|\OT1/ptm/m/it/10.95 (+20) RL \OT1/ptm/m/n/10.95 (+20) (PPO) + WES
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 547--547
+Underfull \hbox (badness 2181) in paragraph at lines 533--533
 []|\OT1/ptm/m/n/10.95 (+20) Manajemen Ke-a-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--547
+Underfull \hbox (badness 10000) in paragraph at lines 533--533
 []|\OT1/ptm/m/n/10.95 (+20) Internal (MAS-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--548
+Underfull \hbox (badness 10000) in paragraph at lines 533--534
 []|\OT1/ptm/m/n/10.95 (+20) Eksternal (\OT1/ptm/m/it/10.95 (+20) Client-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--548
+Underfull \hbox (badness 10000) in paragraph at lines 533--534
 \OT1/ptm/m/it/10.95 (+20) Side Me-mory \OT1/ptm/m/n/10.95 (+20) +
  []
 
 
-Underfull \hbox (badness 5696) in paragraph at lines 549--549
+Underfull \hbox (badness 5696) in paragraph at lines 535--535
 []|\OT1/ptm/m/n/10.95 (+20) Terbatas (\OT1/ptm/m/it/10.95 (+20) model-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 549--550
+Underfull \hbox (badness 10000) in paragraph at lines 535--536
 []|\OT1/ptm/m/n/10.95 (+20) Tinggi (\OT1/ptm/m/it/10.95 (+20) proxy-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 549--550
+Underfull \hbox (badness 10000) in paragraph at lines 535--536
 \OT1/ptm/m/it/10.95 (+20) trained\OT1/ptm/m/n/10.95 (+20) , \OT1/ptm/m/it/10.95 (+20) uni-ver-sal
  []
 
 
-Underfull \hbox (badness 1314) in paragraph at lines 555--556
+Underfull \hbox (badness 1314) in paragraph at lines 541--542
 []|\OT1/ptm/m/n/10.95 (+20) Tinggi (pem-be-la-jar-
  []
 
@@ -765,11 +765,11 @@ Underfull \hbox (badness 1314) in paragraph at lines 555--556
 [17]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 574.
+(hyperref)                be the same. Added a new anchor on input line 568.
 
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 582.
+(hyperref)                be the same. Added a new anchor on input line 576.
 
 
 
@@ -784,32 +784,32 @@ Package hyperref Warning: The anchor of a bookmark and its parent's must not
 [22]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 624.
+(hyperref)                be the same. Added a new anchor on input line 618.
 
 
 
 [23]
-Underfull \hbox (badness 1728) in paragraph at lines 645--645
+Underfull \hbox (badness 1728) in paragraph at lines 639--639
 []|\OT1/ptm/m/n/10.95 (+20) Attack Su-ccess Ra-te
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 647--647
+Underfull \hbox (badness 10000) in paragraph at lines 641--641
 []|\OT1/ptm/m/n/10.95 (+20) Topology Fi-de-li-ty
  []
 
 
-Underfull \hbox (badness 1122) in paragraph at lines 647--648
+Underfull \hbox (badness 1122) in paragraph at lines 641--642
 []|\OT1/ptm/m/n/10.95 (+20) Graph Edit Si-mi-la-ri-ty an-ta-ra extra-cted
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 651--651
+Underfull \hbox (badness 10000) in paragraph at lines 645--645
 []|\OT1/ptm/m/n/10.95 (+20) Semantic Si-mi-la-ri-ty
  []
 
 
-Underfull \hbox (badness 2080) in paragraph at lines 651--652
+Underfull \hbox (badness 2080) in paragraph at lines 645--646
 []|\OT1/ptm/m/n/10.95 (+20) Word Edit Si-mi-la-ri-ty an-ta-ra extra-cted
  []
 
@@ -838,21 +838,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `"Seminar Draft 3".out' has not changed.
-(rerunfilecheck)             Checksum: 4F157D2BC98CD042E000B993CEFCD564;6208.
+(rerunfilecheck)             Checksum: 5C11AF88FF466DC87A527E8CA7A4ABF4;6165.
  ) 
 Here is how much of TeX's memory you used:
- 17020 strings out of 473190
- 272929 string characters out of 5715799
+ 17010 strings out of 473190
+ 272808 string characters out of 5715799
  725265 words of memory out of 5000000
- 39489 multiletter control sequences out of 15000+600000
- 608300 words of font info for 380 fonts, out of 8000000 for 9000
+ 39490 multiletter control sequences out of 15000+600000
+ 607424 words of font info for 368 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,12n,79p,2032b,738s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Seminar Draft 3.pdf" (41 pages, 256346 bytes).
+Output written on "Seminar Draft 3.pdf" (41 pages, 254545 bytes).
 PDF statistics:
- 480 PDF objects out of 1000 (max. 8388607)
- 407 compressed objects within 5 object streams
- 83 named destinations out of 1000 (max. 500000)
+ 488 PDF objects out of 1000 (max. 8388607)
+ 415 compressed objects within 5 object streams
+ 90 named destinations out of 1000 (max. 500000)
  61670 words of extra memory for PDF output out of 61914 (max. 10000000)
 

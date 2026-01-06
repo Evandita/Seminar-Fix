@@ -14,8 +14,8 @@
 \contentsline {subsubsection}{2.1.5 Proximal Policy Optimization (PPO) dalam Adversarial Prompting}{12}{section*.2}%
 \contentsline {subsubsection}{2.1.6 Fungsi Reward Semantik: Sliding-window Word Edit Similarity (WES)}{13}{section*.2}%
 \contentsline {subsection}{2.2 Penelitian Terkait}{14}{section*.2}%
-\contentsline {subsection}{2.3 Tabel Perbandingan Studi Pustaka}{16}{section*.2}%
-\contentsline {section}{BAB III METODOLOGI PENELITIAN}{18}{table.caption.3}%
+\contentsline {subsection}{2.3 Tabel Perbandingan Studi Pustaka}{16}{Item.26}%
+\contentsline {section}{BAB III METODOLOGI PENELITIAN}{18}{Item.29}%
 \contentsline {subsection}{3.1 Waktu dan Tempat Penelitian}{18}{section*.4}%
 \contentsline {subsection}{3.2 Metodologi Penelitian}{18}{section*.4}%
 \contentsline {subsubsection}{3.2.1 Fase I: Generasi Hulu Ledak (Warhead Generation)}{18}{section*.5}%
