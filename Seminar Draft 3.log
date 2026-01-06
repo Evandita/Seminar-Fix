@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.12.21)  6 JAN 2026 09:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.12.21)  6 JAN 2026 09:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -567,7 +567,7 @@ Package hyperref Info: Link coloring OFF on input line 53.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<logo-ui.png, id=94, 215.80624pt x 235.88126pt>
+<logo-ui.png, id=95, 215.80624pt x 235.88126pt>
 File: logo-ui.png Graphic file (type png)
 <use logo-ui.png>
 Package pdftex.def Info: logo-ui.png  used on input line 59.
@@ -795,21 +795,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `"Seminar Draft 3".out' has not changed.
-(rerunfilecheck)             Checksum: BEB9562D027C74BAC5E664BA42353CB5;5702.
+(rerunfilecheck)             Checksum: 79F52938A0AB422B24867CCD998C6E0E;5702.
  ) 
 Here is how much of TeX's memory you used:
- 16897 strings out of 473190
- 271751 string characters out of 5715799
+ 16918 strings out of 473190
+ 271942 string characters out of 5715799
  722125 words of memory out of 5000000
- 39478 multiletter control sequences out of 15000+600000
- 599594 words of font info for 314 fonts, out of 8000000 for 9000
+ 39479 multiletter control sequences out of 15000+600000
+ 600599 words of font info for 324 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,12n,79p,2032b,738s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Seminar Draft 3.pdf" (37 pages, 234972 bytes).
+Output written on "Seminar Draft 3.pdf" (37 pages, 236924 bytes).
 PDF statistics:
- 428 PDF objects out of 1000 (max. 8388607)
- 360 compressed objects within 4 object streams
- 69 named destinations out of 1000 (max. 500000)
+ 435 PDF objects out of 1000 (max. 8388607)
+ 367 compressed objects within 4 object streams
+ 74 named destinations out of 1000 (max. 500000)
  53462 words of extra memory for PDF output out of 61914 (max. 10000000)
 
