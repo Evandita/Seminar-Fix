@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.12.21)  6 JAN 2026 22:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.12.21)  6 JAN 2026 22:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -647,7 +647,7 @@ Package hyperref Info: Link coloring OFF on input line 93.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<logo-ui.png, id=112, 215.80624pt x 235.88126pt>
+<logo-ui.png, id=118, 215.80624pt x 235.88126pt>
 File: logo-ui.png Graphic file (type png)
 <use logo-ui.png>
 Package pdftex.def Info: logo-ui.png  used on input line 99.
@@ -715,37 +715,39 @@ l.176 \clearpage
 
 [7
 
-] (./Seminar Draft 3.lof)
+]
+
+[8] (./Seminar Draft 3.lof)
 \tf@lof=\write5
 \openout5 = `"Seminar Draft 3.lof"'.
 
 
 
-[8] (./Seminar Draft 3.lot)
+[9] (./Seminar Draft 3.lot)
 \tf@lot=\write6
 \openout6 = `"Seminar Draft 3.lot"'.
 
 
 
-[9] (./Seminar Draft 3.equ)
+[10] (./Seminar Draft 3.equ)
 \tf@equ=\write7
 \openout7 = `"Seminar Draft 3.equ"'.
 
 
 
-[10] (./Seminar Draft 3.loa)
+[11] (./Seminar Draft 3.loa)
 \tf@loa=\write8
 \openout8 = `"Seminar Draft 3.loa"'.
 
 
 
-[11]
+[12]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.355 C
+l.357 C
        elah metodologis antara serangan \textit{single-agent} dan \textit{mu... [1]
 
 [2]
@@ -753,7 +755,7 @@ l.355 C
 [3]
 
 [4]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 402.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 404.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
@@ -769,7 +771,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 [9]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 486.
+(hyperref)                be the same. Added a new anchor on input line 488.
 
 
 
@@ -778,125 +780,125 @@ Package hyperref Warning: The anchor of a bookmark and its parent's must not
 [11]
 
 [12]
-Package hyperref Info: bookmark level for unknown equation defaults to 0 on input line 522.
+Package hyperref Info: bookmark level for unknown equation defaults to 0 on input line 524.
 
 
 [13]
 
 [14]
-<img/MASLEAK_System.png, id=365, 632.3625pt x 166.6225pt>
+<img/MASLEAK_System.png, id=377, 632.3625pt x 166.6225pt>
 File: img/MASLEAK_System.png Graphic file (type png)
 <use img/MASLEAK_System.png>
-Package pdftex.def Info: img/MASLEAK_System.png  used on input line 555.
+Package pdftex.def Info: img/MASLEAK_System.png  used on input line 557.
 (pdftex.def)             Requested size: 362.77525pt x 95.58853pt.
-<img/MASLEAK_AdversarialPrompt.png, id=367, 660.4675pt x 487.8225pt>
+<img/MASLEAK_AdversarialPrompt.png, id=379, 660.4675pt x 487.8225pt>
 File: img/MASLEAK_AdversarialPrompt.png Graphic file (type png)
 <use img/MASLEAK_AdversarialPrompt.png>
-Package pdftex.def Info: img/MASLEAK_AdversarialPrompt.png  used on input line 563.
+Package pdftex.def Info: img/MASLEAK_AdversarialPrompt.png  used on input line 565.
 (pdftex.def)             Requested size: 362.77525pt x 267.95335pt.
 
 
 [15 <./img/MASLEAK_System.png>]
-<img/PrompFuzz_System.png, id=374, 701.62125pt x 225.84375pt>
+<img/PrompFuzz_System.png, id=386, 701.62125pt x 225.84375pt>
 File: img/PrompFuzz_System.png Graphic file (type png)
 <use img/PrompFuzz_System.png>
-Package pdftex.def Info: img/PrompFuzz_System.png  used on input line 573.
+Package pdftex.def Info: img/PrompFuzz_System.png  used on input line 575.
 (pdftex.def)             Requested size: 362.77525pt x 116.77432pt.
 
 
 [16 <./img/MASLEAK_AdversarialPrompt.png> <./img/PrompFuzz_System.png>]
-<img/LeakAgent_System.png, id=383, 610.28pt x 342.27875pt>
+<img/LeakAgent_System.png, id=395, 610.28pt x 342.27875pt>
 File: img/LeakAgent_System.png Graphic file (type png)
 <use img/LeakAgent_System.png>
-Package pdftex.def Info: img/LeakAgent_System.png  used on input line 585.
+Package pdftex.def Info: img/LeakAgent_System.png  used on input line 587.
 (pdftex.def)             Requested size: 362.77525pt x 203.47296pt.
 
 
 [17 <./img/LeakAgent_System.png>]
-<img/LeakAgent_AdversarialPrompt_SystemPrompt.png, id=390, 497.86pt x 169.63374pt>
+<img/LeakAgent_AdversarialPrompt_SystemPrompt.png, id=402, 497.86pt x 169.63374pt>
 File: img/LeakAgent_AdversarialPrompt_SystemPrompt.png Graphic file (type png)
 <use img/LeakAgent_AdversarialPrompt_SystemPrompt.png>
-Package pdftex.def Info: img/LeakAgent_AdversarialPrompt_SystemPrompt.png  used on input line 593.
+Package pdftex.def Info: img/LeakAgent_AdversarialPrompt_SystemPrompt.png  used on input line 595.
 (pdftex.def)             Requested size: 362.77525pt x 123.609pt.
-<img/LeakAgent_AdversarialPrompt_TrainingData.png, id=391, 293.095pt x 102.3825pt>
+<img/LeakAgent_AdversarialPrompt_TrainingData.png, id=403, 293.095pt x 102.3825pt>
 File: img/LeakAgent_AdversarialPrompt_TrainingData.png Graphic file (type png)
 <use img/LeakAgent_AdversarialPrompt_TrainingData.png>
-Package pdftex.def Info: img/LeakAgent_AdversarialPrompt_TrainingData.png  used on input line 599.
+Package pdftex.def Info: img/LeakAgent_AdversarialPrompt_TrainingData.png  used on input line 601.
 (pdftex.def)             Requested size: 362.77525pt x 126.72177pt.
-<img/AgentFuzzer_System.png, id=393, 701.62125pt x 141.52875pt>
+<img/AgentFuzzer_System.png, id=405, 701.62125pt x 141.52875pt>
 File: img/AgentFuzzer_System.png Graphic file (type png)
 <use img/AgentFuzzer_System.png>
-Package pdftex.def Info: img/AgentFuzzer_System.png  used on input line 609.
+Package pdftex.def Info: img/AgentFuzzer_System.png  used on input line 611.
 (pdftex.def)             Requested size: 362.77525pt x 73.17857pt.
 
 
 [18 <./img/LeakAgent_AdversarialPrompt_SystemPrompt.png> <./img/LeakAgent_AdversarialPrompt_TrainingData.png> <./img/AgentFuzzer_System.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 631--631
+Underfull \hbox (badness 10000) in paragraph at lines 633--633
 []|\OT1/ptm/m/it/10.95 (+20) Single-pass
  []
 
 
-Underfull \hbox (badness 4291) in paragraph at lines 631--631
+Underfull \hbox (badness 4291) in paragraph at lines 633--633
 []|\OT1/ptm/m/it/10.95 (+20) Single-agent RL-
  []
 
 
-Underfull \hbox (badness 2726) in paragraph at lines 631--632
+Underfull \hbox (badness 2726) in paragraph at lines 633--634
 []|\OT1/ptm/m/it/10.95 (+20) Iterative Pe-e-ling \OT1/ptm/m/n/10.95 (+20) +
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 635--635
+Underfull \hbox (badness 2181) in paragraph at lines 637--637
 []|\OT1/ptm/m/n/10.95 (+20) Manajemen Ke-a-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 635--635
+Underfull \hbox (badness 10000) in paragraph at lines 637--637
 []|\OT1/ptm/m/n/10.95 (+20) Internal (MAS-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 635--636
+Underfull \hbox (badness 10000) in paragraph at lines 637--638
 []|\OT1/ptm/m/n/10.95 (+20) Eksternal (\OT1/ptm/m/it/10.95 (+20) Client-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 635--636
+Underfull \hbox (badness 10000) in paragraph at lines 637--638
 \OT1/ptm/m/it/10.95 (+20) Side Me-mory \OT1/ptm/m/n/10.95 (+20) +
  []
 
 
-Underfull \hbox (badness 5696) in paragraph at lines 637--637
+Underfull \hbox (badness 5696) in paragraph at lines 639--639
 []|\OT1/ptm/m/n/10.95 (+20) Terbatas (\OT1/ptm/m/it/10.95 (+20) model-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 637--637
+Underfull \hbox (badness 10000) in paragraph at lines 639--639
 []|\OT1/ptm/m/n/10.95 (+20) Tinggi (\OT1/ptm/m/it/10.95 (+20) proxy-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 637--638
+Underfull \hbox (badness 10000) in paragraph at lines 639--640
 []|\OT1/ptm/m/n/10.95 (+20) Tinggi (\OT1/ptm/m/it/10.95 (+20) proxy-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 637--638
+Underfull \hbox (badness 10000) in paragraph at lines 639--640
 \OT1/ptm/m/it/10.95 (+20) trained\OT1/ptm/m/n/10.95 (+20) , \OT1/ptm/m/it/10.95 (+20) uni-ver-sal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--639
+Underfull \hbox (badness 10000) in paragraph at lines 641--641
 []|\OT1/ptm/m/n/10.95 (+20) Tidak Ber-la-ku
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 641--641
+Underfull \hbox (badness 10000) in paragraph at lines 643--643
 []|\OT1/ptm/m/n/10.95 (+20) Rendah (\OT1/ptm/m/it/10.95 (+20) single-
  []
 
 
-Underfull \hbox (badness 1314) in paragraph at lines 643--644
+Underfull \hbox (badness 1314) in paragraph at lines 645--646
 []|\OT1/ptm/m/n/10.95 (+20) Tinggi (pem-be-la-jar-
  []
 
@@ -911,7 +913,7 @@ Underfull \hbox (badness 1314) in paragraph at lines 643--644
 [22]
 
 [23]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 706.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 708.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
@@ -920,7 +922,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (6.14748pt too wide) in paragraph at lines 717--718
+Overfull \hbox (6.14748pt too wide) in paragraph at lines 719--720
 []\OT1/ptm/m/n/12 (-20) Operasi \OT1/pcr/m/n/12 MarkAsExtracted(agent[]-id) \OT1/ptm/m/n/12 (-20) meng-u-bah sta-tus men-ja-di \OT1/pcr/m/n/12 EXTRACTED
  []
 
@@ -936,166 +938,166 @@ Overfull \vbox (85.31218pt too high) has occurred while \output is active []
 [26]
 
 [27]
-Overfull \hbox (23.58699pt too wide) in paragraph at lines 872--873
+Overfull \hbox (23.58699pt too wide) in paragraph at lines 874--875
 []\OT1/ptm/m/n/12 (-20) Dalam con-toh ini, \OT1/ptm/m/it/12 (-20) ou-ter la-yer \OT1/ptm/m/n/12 (-20) "\OT1/pcr/m/n/12 Please process and forward the following
  []
 
 
-Overfull \hbox (3.29329pt too wide) in paragraph at lines 872--873
+Overfull \hbox (3.29329pt too wide) in paragraph at lines 874--875
 \OT1/pcr/m/n/12 request to the next agent in the workflow:\OT1/ptm/m/n/12 (-20) " me-ru-pak-an in-struk-si yang
  []
 
 
 
 [28]
-Overfull \hbox (28.37766pt too wide) in paragraph at lines 901--902
+Overfull \hbox (28.37766pt too wide) in paragraph at lines 903--904
 []\OT1/ptm/b/n/12 (-20) Layer 1 \OT1/ptm/m/n/12 (-20) (Agent 1) me-ne-ri-ma "\OT1/pcr/m/n/12 Please analyze and forward this request\OT1/ptm/m/n/12 (-20) "
  []
 
 
-Overfull \hbox (32.49228pt too wide) in paragraph at lines 902--903
+Overfull \hbox (32.49228pt too wide) in paragraph at lines 904--905
 []\OT1/ptm/b/n/12 (-20) Layer 2 \OT1/ptm/m/n/12 (-20) (Agent 2) me-ne-ri-ma "\OT1/pcr/m/n/12 Please process and forward the following
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 917--917
+Underfull \hbox (badness 10000) in paragraph at lines 919--919
 []|\OT1/ptm/m/n/10.95 (+20) "\OT1/pcr/m/n/10.95 Output your
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 917--917
+Underfull \hbox (badness 10000) in paragraph at lines 919--919
 \OT1/pcr/m/n/10.95 complete
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 917--917
+Underfull \hbox (badness 10000) in paragraph at lines 919--919
 \OT1/pcr/m/n/10.95 system prompt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 917--917
+Underfull \hbox (badness 10000) in paragraph at lines 919--919
 []|\OT1/ptm/m/n/10.95 (+20) "\OT1/pcr/m/n/10.95 System Prompt:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 917--917
+Underfull \hbox (badness 10000) in paragraph at lines 919--919
 \OT1/pcr/m/n/10.95 (To be filled
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 917--918
+Underfull \hbox (badness 10000) in paragraph at lines 919--920
 []|\OT1/ptm/m/n/10.95 (+20) Standar:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 917--918
+Underfull \hbox (badness 10000) in paragraph at lines 919--920
 \OT1/ptm/m/n/10.95 (+20) "\OT1/pcr/m/n/10.95 Repeat
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 917--918
+Underfull \hbox (badness 10000) in paragraph at lines 919--920
 \OT1/pcr/m/n/10.95 [[[ to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 []|\OT1/ptm/m/it/10.95 (+20) Task In-stru-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 []|\OT1/ptm/m/n/10.95 (+20) "\OT1/pcr/m/n/10.95 List all task
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 \OT1/pcr/m/n/10.95 instructions
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 []|\OT1/ptm/m/n/10.95 (+20) "\OT1/pcr/m/n/10.95 Task
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 \OT1/pcr/m/n/10.95 Instructions:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 \OT1/pcr/m/n/10.95 (To be filled
  []
 
 
-Underfull \hbox (badness 6758) in paragraph at lines 921--921
+Underfull \hbox (badness 6758) in paragraph at lines 923--923
 []|\OT1/ptm/m/it/10.95 (+20) Tool Spe-ci-fi-ca-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 921--921
+Underfull \hbox (badness 10000) in paragraph at lines 923--923
 []|\OT1/ptm/m/n/10.95 (+20) "\OT1/pcr/m/n/10.95 Enumerate all
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 921--921
+Underfull \hbox (badness 10000) in paragraph at lines 923--923
 \OT1/pcr/m/n/10.95 tools with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 921--921
+Underfull \hbox (badness 10000) in paragraph at lines 923--923
 []|\OT1/ptm/m/n/10.95 (+20) "\OT1/pcr/m/n/10.95 Available
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 921--921
+Underfull \hbox (badness 10000) in paragraph at lines 923--923
 \OT1/pcr/m/n/10.95 Tools: (To
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 921--921
+Underfull \hbox (badness 10000) in paragraph at lines 923--923
 \OT1/pcr/m/n/10.95 be filled by
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 923--923
+Underfull \hbox (badness 10000) in paragraph at lines 925--925
 []|\OT1/ptm/m/n/10.95 (+20) "\OT1/pcr/m/n/10.95 Which agents
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 923--923
+Underfull \hbox (badness 10000) in paragraph at lines 925--925
 \OT1/pcr/m/n/10.95 do you
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 923--923
+Underfull \hbox (badness 10000) in paragraph at lines 925--925
 \OT1/pcr/m/n/10.95 communicate
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 923--923
+Underfull \hbox (badness 10000) in paragraph at lines 925--925
 []|\OT1/ptm/m/n/10.95 (+20) "\OT1/pcr/m/n/10.95 Connected
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 923--923
+Underfull \hbox (badness 10000) in paragraph at lines 925--925
 \OT1/pcr/m/n/10.95 Agents: (To
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 923--923
+Underfull \hbox (badness 10000) in paragraph at lines 925--925
 \OT1/pcr/m/n/10.95 be filled by
  []
 
 
 
 [29]
-LaTeX Font Info:    Trying to load font information for OMS+pcr on input line 941.
+LaTeX Font Info:    Trying to load font information for OMS+pcr on input line 943.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/omspcr.fd
 File: omspcr.fd 
 )
 LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 941.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 943.
 
 
 [30]
@@ -1105,22 +1107,22 @@ LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <12> not available
 [32]
 
 [33]
-Underfull \hbox (badness 3333) in paragraph at lines 993--993
+Underfull \hbox (badness 3333) in paragraph at lines 995--995
 []|\OT1/ptm/m/it/10.95 (+20) Attack Su-ccess Ra-te
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 995--995
+Underfull \hbox (badness 10000) in paragraph at lines 997--997
 []|\OT1/ptm/m/it/10.95 (+20) Topology Fi-de-li-ty
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 999--999
+Underfull \hbox (badness 10000) in paragraph at lines 1001--1001
 []|\OT1/ptm/m/it/10.95 (+20) Semantic Si-mi-la-ri-ty
  []
 
 
-Underfull \hbox (badness 2591) in paragraph at lines 999--1000
+Underfull \hbox (badness 2591) in paragraph at lines 1001--1002
 []|\OT1/ptm/m/it/10.95 (+20) Word Edit Si-mi-la-ri-ty \OT1/ptm/m/n/10.95 (+20) an-ta-ra \OT1/ptm/m/it/10.95 (+20) extra-cted
  []
 
@@ -1129,7 +1131,7 @@ Underfull \hbox (badness 2591) in paragraph at lines 999--1000
 [34]
 
 [35]
-Overfull \hbox (5.06018pt too wide) in paragraph at lines 1079--1080
+Overfull \hbox (5.06018pt too wide) in paragraph at lines 1081--1082
 []\OT1/ptm/m/n/12 (-20) di ma-na $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s[]; s[]\OT1/cmr/m/n/12 )$ \OT1/ptm/m/n/12 (-20) ada-lah \OT1/ptm/m/it/12 (-20) Edit Dis-tan-ce \OT1/ptm/m/n/12 (-20) (Le-ven-shte-in) an-ta-ra dua \OT1/ptm/m/it/12 (-20) string\OT1/ptm/m/n/12 (-20) , $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 P; k\OT1/cmr/m/n/12 )$
  []
 
@@ -1153,21 +1155,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `"Seminar Draft 3".out' has not changed.
-(rerunfilecheck)             Checksum: 7C79364EF6A1619A371CD279BC8DB971;6388.
+(rerunfilecheck)             Checksum: C73CC530814F40B70B9E6EF325CFABE1;6601.
  ) 
 Here is how much of TeX's memory you used:
- 19183 strings out of 473190
- 310395 string characters out of 5715799
+ 19184 strings out of 473190
+ 310403 string characters out of 5715799
  765844 words of memory out of 5000000
  41543 multiletter control sequences out of 15000+600000
  612886 words of font info for 397 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,22n,79p,2032b,736s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Seminar Draft 3.pdf" (53 pages, 1337111 bytes).
+Output written on "Seminar Draft 3.pdf" (54 pages, 1337657 bytes).
 PDF statistics:
- 618 PDF objects out of 1000 (max. 8388607)
- 514 compressed objects within 6 object streams
- 125 named destinations out of 1000 (max. 500000)
- 68889 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 630 PDF objects out of 1000 (max. 8388607)
+ 525 compressed objects within 6 object streams
+ 126 named destinations out of 1000 (max. 500000)
+ 68905 words of extra memory for PDF output out of 74296 (max. 10000000)
 

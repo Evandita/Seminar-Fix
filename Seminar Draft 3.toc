@@ -1,6 +1,8 @@
 \babel@toc {bahasa}{}\relax 
-\contentsline {section}{Daftar Rumus}{x}{Item.5}%
-\contentsline {section}{Daftar Kode}{xi}{Item.5}%
+\contentsline {section}{Daftar Gambar}{ix}{Item.5}%
+\contentsline {section}{Daftar Tabel}{x}{Item.5}%
+\contentsline {section}{Daftar Rumus}{xi}{Item.5}%
+\contentsline {section}{Daftar Kode}{xii}{Item.5}%
 \contentsline {section}{BAB I PENDAHULUAN}{1}{Item.5}%
 \contentsline {subsection}{1.1 Latar Belakang}{1}{section*.1}%
 \contentsline {subsection}{1.2 Rumusan Masalah}{3}{section*.1}%
