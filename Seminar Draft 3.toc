@@ -10,7 +10,7 @@
 \contentsline {subsection}{2.1 Landasan Teori}{9}{section*.2}%
 \contentsline {subsubsection}{2.1.2 Iterative Peeling: Pendekatan Ekstraksi Bertahap}{9}{section*.2}%
 \contentsline {subsubsection}{2.1.3 Client-Side Memory: Repositori Pengetahuan Persisten}{10}{section*.2}%
-\contentsline {subsubsection}{2.1.4 Computer Worm dan Konsep Matryoshka}{11}{section*.2}%
+\contentsline {subsubsection}{2.1.4 Computer Worm dan Enkapsulasi Rekursif}{11}{section*.2}%
 \contentsline {subsubsection}{2.1.5 Proximal Policy Optimization (PPO) dalam Adversarial Prompting}{12}{section*.2}%
 \contentsline {subsubsection}{2.1.6 Fungsi Reward Semantik: Sliding-window Word Edit Similarity (WES)}{13}{section*.2}%
 \contentsline {subsection}{2.2 Penelitian Terkait}{14}{section*.2}%
@@ -25,5 +25,5 @@
 \contentsline {subsubsection}{3.4.1 Skenario Pengujian}{23}{section*.6}%
 \contentsline {subsubsection}{3.4.2 Metrik Kuantitatif}{24}{section*.6}%
 \contentsline {subsubsection}{3.4.3 Pengujian Hipotesis}{24}{table.caption.7}%
-\contentsline {subsubsection}{3.4.4 Pertimbangan Etis}{27}{table.caption.7}%
+\contentsline {subsubsection}{3.4.4 Pertimbangan Etis}{26}{table.caption.7}%
 \contentsline {section}{Daftar Pustaka}{29}{table.caption.7}%

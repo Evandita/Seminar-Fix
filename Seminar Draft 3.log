@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.12.21)  6 JAN 2026 10:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.12.21)  6 JAN 2026 10:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -714,11 +714,6 @@ Underfull \hbox (badness 2726) in paragraph at lines 543--544
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 543--544
-\OT1/ptm/m/it/10.95 (+20) Ma-tr-yo-sh-ka En-ca-
- []
-
-
 Underfull \hbox (badness 1430) in paragraph at lines 545--546
 []|\OT1/ptm/m/it/10.95 (+20) RL \OT1/ptm/m/n/10.95 (+20) (PPO) + WES
  []
@@ -762,9 +757,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 549--550
 Underfull \hbox (badness 1314) in paragraph at lines 555--556
 []|\OT1/ptm/m/n/10.95 (+20) Tinggi (pem-be-la-jar-
  []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
@@ -846,18 +838,18 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `"Seminar Draft 3".out' has not changed.
-(rerunfilecheck)             Checksum: DE92EF9394402DE5BD36F0FEA3278B06;6193.
+(rerunfilecheck)             Checksum: 4F157D2BC98CD042E000B993CEFCD564;6208.
  ) 
 Here is how much of TeX's memory you used:
- 16996 strings out of 473190
- 272716 string characters out of 5715799
- 724265 words of memory out of 5000000
+ 17020 strings out of 473190
+ 272929 string characters out of 5715799
+ 725265 words of memory out of 5000000
  39489 multiletter control sequences out of 15000+600000
- 607184 words of font info for 364 fonts, out of 8000000 for 9000
+ 608300 words of font info for 380 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,79p,2039b,738s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,2032b,738s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Seminar Draft 3.pdf" (41 pages, 255474 bytes).
+Output written on "Seminar Draft 3.pdf" (41 pages, 256346 bytes).
 PDF statistics:
  480 PDF objects out of 1000 (max. 8388607)
  407 compressed objects within 5 object streams
