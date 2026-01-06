@@ -343,24 +343,27 @@ Penelitian ini bertujuan untuk mengembangkan kerangka kerja serangan \textit{adv
 
 \subsection*{1.4 Manfaat Penelitian}
 \addcontentsline{toc}{subsection}{1.4 Manfaat Penelitian}
-Penelitian ini diharapkan memberikan kontribusi yang signifikan dan multidimensi, baik bagi komunitas akademik maupun praktisi industri:
+Penelitian ini diharapkan memberikan kontribusi yang signifikan bagi pengembangan metodologi keamanan sistem \textit{multi-agent}, dengan manfaat yang dapat diklasifikasikan sebagai berikut:
 
-\begin{itemize}
-    \item \textbf{Manfaat Akademis:}
+\begin{enumerate}
+    \item \textbf{Manfaat Akademis}
     \begin{itemize}
-        \item Perluasan Teori Adversarial AI: Memberikan wawasan baru mengenai batasan keamanan MAS dan validitas penggunaan model proksi untuk serangan transfer.
-        \item Metodologi Evaluasi Baru: Memperkenalkan metrik evaluasi topologi graf (Topology Fidelity) dan fungsi reward semantik (WES) yang dapat diadopsi oleh peneliti lain untuk mengukur ketahanan sistem multi-agen secara lebih presisi.
+        \item Memberikan kontribusi metodologis baru dalam adaptasi teknik serangan \textit{adversarial} dari lingkungan \textit{single-agent} ke \textit{multi-agent systems}, khususnya melalui konsep \textit{iterative peeling} dan \textit{Client-Side Memory} yang dapat menjadi referensi bagi penelitian keamanan MAS di masa depan.
+        \item Memvalidasi hipotesis transferabilitas \textit{prompt adversarial} yang dilatih pada model proksi \textit{open-source} terhadap berbagai arsitektur MAS \textit{black-box}, memberikan wawasan empiris tentang keselarasan universal (\textit{universal alignment}) dalam mekanisme model bahasa untuk mengikuti instruksi sistem.
+        \item Memperkenalkan metrik evaluasi baru seperti \textit{Topology Fidelity} ($GS_{topo}$) dan \textit{Extraction Efficiency} yang dapat diadopsi oleh peneliti lain untuk mengukur efektivitas serangan dan ketahanan sistem \textit{multi-agent} secara lebih komprehensif.
     \end{itemize}
-    \item \textbf{Manfaat Praktis:}
+    \item \textbf{Manfaat Praktis untuk Industri}
     \begin{itemize}
-        \item Peningkatan Keamanan Industri: Menunjukkan bukti empiris (proof-of-concept) mengenai kerentanan arsitektur MAS saat ini, yang dapat mendorong pengembangan platform (seperti Microsoft, OpenAI, dan penyedia kerangka kerja agen) untuk beralih dari model keamanan berbasis ketidakjelasan menuju pertahanan yang lebih kuat.
-        \item Kesadaran Perlindungan IP: Memberikan peringatan dini kepada perusahaan yang berinvestasi dalam “Cognitive IP” mengenai risiko kloning sistem dan spionase ekonomi.
+        \item Mengidentifikasi kerentanan kritis dalam arsitektur MAS komersial yang mengandalkan \textit{security by obscurity}, memberikan bukti empiris (\textit{proof-of-concept}) yang dapat mendorong pengembang platform seperti CrewAI, AutoGen, dan Coze untuk mengimplementasikan mekanisme pertahanan yang lebih \textit{robust}.
+        \item Meningkatkan kesadaran perusahaan yang mengembangkan atau menggunakan MAS tentang pentingnya melindungi arsitektur kognitif sebagai aset Kekayaan Intelektual (IP), termasuk risiko kloning sistem dan pencurian konfigurasi melalui serangan \textit{adversarial}.
+        \item Menyediakan \textit{baseline} untuk pengembangan mekanisme pertahanan adaptif yang dapat mendeteksi dan memitigasi serangan berbasis \textit{iterative extraction}, seperti anomali deteksi pada pola \textit{query} atau implementasi verifikasi berlapis pada komunikasi antar agen.
     \end{itemize}
-    \item \textbf{Manfaat Institusional:}
+    \item \textbf{Manfaat untuk Pengembangan Standar Keamanan}
     \begin{itemize}
-        \item Memperkaya portofolio penelitian Universitas Indonesia dalam domain keamanan siber dan kecerdasan buatan tingkat lanjut.
+        \item Berkontribusi pada formulasi \textit{best practices} dan standar keamanan untuk pengembangan MAS, khususnya terkait perlindungan \textit{system prompt}, validasi komunikasi antar agen, dan manajemen \textit{state} yang aman dalam sistem terdistribusi.
+        \item Memperkaya diskusi akademik dan industri tentang keseimbangan antara aksesibilitas sistem MAS melalui API publik dengan perlindungan informasi konfigurasi internal yang sensitif.
     \end{itemize}
-\end{itemize}
+\end{enumerate}
 
 \subsection*{1.5 Batasan Masalah}
 \addcontentsline{toc}{subsection}{1.5 Batasan Masalah}
